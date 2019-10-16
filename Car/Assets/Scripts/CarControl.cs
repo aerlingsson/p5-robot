@@ -13,7 +13,7 @@ public class CarControl : MonoBehaviour
     public Transform backDriver, backPassenger;
 
     public float _steerAngle = 30.0f;
-    public float _motorForce = 500f;
+    public float _motorForce = 100f;
     public float steerAngl;
     float h,v;
 
@@ -44,8 +44,10 @@ public class CarControl : MonoBehaviour
 
     void Drive()
     {
+        
         back_driver_col.motorTorque = v * _motorForce;
         back_passenger_col.motorTorque = v * _motorForce;
+
     }
 
     void SteerCar()
@@ -62,6 +64,7 @@ public class CarControl : MonoBehaviour
 
         col.GetWorldPose(out pos, out rot);
         t.position = pos;
+        rot = rot * Quaternion.Euler(new Vector3(0, 0, 90));
         t.rotation = rot;
 
     }
