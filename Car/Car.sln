@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{4F9212E2-498F-3E17-88EB-5F55920B82A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacBLAS", "MacBLAS.csproj", "{7EB51345-AB8E-DA68-8D97-B2326C582581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSBLAS", "iOSBLAS.csproj", "{D0484F20-CEA8-EF8B-80BA-001A2BACA2C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{4E4C130E-47EE-4EBC-A51B-43356C280274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barracuda-editor", "Barracuda-editor.csproj", "{9EF204CF-5DB4-9D74-03B1-DA522AC86A38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +21,22 @@ Global
 		{4F9212E2-498F-3E17-88EB-5F55920B82A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F9212E2-498F-3E17-88EB-5F55920B82A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F9212E2-498F-3E17-88EB-5F55920B82A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB51345-AB8E-DA68-8D97-B2326C582581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB51345-AB8E-DA68-8D97-B2326C582581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB51345-AB8E-DA68-8D97-B2326C582581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB51345-AB8E-DA68-8D97-B2326C582581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0484F20-CEA8-EF8B-80BA-001A2BACA2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0484F20-CEA8-EF8B-80BA-001A2BACA2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0484F20-CEA8-EF8B-80BA-001A2BACA2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0484F20-CEA8-EF8B-80BA-001A2BACA2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4C130E-47EE-4EBC-A51B-43356C280274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4C130E-47EE-4EBC-A51B-43356C280274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4C130E-47EE-4EBC-A51B-43356C280274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4C130E-47EE-4EBC-A51B-43356C280274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF204CF-5DB4-9D74-03B1-DA522AC86A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF204CF-5DB4-9D74-03B1-DA522AC86A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF204CF-5DB4-9D74-03B1-DA522AC86A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF204CF-5DB4-9D74-03B1-DA522AC86A38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
