@@ -5,4 +5,12 @@ using MLAgents;
 public class CarAcademy : Academy
 {
 
+    public override void AcademyReset(){
+
+    }
+
+    public override void AcademyStep(){
+        
+    }
+
 }
