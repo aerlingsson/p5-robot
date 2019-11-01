@@ -79,37 +79,37 @@
      <Compile Include="Assets\ML-Agents\Editor\Tests\TensorUtilsTest.cs" />
      <Compile Include="Assets\ML-Agents\Editor\Tests\UtilitiesTests.cs" />
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -298,31 +298,31 @@
  <HintPath>C:/Program Files/2019.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="EasyRoads3Dv3Editor">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll</HintPath>
  </Reference>
  <Reference Include="EasyRoads3Dv3">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.Abstractions">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/ML-Agents/Plugins/System.IO.Abstractions.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/ML-Agents/Plugins/System.IO.Abstractions.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.Abstractions.TestingHelpers">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/ML-Agents/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/ML-Agents/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Barracuda">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/ML-Agents/Plugins/Barracuda.Core/Barracuda/Barracuda.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/ML-Agents/Plugins/Barracuda.Core/Barracuda/Barracuda.dll</HintPath>
  </Reference>
  <Reference Include="Google.Protobuf">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/ML-Agents/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/ML-Agents/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
  </Reference>
  <Reference Include="Grpc.Core">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/ML-Agents/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/ML-Agents/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
  </Reference>
  <Reference Include="System.Interactive.Async">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Assets/ML-Agents/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Assets/ML-Agents/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/Jan/Dropbox/AAU/5. Semester/code/Car/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

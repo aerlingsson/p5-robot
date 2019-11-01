@@ -6,6 +6,8 @@ TagManager:
   tags:
   - target
   - back
+  - road
+  - target1
   layers:
   - Default
   - TransparentFX
