@@ -5,6 +5,7 @@ using MLAgents;
 public class carAgent : Agent
 {
     Rigidbody rBody;
+    [HideInInspector] public GameObject[] spawnlocations;
     public WheelCollider front_driver_col, front_passenger_col;
     public WheelCollider back_driver_col, back_passenger_col;
     public Transform frontDriver, frontPassenger;
@@ -16,6 +17,11 @@ public class carAgent : Agent
     internal Vector3 startPos;
     internal Vector3 startRot;
 
+
+    void Awake()
+    {
+        spawnlocations = GameObject.FindGameObjectsWithTag("spawnpoint");
+    }
 
     void Start()
     {
@@ -40,8 +46,11 @@ public class carAgent : Agent
         this.rBody.velocity = Vector3.zero;
         //transform.position = startPos;
         //transform.eulerAngles = startRot;
-        this.transform.position = new Vector3(5.133f, 0.14f, 16.752f);
-        this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
+        /*this.transform.position = new Vector3(5.133f, 0.14f, 16.752f);
+        this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));*/
+        int spawn = Random.Range(0, spawnlocations.Length);
+        this.transform.position = spawnlocations[spawn].transform.position;
+
     }
 
     public override void CollectObservations(){
