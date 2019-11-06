@@ -43,6 +43,7 @@ namespace UnityStandardAssets.Utility
         public WaypointCircuit.RoutePoint progressPoint { get; private set; }
 
         public Transform target;
+        Rigidbody rigidbody;
 
         private float progressDistance; // The progress round the route, used in smooth mode.
         private int progressNum; // the current waypoint number, used in point-to-point mode.
@@ -52,6 +53,7 @@ namespace UnityStandardAssets.Utility
         // setup script properties
         private void Start()
         {
+            rigidbody = GetComponent<Rigidbody>();
             // we use a transform to represent the point to aim for, and the point which
             // is considered for upcoming changes-of-speed. This allows this component
             // to communicate this information to the AI without requiring further dependencies.
@@ -60,7 +62,21 @@ namespace UnityStandardAssets.Utility
             // then this component will update it, and the AI can read it.
             if (target == null)
             {
+                Transform tMin = null;
+                float minDist = Mathf.Infinity;
+                Vector3 currentPos = rigidbody.position;
+                foreach (Transform t in circuit.Waypoints)
+                {
+                    float dist = Vector3.Distance(t.position, currentPos);
+                    if (dist < minDist)
+                    {
+                        tMin = t;
+                        minDist = dist;
+                    }
+                }
                 target = new GameObject(name + " Waypoint Target").transform;
+                target.position = tMin.position;
+                target.rotation = tMin.rotation;
             }
 
             Reset();
