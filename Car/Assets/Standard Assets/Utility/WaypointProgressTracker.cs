@@ -110,7 +110,6 @@ namespace UnityStandardAssets.Utility
                 
                 if(progressDeltaX < -1 || progressDeltaX > 1)
                 {
-                    Debug.Log("I am active");
                     progressDistance += 1.0f;
                     if((progressDeltaX > -1 || progressDeltaX < 1) && (progressDeltaZ < -1 || progressDeltaZ > 1)){
                         progressDistance += 5.0f;
@@ -156,6 +155,12 @@ namespace UnityStandardAssets.Utility
         }
 
 
+        public Vector3 getDistanceFromCenter()
+        {
+            Debug.Log("You used the method!");
+            Vector3 distance = transform.position - target.position;
+            return distance;
+        }
         private void OnDrawGizmos()
         {
             if (Application.isPlaying)

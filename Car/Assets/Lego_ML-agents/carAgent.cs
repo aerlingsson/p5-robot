@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MLAgents;
+using UnityStandardAssets.Utility;
 public class carAgent : Agent
 {
     Rigidbody rBody;
+    public WaypointProgressTracker progressTracker; // A reference to the waypoint-based route we should follow
+
     [HideInInspector] public GameObject[] spawnlocations;
     public WheelCollider front_driver_col, front_passenger_col;
     public WheelCollider back_driver_col, back_passenger_col;
@@ -25,6 +28,7 @@ public class carAgent : Agent
 
     void Start()
     {
+        progressTracker.getDistanceFromCenter();
         rBody = GetComponent<Rigidbody>();
         //startPos = transform.position;
         //startRot = transform.eulerAngles;
