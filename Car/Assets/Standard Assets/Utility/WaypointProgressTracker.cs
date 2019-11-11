@@ -43,17 +43,16 @@ namespace UnityStandardAssets.Utility
         public WaypointCircuit.RoutePoint progressPoint { get; private set; }
 
         public Transform target;
-        Rigidbody rigidbody;
 
         private float progressDistance; // The progress round the route, used in smooth mode.
         private int progressNum; // the current waypoint number, used in point-to-point mode.
         private Vector3 lastPosition; // Used to calculate current speed (since we may not have a rigidbody component)
         private float speed; // current speed of this object (calculated from delta since last frame)
-
+        Transform tMin = null;
         // setup script properties
         private void Start()
         {
-            rigidbody = GetComponent<Rigidbody>();
+
             // we use a transform to represent the point to aim for, and the point which
             // is considered for upcoming changes-of-speed. This allows this component
             // to communicate this information to the AI without requiring further dependencies.
@@ -62,21 +61,7 @@ namespace UnityStandardAssets.Utility
             // then this component will update it, and the AI can read it.
             if (target == null)
             {
-                Transform tMin = null;
-                float minDist = Mathf.Infinity;
-                Vector3 currentPos = rigidbody.position;
-                foreach (Transform t in circuit.Waypoints)
-                {
-                    float dist = Vector3.Distance(t.position, currentPos);
-                    if (dist < minDist)
-                    {
-                        tMin = t;
-                        minDist = dist;
-                    }
-                }
                 target = new GameObject(name + " Waypoint Target").transform;
-                target.position = tMin.position;
-                target.rotation = tMin.rotation;
             }
 
             Reset();
@@ -120,12 +105,30 @@ namespace UnityStandardAssets.Utility
                 // get our current progress along the route
                 progressPoint = circuit.GetRoutePoint(progressDistance);
                 Vector3 progressDelta = progressPoint.position - transform.position;
-                if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
+                float progressDeltaX = progressPoint.position.x - transform.position.x;
+                float progressDeltaZ = progressPoint.position.z - transform.position.z;
+                
+                if(progressDeltaX < -1 || progressDeltaX > 1)
                 {
-                    progressDistance += progressDelta.magnitude*0.5f;
+                    Debug.Log("I am active");
+                    progressDistance += 1.0f;
+                    if((progressDeltaX > -1 || progressDeltaX < 1) && (progressDeltaZ < -1 || progressDeltaZ > 1)){
+                        progressDistance += 5.0f;
+                    }
                 }
-
+                else
+                {
+                    if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
+                    {
+                        progressDistance += progressDelta.magnitude*0.5f;
+                    } 
+                    else
+                    {
+                        progressDistance -= progressDelta.magnitude*0.5f;      
+                    }
+                }
                 lastPosition = transform.position;
+
             }
             else
             {

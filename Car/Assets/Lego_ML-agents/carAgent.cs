@@ -70,13 +70,13 @@ public class carAgent : Agent
 
         switch(action){
             case 1:
-                _steerangl = -30.0f;
+                _steerangl = -25.6f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 break;
 
             case 2:
-                _steerangl = 30.0f;
+                _steerangl = 25.6f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 break;
