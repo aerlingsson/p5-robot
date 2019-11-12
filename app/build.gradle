@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.p5_robot"
-        minSdkVersion 15    //minSdkVersion 21 if this doesn't work
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -33,11 +33,12 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation project(path: ':opencv')
+    //implementation project(path: ':openCVLibrary2411')
     implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
     implementation 'org.tensorflow:tensorflow-lite-gpu:+'
     implementation 'org.tensorflow:tensorflow-lite:+'
     def camerax_version = "1.0.0-alpha01"
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation project(path: ':openCVLibrary2411')
 }
