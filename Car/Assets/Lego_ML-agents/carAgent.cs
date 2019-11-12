@@ -17,8 +17,6 @@ public class carAgent : Agent
     float _motorForce = 500f;
     float _steerangl = 0.0f;
 
-    internal Vector3 startPos;
-    internal Vector3 startRot;
 
 
     void Awake()
@@ -28,7 +26,6 @@ public class carAgent : Agent
 
     void Start()
     {
-        progressTracker.getDistanceFromCenter();
         rBody = GetComponent<Rigidbody>();
         //startPos = transform.position;
         //startRot = transform.eulerAngles;
@@ -95,18 +92,6 @@ public class carAgent : Agent
     }
     public override void AgentAction(float[] vectorAction, string textAction){
         turnCar(vectorAction);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /*
         //Actions, size = 2
         Vector3 controlSignal = Vector3.zero;
@@ -125,27 +110,20 @@ public class carAgent : Agent
             SetReward(0.1f);
         }
         */
-        if(this.transform.position.y < 0)
+
+        if((progressTracker.getDistanceFromCenter() >= 1) && (progressTracker.SetupDone() == true))
         {
-            SetReward(-100.0f);
-            Done();
-        }
-
-        SetReward(0.005f);
-
-    }
-        private void OnTriggerEnter(Collider collider){
-        if(collider.CompareTag("target")){
-            SetReward(100.0f);
-            Done();
-        }
-
-        if(collider.CompareTag("back")){
-            SetReward(-100.0f);
+            SetReward(-1.0f);
             Done();
         }
         
+
+        SetReward(1.0f - progressTracker.getDistanceFromCenter());
+
     }
+
+        
+
 
 
         void updateWheelPos(WheelCollider col, Transform t)

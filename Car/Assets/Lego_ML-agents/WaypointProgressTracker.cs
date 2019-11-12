@@ -45,10 +45,12 @@ namespace UnityStandardAssets.Utility
         public Transform target;
 
         private float progressDistance; // The progress round the route, used in smooth mode.
+        Vector3 progressDelta;
+        float progressDeltaX;
+        float progressDeltaZ;
         private int progressNum; // the current waypoint number, used in point-to-point mode.
         private Vector3 lastPosition; // Used to calculate current speed (since we may not have a rigidbody component)
         private float speed; // current speed of this object (calculated from delta since last frame)
-        Transform tMin = null;
         // setup script properties
         private void Start()
         {
@@ -104,9 +106,9 @@ namespace UnityStandardAssets.Utility
 
                 // get our current progress along the route
                 progressPoint = circuit.GetRoutePoint(progressDistance);
-                Vector3 progressDelta = progressPoint.position - transform.position;
-                float progressDeltaX = progressPoint.position.x - transform.position.x;
-                float progressDeltaZ = progressPoint.position.z - transform.position.z;
+                progressDelta = progressPoint.position - transform.position;
+                progressDeltaX = progressPoint.position.x - transform.position.x;
+                progressDeltaZ = progressPoint.position.z - transform.position.z;
                 
                 if(progressDeltaX < -1 || progressDeltaX > 1)
                 {
@@ -155,11 +157,25 @@ namespace UnityStandardAssets.Utility
         }
 
 
-        public Vector3 getDistanceFromCenter()
+        public float getDistanceFromCenter()
         {
-            Debug.Log("You used the method!");
-            Vector3 distance = transform.position - target.position;
-            return distance;
+            float distance = Vector3.Distance(transform.position, target.position);
+            float distanceNormalized = Mathf.InverseLerp(0.0f, 0.5f, distance);
+            return distanceNormalized;
+        }
+
+        public bool SetupDone(){
+            bool done;
+            progressDeltaX = target.position.x - transform.position.x;
+            progressDeltaZ = target.position.z - transform.position.z;
+            if((progressDeltaX > -1 || progressDeltaX < 1) && (progressDeltaZ > -1 || progressDeltaZ < 1))
+            {
+                //Debug.Log("test");
+                done = true;
+            }else done = false;
+            Debug.Log("progresdeltaX:" + progressDeltaX + "\nprogressdeltaZ:" + progressDeltaZ);
+            Debug.Log(done);
+            return done;
         }
         private void OnDrawGizmos()
         {
@@ -167,9 +183,6 @@ namespace UnityStandardAssets.Utility
             {
                 Gizmos.color = Color.green;
                 Gizmos.DrawLine(transform.position, target.position);
-                Gizmos.DrawWireSphere(circuit.GetRoutePosition(progressDistance), 1);
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawLine(target.position, target.position + target.forward);
             }
         }
     }

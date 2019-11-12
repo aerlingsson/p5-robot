@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/NewRoadSystem.unity
+- path: Assets/Scenes/TrainingScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
