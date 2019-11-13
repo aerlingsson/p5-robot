@@ -117,12 +117,16 @@ public class carAgent : Agent
         }
         */
 
-        /*if ((progressTracker.getDistanceFromCenter() >= 1) && (progressTracker.SetupDone()))
+        Debug.Log(progressTracker.SetupDone());
+        if (progressTracker.SetupDone() == true)
         {
-            SetReward(-1.0f);
-            progressTracker.Reset();
-            Done();
-        }*/
+            if (progressTracker.getDistanceFromCenter() >= 1)
+            {
+                SetReward(-1.0f);
+                progressTracker.Reset();
+                Done();
+            }
+        }
 
 
         SetReward(1.0f - progressTracker.getDistanceFromCenter());
