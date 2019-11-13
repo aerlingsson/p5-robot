@@ -76,19 +76,55 @@ public class carAgent : Agent
         switch (action)
         {
             case 1:
-                _steerangl = -25.6f;
+                _steerangl = 0.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 break;
 
             case 2:
-                _steerangl = 25.6f;
+                _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 break;
 
             case 3:
-                _steerangl = 0.0f;
+                _steerangl = 12.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                break;
+                
+            case 4:
+                _steerangl = 18.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                break;
+                
+            case 5:
+                _steerangl = 21.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                break;
+                
+            case 6:
+                _steerangl = -6.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                break;
+                
+            case 7:
+                _steerangl = -12.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                break;
+                
+            case 8:
+                _steerangl = -18.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                break;
+                
+            case 9:
+                _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 break;
