@@ -110,14 +110,14 @@ namespace UnityStandardAssets.Utility
                 progressDeltaX = progressPoint.position.x - transform.position.x;
                 progressDeltaZ = progressPoint.position.z - transform.position.z;
                 
-                if(progressDeltaX < -1 || progressDeltaX > 1)
+                if(progressDeltaX < -1.0f || progressDeltaX > 1.0f)
                 {
                     progressDistance += 1.0f;
-                    if((progressDeltaX > -1 || progressDeltaX < 1) && (progressDeltaZ < -1 || progressDeltaZ > 1)){
-                        progressDistance += 5.0f;
-                    }
                 }
-                else
+                else 
+                if((progressDeltaX > -1.0f && progressDeltaX < 1.0f) && (progressDeltaZ < -1.0f || progressDeltaZ > 1.0f)){
+                        progressDistance += 2.0f;
+                } else
                 {
                     if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
                     {
@@ -128,6 +128,7 @@ namespace UnityStandardAssets.Utility
                         progressDistance -= progressDelta.magnitude*0.5f;      
                     }
                 }
+                Debug.Log(Vector3.Dot(progressDelta, progressPoint.direction));
                 lastPosition = transform.position;
 
             }
@@ -173,8 +174,6 @@ namespace UnityStandardAssets.Utility
                 //Debug.Log("test");
                 done = true;
             }else done = false;
-            Debug.Log("progresdeltaX:" + progressDeltaX + "\nprogressdeltaZ:" + progressDeltaZ);
-            Debug.Log(done);
             return done;
         }
         private void OnDrawGizmos()

@@ -24,6 +24,7 @@ public class carAgent : Agent
         spawnlocations = GameObject.FindGameObjectsWithTag("spawnpoint");
     }
 
+
     void Start()
     {
         rBody = GetComponent<Rigidbody>();
@@ -42,7 +43,8 @@ public class carAgent : Agent
         updateWheelPos(back_passenger_col, backPassenger);
     }
 
-    public override void AgentReset(){
+    public override void AgentReset()
+    {
         this.rBody.angularVelocity = Vector3.zero;
         this.rBody.velocity = Vector3.zero;
         //transform.position = startPos;
@@ -54,7 +56,8 @@ public class carAgent : Agent
 
     }
 
-    public override void CollectObservations(){
+    public override void CollectObservations()
+    {
         //position of the agent used for rewards
         AddVectorObs(this.transform.position);
 
@@ -66,10 +69,12 @@ public class carAgent : Agent
     }
 
 
-    public void turnCar(float[] act){
+    public void turnCar(float[] act)
+    {
         var action = Mathf.FloorToInt(act[0]);
 
-        switch(action){
+        switch (action)
+        {
             case 1:
                 _steerangl = -25.6f;
                 front_driver_col.steerAngle = _steerangl;
@@ -90,7 +95,8 @@ public class carAgent : Agent
         }
 
     }
-    public override void AgentAction(float[] vectorAction, string textAction){
+    public override void AgentAction(float[] vectorAction, string textAction)
+    {
         turnCar(vectorAction);
         /*
         //Actions, size = 2
@@ -111,22 +117,28 @@ public class carAgent : Agent
         }
         */
 
-        if((progressTracker.getDistanceFromCenter() >= 1) && (progressTracker.SetupDone() == true))
+        /*if ((progressTracker.getDistanceFromCenter() >= 1) && (progressTracker.SetupDone()))
         {
             SetReward(-1.0f);
+            progressTracker.Reset();
             Done();
-        }
-        
+        }*/
+
 
         SetReward(1.0f - progressTracker.getDistanceFromCenter());
 
     }
 
-        
 
 
 
-        void updateWheelPos(WheelCollider col, Transform t)
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+
+    }
+    void updateWheelPos(WheelCollider col, Transform t)
     {
         Vector3 pos = t.position;
         Quaternion rot = t.rotation;
