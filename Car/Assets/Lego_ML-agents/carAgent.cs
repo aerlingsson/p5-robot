@@ -61,13 +61,12 @@ public class carAgent : Agent
     public override void CollectObservations()
     {
         //position of the agent used for rewards
-        AddVectorObs(this.transform.position);
-
+        //AddVectorObs(this.transform.position);
         //wheelcolliders used to driver and steer the agent
         //AddVectorObs(back_driver_col.motorTorque);
         //AddVectorObs(back_passenger_col.motorTorque);
-        AddVectorObs(front_driver_col.steerAngle);
-        AddVectorObs(front_passenger_col.steerAngle);
+        //AddVectorObs(front_driver_col.steerAngle);
+        //AddVectorObs(front_passenger_col.steerAngle);
     }
 
 
