@@ -114,7 +114,7 @@ namespace UnityStandardAssets.Utility
                 
                 if(progressDeltaX < -1.0f || progressDeltaX > 1.0f)
                 {
-                    progressDistance += 1.0f;
+                    progressDistance += progressDelta.magnitude;
                 }
                 else 
                 if((progressDeltaX > -1.0f && progressDeltaX < 1.0f) && (progressDeltaZ < -1.0f || progressDeltaZ > 1.0f)){
@@ -172,7 +172,6 @@ namespace UnityStandardAssets.Utility
             progressDeltaZ = target.position.z - transform.position.z;
             if((progressDeltaX > -0.5f && progressDeltaX < 0.5f) && (progressDeltaZ > -0.5f && progressDeltaZ < 0.5f))
             {
-                //Debug.Log("test");
                 done = true;
             }
             return done;

@@ -16,6 +16,8 @@ public class carAgent : Agent
     float _steerAngle = 30.0f;
     float _motorForce = 500f;
     float _steerangl = 0.0f;
+    float turningNumber = 0.0f;
+
 
 
 
@@ -76,58 +78,68 @@ public class carAgent : Agent
         switch (action)
         {
             case 1:
-                _steerangl = 0.0f;
+                _steerangl = _steerangl - turningNumber;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 0;
                 break;
 
             case 2:
                 _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 6.0f;
                 break;
 
             case 3:
                 _steerangl = 12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 12.0f;
                 break;
                 
             case 4:
                 _steerangl = 18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 18.0f;
                 break;
                 
             case 5:
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 21.0f;
                 break;
                 
             case 6:
                 _steerangl = -6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = -6.0f;
                 break;
                 
             case 7:
                 _steerangl = -12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = -12.0f;
                 break;
                 
             case 8:
                 _steerangl = -18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = -18.0f;
                 break;
                 
             case 9:
                 _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
+                turningNumber = -21.0f;
                 break;
+            
         }
 
     }
@@ -153,7 +165,6 @@ public class carAgent : Agent
         }
         */
 
-        Debug.Log(progressTracker.SetupDone());
         if (progressTracker.SetupDone() == true)
         {
             if (progressTracker.getDistanceFromCenter() >= 1)
