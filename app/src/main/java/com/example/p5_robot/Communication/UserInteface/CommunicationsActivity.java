@@ -15,9 +15,7 @@ public abstract class CommunicationsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_communications);
 
         // Retrieve the address of the bluetooth device from the BluetoothListDeviceActivity

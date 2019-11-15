@@ -1,11 +1,14 @@
 package com.example.p5_robot.Communication.UserInteface;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.p5_robot.Agent.CameraPageActivity;
 import com.example.p5_robot.R;
 
 import java.io.IOException;
@@ -14,6 +17,7 @@ import java.io.InputStream;
 
 public class MainCommunicationsActivity extends CommunicationsActivity {
 
+    private static final String TAG = "MainCommActivity";
     private InputStream in;
 
     @Override
@@ -27,10 +31,17 @@ public class MainCommunicationsActivity extends CommunicationsActivity {
             e.printStackTrace();
         }
 
-        Button button = findViewById(R.id.button);
-        final EditText userText = findViewById(R.id.editText);
+        // Starts the camera activity
+        CameraPageActivity cameraPageActivity = new CameraPageActivity();
+        Intent i = new Intent(MainCommunicationsActivity.this, CameraPageActivity.class); // Make an intent to start next activity.
+        Log.d(TAG, "Starting camera activity");
+        startActivity(i);                       //Change the activity.
 
-        final TextView serverMsg = findViewById(R.id.textView);
+
+        Button button = findViewById(R.id.send_button);
+        final EditText userText = findViewById(R.id.send_to_server_text);
+
+        final TextView serverMsg = findViewById(R.id.server_messages);
         String srv = "Messages from the server will appear here:\n";
         serverMsg.setText(srv);
 
