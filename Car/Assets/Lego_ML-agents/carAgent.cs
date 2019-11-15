@@ -14,7 +14,7 @@ public class carAgent : Agent
     public Transform frontDriver, frontPassenger;
     public Transform backDriver, backPassenger;
     float _steerAngle = 30.0f;
-    float _motorForce = 500f;
+    float _motorForce = 0.0f;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
 
@@ -32,8 +32,7 @@ public class carAgent : Agent
         rBody = GetComponent<Rigidbody>();
         //startPos = transform.position;
         //startRot = transform.eulerAngles;
-        back_driver_col.motorTorque = _motorForce;
-        back_passenger_col.motorTorque = _motorForce;
+
     }
 
     // Update is called once per frame
@@ -43,6 +42,8 @@ public class carAgent : Agent
         updateWheelPos(front_passenger_col, frontPassenger);
         updateWheelPos(back_driver_col, backDriver);
         updateWheelPos(back_passenger_col, backPassenger);
+        back_driver_col.motorTorque = _motorForce;
+        back_passenger_col.motorTorque = _motorForce;
     }
 
     public override void AgentReset()
@@ -55,6 +56,7 @@ public class carAgent : Agent
         this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));*/
         int spawn = Random.Range(0, spawnlocations.Length);
         this.transform.position = spawnlocations[spawn].transform.position;
+        _motorForce = 0.0f;
 
     }
 
@@ -166,6 +168,7 @@ public class carAgent : Agent
 
         if (progressTracker.SetupDone() == true)
         {
+            _motorForce = 300.0f;
             if (progressTracker.getDistanceFromCenter() >= 1)
             {
                 SetReward(-1.0f);

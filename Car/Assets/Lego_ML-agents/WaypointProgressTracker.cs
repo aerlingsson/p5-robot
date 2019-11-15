@@ -112,12 +112,12 @@ namespace UnityStandardAssets.Utility
                 progressDeltaX = progressPoint.position.x - transform.position.x;
                 progressDeltaZ = progressPoint.position.z - transform.position.z;
                 
-                if(progressDeltaX < -1.0f || progressDeltaX > 1.0f)
+                if(progressDeltaX < -0.7f || progressDeltaX > 0.7f)
                 {
                     progressDistance += progressDelta.magnitude;
                 }
                 else 
-                if((progressDeltaX > -1.0f && progressDeltaX < 1.0f) && (progressDeltaZ < -1.0f || progressDeltaZ > 1.0f)){
+                if((progressDeltaX > -0.7f && progressDeltaX < 0.7f) && (progressDeltaZ < -0.7f || progressDeltaZ > 0.7f)){
                         progressDistance += 2.0f;
                 } else
                 {
