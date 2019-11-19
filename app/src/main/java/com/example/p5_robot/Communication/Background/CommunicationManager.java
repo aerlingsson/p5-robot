@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.p5_robot.Communication.UserInterface.CommunicationsActivity;
 import com.example.p5_robot.R;
 
 import java.io.IOException;

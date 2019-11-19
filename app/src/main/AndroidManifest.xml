@@ -29,7 +29,6 @@
         </activity>
 
         <activity android:name=".Communication.UserInterface.MainCommunicationsActivity" />
-        <activity android:name=".Communication.UserInterface.DeviceListActivity" />
         <activity android:name=".Communication.Background.CommunicationManager" />
         <activity android:name=".Agent.CameraPageActivity" />
     </application>

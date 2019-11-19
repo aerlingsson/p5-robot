@@ -1,4 +1,4 @@
-package com.example.p5_robot.Communication.UserInterface;
+package com.example.p5_robot.Communication.Background;
 
 import android.content.Intent;
 import android.os.Bundle;

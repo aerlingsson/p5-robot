@@ -1,15 +1,9 @@
 package com.example.p5_robot.Communication.UserInterface;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.p5_robot.Agent.CameraPageActivity;
-import com.example.p5_robot.R;
+import com.example.p5_robot.Communication.Background.CommunicationsActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
