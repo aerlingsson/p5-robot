@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import java.util.UUID;
 
 
 public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
+
+    private static final String TAG = "CommunicationsTask";
 
     private boolean connected = true;
     private ProgressDialog progressDialog;
@@ -30,7 +33,7 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPreExecute()     {
-        progressDialog = ProgressDialog.show(this.currentActivity, "Connecting...", "Please wait!!!");  //show a progress dialog
+        progressDialog = ProgressDialog.show(this.currentActivity, "Connecting...", "Please wait");  //show a progress dialog
     }
 
     @Override
@@ -42,10 +45,12 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
                 BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);         //connects to the device's address and checks if it's available
                 socket = device.createInsecureRfcommSocketToServiceRecord(myUUID);           //create a RFCOMM (SPP) connection
                 BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
-                socket.connect(); //start connection
+                Log.d(TAG, "Initiating connection to socket");
+                socket.connect(); //connect connection
             }
         }
         catch (IOException e) {
+            Log.d(TAG, "Connection FAILED");
             connected = false;      //if the try failed, you can check the exception here
         }
         return null;
@@ -58,11 +63,12 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
 
         if (!connected){
             message("Connection Failed. Is it a SPP Bluetooth running a server? Try again.");
+            Log.d(TAG, "Connection Failed. Is it a SPP Bluetooth running a server?");
             this.currentActivity.finish();
-
         }
         else {
             message("Connected.");
+            Log.d(TAG, "Successfully connected to Bluetooth device");
         }
         progressDialog.dismiss();
     }
@@ -92,7 +98,6 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
 
         this.currentActivity.finish();
     }
-
 
     private void message(String s) {
         Toast.makeText(this.currentActivity.getApplicationContext(),s, Toast.LENGTH_SHORT).show();

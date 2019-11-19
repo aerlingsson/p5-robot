@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".Communication.UserInteface.DeviceListActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
@@ -28,6 +28,9 @@
         </intent-filter>
         </activity>
 
-        <activity android:name=".Communication.UserInteface.MainCommunicationsActivity" />
+        <activity android:name=".Communication.UserInterface.MainCommunicationsActivity" />
+        <activity android:name=".Communication.UserInterface.DeviceListActivity" />
+        <activity android:name=".Communication.Background.CommunicationManager" />
+        <activity android:name=".Agent.CameraPageActivity" />
     </application>
 </manifest>

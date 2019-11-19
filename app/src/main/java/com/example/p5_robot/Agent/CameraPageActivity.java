@@ -34,6 +34,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.example.p5_robot.Communication.Background.CommunicationManager;
 import com.example.p5_robot.R;
 
 import java.util.concurrent.Executor;
@@ -82,6 +83,7 @@ public class CameraPageActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.camera_activity);
+        Log.d(TAG, "STARTING CAMERA ACTIVITY");
 
         txView = findViewById(R.id.view_finder);
         text1 = findViewById(R.id.textView1);
@@ -98,7 +100,7 @@ public class CameraPageActivity extends AppCompatActivity {
     private void startCamera() {
         CameraX.unbindAll();
 
-        /* start preview */
+        /* connect preview */
         int aspRatioW = txView.getWidth();  //get width of screen
         int aspRatioH = txView.getHeight();  //get height
         Rational asp = new Rational(aspRatioW, aspRatioH); //aspect ratio
@@ -181,7 +183,7 @@ public class CameraPageActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        //start camera when permissions have been granted otherwise exit app
+        //connect camera when permissions have been granted otherwise exit app
         if (requestCode == REQUEST_CODE_PERMISSIONS) {
             if (allPermissionsGranted()) {
                 Toast.makeText(this, "Permissions not granted by the user.", Toast.LENGTH_SHORT).show();

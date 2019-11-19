@@ -1,4 +1,4 @@
-package com.example.p5_robot.Communication.UserInteface;
+package com.example.p5_robot.Communication.UserInterface;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -33,11 +33,11 @@ public class DeviceListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_list);
 
-        mDeviceList = findViewById(R.id.listView);
+        //mDeviceList = findViewById(R.id.listView);
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if(mBluetoothAdapter == null) {
-            Toast.makeText(getApplicationContext(), "Bluetooth Device Not Available", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Bluetooth device not available", Toast.LENGTH_LONG).show();
             finish();
         }
         else {
@@ -64,7 +64,7 @@ public class DeviceListActivity extends AppCompatActivity {
                 Log.d(TAG, "Found " + device.getName());
                 String address = device.getAddress();   //MAC Address
                 Log.d(TAG, "Got MAC " + address);
-                Intent i = new Intent(DeviceListActivity.this, MainCommunicationsActivity.class); // Make an intent to start next activity.
+                Intent i = new Intent(DeviceListActivity.this, MainCommunicationsActivity.class); // Make an intent to connect next activity.
                 Log.d(TAG, "Starting comm activity");
                 i.putExtra(EXTRA_ADDRESS, address);     //this will be received at CommunicationsActivity
                 startActivity(i);                       //Change the activity.
@@ -75,9 +75,9 @@ public class DeviceListActivity extends AppCompatActivity {
             Toast.makeText(this, ev3Name + " was not found. Make sure the device is paired", Toast.LENGTH_SHORT).show();
 
         }
-        
     }
 
+/*
     private void listPairedDevices() {
         Set<BluetoothDevice> mPairedDevices = mBluetoothAdapter.getBondedDevices();
         ArrayList<String> list = new ArrayList<>();
@@ -112,12 +112,13 @@ public class DeviceListActivity extends AppCompatActivity {
             // Get the device MAC address, the last 17 chars in the View
             String info = ((TextView) v).getText().toString();
             String address = info.substring(info.length() - 17);
-            // Make an intent to start next activity.
+            // Make an intent to connect next activity.
             Intent i = new Intent(DeviceListActivity.this, MainCommunicationsActivity.class);
             //Change the activity.
             i.putExtra(EXTRA_ADDRESS, address);     //this will be received at CommunicationsActivity
             startActivity(i);
         }
     };
+*/
 
 }

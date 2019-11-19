@@ -1,4 +1,4 @@
-package com.example.p5_robot.Communication.UserInteface;
+package com.example.p5_robot.Communication.UserInterface;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ public class MainCommunicationsActivity extends CommunicationsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_communications);
+        //setContentView(R.layout.activity_communications);
 
         try {
             this.in = btConnection.socket.getInputStream();
@@ -32,8 +32,8 @@ public class MainCommunicationsActivity extends CommunicationsActivity {
         }
 
         // Starts the camera activity
-        CameraPageActivity cameraPageActivity = new CameraPageActivity();
-        Intent i = new Intent(MainCommunicationsActivity.this, CameraPageActivity.class); // Make an intent to start next activity.
+        /*CameraPageActivity cameraPageActivity = new CameraPageActivity();
+        Intent i = new Intent(MainCommunicationsActivity.this, CameraPageActivity.class); // Make an intent to connect next activity.
         Log.d(TAG, "Starting camera activity");
         startActivity(i);                       //Change the activity.
 
@@ -55,7 +55,7 @@ public class MainCommunicationsActivity extends CommunicationsActivity {
                 btConnection.write((byte) '.');
                 msgFromServer(serverMsg);
             }
-        });
+        }); */
     }
 
     public void msgFromServer(TextView srvText) {
