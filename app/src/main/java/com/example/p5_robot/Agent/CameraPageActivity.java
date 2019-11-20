@@ -34,7 +34,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
-import com.example.p5_robot.Communication.Background.CommunicationManager;
 import com.example.p5_robot.R;
 
 import java.util.concurrent.Executor;

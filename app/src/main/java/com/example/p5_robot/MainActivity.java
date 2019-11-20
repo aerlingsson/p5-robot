@@ -9,7 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.p5_robot.Communication.Background.CommunicationManager;
+import com.example.p5_robot.Agent.CameraPageActivity;
+import com.example.p5_robot.Communication.Background.ConnectionActivity;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         } else {
             checkBluetoothAndConnect();
+            startCameraActivity();
         }
     }
 
@@ -50,15 +52,20 @@ public class MainActivity extends AppCompatActivity {
                 String btDeviceAddress = device.getAddress();   //MAC Address
                 Log.d(TAG, "Got MAC " + btDeviceAddress);
                 Log.d(TAG, "Starting comm activity");
-                CommunicationManager commMan = new CommunicationManager();
-                Intent i = new Intent(MainActivity.this, CommunicationManager.class); // Make an intent to connect next activity.
-                i.putExtra(EXTRA_ADDRESS, btDeviceAddress);     //this will be received at CommunicationsActivity
-                startActivity(i);                               //Change the activity.
+                ConnectionActivity commMan = new ConnectionActivity();
+                Intent ConnInt = new Intent(MainActivity.this, ConnectionActivity.class); // Make an intent to connect next activity.
+                ConnInt.putExtra(EXTRA_ADDRESS, btDeviceAddress);     //this will be received at CommunicationsActivity
+                startActivity(ConnInt);                               //Change the activity.
             }
         }
         if (!isEv3Paired) {
             Toast.makeText(this, deviceName + " was not found. Make sure the device is paired", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void startCameraActivity(){
+        Intent camInt = new Intent(MainActivity.this, CameraPageActivity.class);
+        startActivity(camInt);
     }
 
 }

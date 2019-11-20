@@ -9,9 +9,9 @@ import com.example.p5_robot.R;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class CommunicationManager extends CommunicationsActivity {
+public class ConnectionActivity extends CommunicationsActivity {
 
-    private static final String TAG = "CommunicationManager";
+    private static final String TAG = "ConnectionActivity";
     private InputStream in;
 
     @Override
