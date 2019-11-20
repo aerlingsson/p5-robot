@@ -372,7 +372,7 @@ MeshCollider:
   m_GameObject: {fileID: 3138335034246372184}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 3138335034268544517}
   - component: {fileID: 3138335034268544518}
   m_Layer: 0
-  m_Name: Road Network 3
+  m_Name: final Road Network
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1623,7 +1623,7 @@ MeshCollider:
   m_GameObject: {fileID: 3138335034325150014}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -2522,7 +2522,7 @@ MeshCollider:
   m_GameObject: {fileID: 3138335034501461785}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -2986,7 +2986,7 @@ MeshCollider:
   m_GameObject: {fileID: 3138335034504761127}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -3614,7 +3614,7 @@ MonoBehaviour:
   sideObjectNames: []
   selectedSO: 0
   rebuildSos: 0
-  sosCleared: 1
+  sosCleared: 0
   isSideObject: 0
   startOffsetActiveMarker: -1
   endOffsetActiveMarker: -1
@@ -3711,7 +3711,7 @@ MeshCollider:
   m_GameObject: {fileID: 3138335034746821650}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14

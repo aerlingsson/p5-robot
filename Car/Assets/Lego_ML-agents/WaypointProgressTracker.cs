@@ -51,7 +51,7 @@ namespace UnityStandardAssets.Utility
         private int progressNum; // the current waypoint number, used in point-to-point mode.
         private Vector3 lastPosition; // Used to calculate current speed (since we may not have a rigidbody component)
         private float speed; // current speed of this object (calculated from delta since last frame)
-        bool done = false;
+        bool done;
         // setup script properties
         private void Start()
         {
@@ -77,6 +77,18 @@ namespace UnityStandardAssets.Utility
             progressDistance = 0;
             progressNum = 0;
             done = false;
+            
+            if(progressStyle == ProgressStyle.SmoothAlongRoute)
+            {
+                target.position =
+                    circuit.GetRoutePoint(progressDistance + lookAheadForTargetOffset + lookAheadForTargetFactor*speed)
+                               .position;
+                target.rotation =
+                    Quaternion.LookRotation(
+                        circuit.GetRoutePoint(progressDistance + lookAheadForSpeedOffset + lookAheadForSpeedFactor*speed)
+                            .direction);
+            }
+
             if (progressStyle == ProgressStyle.PointToPoint)
             {
                 target.position = circuit.Waypoints[progressNum].position;
@@ -112,13 +124,13 @@ namespace UnityStandardAssets.Utility
                 progressDeltaX = progressPoint.position.x - transform.position.x;
                 progressDeltaZ = progressPoint.position.z - transform.position.z;
                 
-                if(progressDeltaX < -0.7f || progressDeltaX > 0.7f)
+                if(progressDeltaX < -0.6f || progressDeltaX > 0.6f)
                 {
-                    progressDistance += progressDelta.magnitude;
+                    progressDistance += progressDelta.magnitude*0.5f;
                 }
                 else 
-                if((progressDeltaX > -0.7f && progressDeltaX < 0.7f) && (progressDeltaZ < -0.7f || progressDeltaZ > 0.7f)){
-                        progressDistance += 2.0f;
+                if((progressDeltaX > -0.6f && progressDeltaX < 0.6f) && (progressDeltaZ < -0.6f || progressDeltaZ > 0.6f)){
+                    progressDistance += progressDelta.magnitude*0.5f;
                 } else
                 {
                     if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
@@ -170,7 +182,7 @@ namespace UnityStandardAssets.Utility
         public bool SetupDone(){
             progressDeltaX = target.position.x - transform.position.x;
             progressDeltaZ = target.position.z - transform.position.z;
-            if((progressDeltaX > -0.5f && progressDeltaX < 0.5f) && (progressDeltaZ > -0.5f && progressDeltaZ < 0.5f))
+            if((progressDeltaX > -0.3f && progressDeltaX < 0.3f) && (progressDeltaZ > -0.3f && progressDeltaZ < 0.3f))
             {
                 done = true;
             }

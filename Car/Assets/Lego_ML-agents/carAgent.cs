@@ -57,6 +57,8 @@ public class carAgent : Agent
         int spawn = Random.Range(0, spawnlocations.Length);
         this.transform.position = spawnlocations[spawn].transform.position;
         _motorForce = 0.0f;
+        progressTracker.Reset();
+
 
     }
 
@@ -172,7 +174,6 @@ public class carAgent : Agent
             if (progressTracker.getDistanceFromCenter() >= 1)
             {
                 SetReward(-1.0f);
-                progressTracker.Reset();
                 Done();
             }
         }
