@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -33,13 +34,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkBluetoothAndConnect(){
-        if (mBluetoothAdapter.isEnabled()){
-            connectToBtDevice();
-        } else {
-            Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            //Ask the user to turn bluetooth on
-            startActivityForResult(turnBTon, 1);
+
+        if (!mBluetoothAdapter.isEnabled()){
+
+            // Run it on another thread, cause otherwise the action gets overwritten
+            new Handler().post(new Runnable() {
+                @Override
+                public void run() {
+                    Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    //Ask the user to turn bluetooth on
+                    startActivityForResult(turnBTon, 1);
+                }
+            });
         }
+
+        connectToBtDevice();
+
     }
 
     private void connectToBtDevice(){
