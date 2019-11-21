@@ -142,7 +142,6 @@ namespace UnityStandardAssets.Utility
                         progressDistance -= progressDelta.magnitude*0.5f;      
                     }
                 }
-                Debug.Log(Vector3.Dot(progressDelta, progressPoint.direction));
                 lastPosition = transform.position;
 
             }
@@ -175,7 +174,7 @@ namespace UnityStandardAssets.Utility
         public float getDistanceFromCenter()
         {
             float distance = Vector3.Distance(transform.position, target.position);
-            float distanceNormalized = Mathf.InverseLerp(0.0f, 0.5f, distance);
+            float distanceNormalized = Mathf.InverseLerp(0.0f, 0.3f, distance);
             return distanceNormalized;
         }
 

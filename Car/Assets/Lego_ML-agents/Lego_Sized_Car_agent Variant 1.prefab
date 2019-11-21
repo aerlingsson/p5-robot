@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1718aa094d1b79d4b81983f8802226c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 14fe13462a64db64c802021e2b06de94, type: 2}
+  brain: {fileID: 11400000, guid: de35687702a50934e9abc889e9bb12fb, type: 2}
   agentParameters:
     agentCameras:
     - {fileID: 166898366751325217}
@@ -52,6 +52,7 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 10
   progressTracker: {fileID: 1946138655}
+  colourScript: {fileID: 0}
   spawnlocations: []
   front_driver_col: {fileID: 166898367170698503}
   front_passenger_col: {fileID: 166898367065652177}
@@ -91,7 +92,12 @@ PrefabInstance:
     - target: {fileID: 1839645294490940962, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_Name
-      value: Lego_Sized_Car_agent Variant 1
+      value: Lego_Sized_Car_agent Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839645294490940964, guid: ba51911dac3f0fd4ea3105628f20826e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1839645294490940964, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
@@ -103,16 +109,6 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 1839645294490940964, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645294490940964, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1839645294490940967, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -121,7 +117,7 @@ PrefabInstance:
     - target: {fileID: 1839645294490940967, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.062
       objectReference: {fileID: 0}
     - target: {fileID: 1839645294490940967, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
@@ -170,22 +166,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1839645294490940963, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645294490940963, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645294490940963, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1839645294490940963, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
-      propertyPath: m_CollisionDetection
+      propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1839645296579048300, guid: ba51911dac3f0fd4ea3105628f20826e,
@@ -195,13 +181,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1839645295673229860, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
-      propertyPath: m_FOVAxisMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645295673229860, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_AllowDynamicResolution
-      value: 0
+      propertyPath: field of view
+      value: 41.019043
       objectReference: {fileID: 0}
     - target: {fileID: 1839645295853831636, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
@@ -240,40 +221,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1839645296546611937, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_Radius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1839645296546611937, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_Height
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1839645296546611937, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645295048160738, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645295048160738, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Height
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1839645295048160738, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_Radius
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1839645295486004617, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645295486004617, guid: ba51911dac3f0fd4ea3105628f20826e,
+    - target: {fileID: 1839645295048160738, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_Height
       value: 1
@@ -283,12 +244,7 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1839645294657501851, guid: ba51911dac3f0fd4ea3105628f20826e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839645294657501851, guid: ba51911dac3f0fd4ea3105628f20826e,
+    - target: {fileID: 1839645295486004617, guid: ba51911dac3f0fd4ea3105628f20826e,
         type: 3}
       propertyPath: m_Height
       value: 1
@@ -297,6 +253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839645294657501851, guid: ba51911dac3f0fd4ea3105628f20826e,
+        type: 3}
+      propertyPath: m_Height
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba51911dac3f0fd4ea3105628f20826e, type: 3}

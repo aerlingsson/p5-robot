@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using ColourScript;
 using MLAgents;
+using UnityEngine;
 using UnityStandardAssets.Utility;
-public class carAgent : Agent
-{
+public class carAgent : Agent {
     Rigidbody rBody;
     public WaypointProgressTracker progressTracker; // A reference to the waypoint-based route we should follow
-
+    public ColorScript colourScript;
     [HideInInspector] public GameObject[] spawnlocations;
     public WheelCollider front_driver_col, front_passenger_col;
     public WheelCollider back_driver_col, back_passenger_col;
@@ -18,52 +18,43 @@ public class carAgent : Agent
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
 
-
-
-
-    void Awake()
-    {
-        spawnlocations = GameObject.FindGameObjectsWithTag("spawnpoint");
+    void Awake () {
+        spawnlocations = GameObject.FindGameObjectsWithTag ("spawnpoint");
     }
 
-
-    void Start()
-    {
-        rBody = GetComponent<Rigidbody>();
+    void Start () {
+        rBody = GetComponent<Rigidbody> ();
         //startPos = transform.position;
         //startRot = transform.eulerAngles;
 
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        updateWheelPos(front_driver_col, frontDriver);
-        updateWheelPos(front_passenger_col, frontPassenger);
-        updateWheelPos(back_driver_col, backDriver);
-        updateWheelPos(back_passenger_col, backPassenger);
+    void FixedUpdate () {
+        updateWheelPos (front_driver_col, frontDriver);
+        updateWheelPos (front_passenger_col, frontPassenger);
+        updateWheelPos (back_driver_col, backDriver);
+        updateWheelPos (back_passenger_col, backPassenger);
         back_driver_col.motorTorque = _motorForce;
         back_passenger_col.motorTorque = _motorForce;
     }
 
-    public override void AgentReset()
-    {
+    public override void AgentReset () {
+        colourScript.ChangeColourAndMaterial ();
         this.rBody.angularVelocity = Vector3.zero;
         this.rBody.velocity = Vector3.zero;
         //transform.position = startPos;
         //transform.eulerAngles = startRot;
         /*this.transform.position = new Vector3(5.133f, 0.14f, 16.752f);
         this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));*/
-        int spawn = Random.Range(0, spawnlocations.Length);
+        int spawn = Random.Range (0, spawnlocations.Length);
         this.transform.position = spawnlocations[spawn].transform.position;
         _motorForce = 0.0f;
-        progressTracker.Reset();
-
+        progressTracker.Reset ();
 
     }
 
-    public override void CollectObservations()
-    {
+    public override void CollectObservations () {
         //position of the agent used for rewards
         //AddVectorObs(this.transform.position);
         //wheelcolliders used to driver and steer the agent
@@ -73,82 +64,78 @@ public class carAgent : Agent
         //AddVectorObs(front_passenger_col.steerAngle);
     }
 
+    public void turnCar (float[] act) {
+        var action = Mathf.FloorToInt (act[0]);
 
-    public void turnCar(float[] act)
-    {
-        var action = Mathf.FloorToInt(act[0]);
-
-        switch (action)
-        {
-            case 1:
+        switch (action) {
+            case 0:
                 _steerangl = _steerangl - turningNumber;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 0;
                 break;
 
-            case 2:
+            case 1:
                 _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 6.0f;
                 break;
 
-            case 3:
+            case 2:
                 _steerangl = 12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 12.0f;
                 break;
-                
-            case 4:
+
+            case 3:
                 _steerangl = 18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 18.0f;
                 break;
-                
-            case 5:
+
+            case 4:
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 21.0f;
                 break;
-                
-            case 6:
+
+            case 5:
                 _steerangl = -6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -6.0f;
                 break;
-                
-            case 7:
+
+            case 6:
                 _steerangl = -12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -12.0f;
                 break;
-                
-            case 8:
+
+            case 7:
                 _steerangl = -18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -18.0f;
                 break;
-                
-            case 9:
+
+            case 8:
                 _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -21.0f;
                 break;
-            
+
         }
 
     }
-    public override void AgentAction(float[] vectorAction, string textAction)
-    {
-        turnCar(vectorAction);
+    public override void AgentAction (float[] vectorAction, string textAction) {
+        turnCar (vectorAction);
         /*
         //Actions, size = 2
         Vector3 controlSignal = Vector3.zero;
@@ -168,38 +155,34 @@ public class carAgent : Agent
         }
         */
 
-        if (progressTracker.SetupDone() == true)
-        {
+        if (progressTracker.SetupDone () == true) {
             _motorForce = 300.0f;
-            if (progressTracker.getDistanceFromCenter() >= 1)
-            {
-                SetReward(-1.0f);
-                Done();
-            }
+
+            //if (progressTracker.getDistanceFromCenter() >= 1)
+            //{
+            //  SetReward(-1.0f);
+            //Done();
+            //}
         }
 
-
-        SetReward(1.0f - progressTracker.getDistanceFromCenter());
-
-    }
-
-
-
-
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
+        SetReward (1.0f - progressTracker.getDistanceFromCenter ());
 
     }
-    void updateWheelPos(WheelCollider col, Transform t)
-    {
+
+    void OnCollisionEnter (Collision collision) {
+        if(collision.collider.tag == "plane"){
+            Done();
+        }
+    }
+
+    
+    void updateWheelPos (WheelCollider col, Transform t) {
         Vector3 pos = t.position;
         Quaternion rot = t.rotation;
 
-        col.GetWorldPose(out pos, out rot);
+        col.GetWorldPose (out pos, out rot);
         t.position = pos;
-        rot = rot * Quaternion.Euler(new Vector3(0, 0, 90));
+        rot = rot * Quaternion.Euler (new Vector3 (0, 0, 90));
         t.rotation = rot;
 
     }
