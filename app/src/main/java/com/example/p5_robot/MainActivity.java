@@ -26,18 +26,28 @@ public class MainActivity extends AppCompatActivity {
         this.mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
             Toast.makeText(getApplicationContext(), "Bluetooth device not available", Toast.LENGTH_LONG).show();
+            Log.d(TAG, "Bluetooth device not available");
             finish();
         } else {
             checkBluetoothAndConnect();
-            startCameraActivity();
+
+            // Start CameraPageActivity on new thread
+            new Handler().post(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d(TAG, "Launcing camera activity");
+                    Intent camInt = new Intent(MainActivity.this, CameraPageActivity.class);
+                    startActivity(camInt);
+
+                }
+            });
         }
     }
 
     private void checkBluetoothAndConnect(){
 
         if (!mBluetoothAdapter.isEnabled()){
-
-            // Run it on another thread, cause otherwise the action gets overwritten
+            // Run it on another thread, otherwise the action gets overwritten
             new Handler().post(new Runnable() {
                 @Override
                 public void run() {
@@ -59,23 +69,18 @@ public class MainActivity extends AppCompatActivity {
             if (device.getName().equals(deviceName)){
                 isEv3Paired = true;
                 Log.d(TAG, "Found " + device.getName());
-                String btDeviceAddress = device.getAddress();   //MAC Address
+                String btDeviceAddress = device.getAddress();         //MAC Address
                 Log.d(TAG, "Got MAC " + btDeviceAddress);
-                Log.d(TAG, "Starting comm activity");
-                ConnectionActivity commMan = new ConnectionActivity();
+                Log.d(TAG, "Starting conn activity");
                 Intent ConnInt = new Intent(MainActivity.this, ConnectionActivity.class); // Make an intent to connect next activity.
                 ConnInt.putExtra(EXTRA_ADDRESS, btDeviceAddress);     //this will be received at CommunicationsActivity
                 startActivity(ConnInt);                               //Change the activity.
+                Log.d(TAG, "Done with conn activity");
             }
         }
         if (!isEv3Paired) {
             Toast.makeText(this, deviceName + " was not found. Make sure the device is paired", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private void startCameraActivity(){
-        Intent camInt = new Intent(MainActivity.this, CameraPageActivity.class);
-        startActivity(camInt);
     }
 
 }

@@ -82,7 +82,7 @@ public class CameraPageActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.camera_activity);
-        Log.d(TAG, "STARTING CAMERA ACTIVITY");
+        Log.d(TAG, "Starting camera activity");
 
         txView = findViewById(R.id.view_finder);
         text1 = findViewById(R.id.textView1);

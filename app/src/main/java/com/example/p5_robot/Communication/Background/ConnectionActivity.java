@@ -18,10 +18,11 @@ public class ConnectionActivity extends CommunicationsActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera_activity);
+        Log.d(TAG, "Started ConnectionActivity");
 
         try {
             this.in = super.btConnection.socket.getInputStream();
-            Log.d(TAG, "InputStream set");
+            Log.d(TAG, "InputStream set successfully");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -41,12 +41,13 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
 
         try {
             if (socket == null || !connected) {
+                Log.d(TAG, "Starting doInBackground");
                 BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();   //get the mobile bluetooth device
                 BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);         //connects to the device's address and checks if it's available
                 socket = device.createInsecureRfcommSocketToServiceRecord(myUUID);           //create a RFCOMM (SPP) connection
                 BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
                 Log.d(TAG, "Initiating connection to socket");
-                socket.connect(); //connect connection
+                socket.connect();
             }
         }
         catch (IOException e) {
