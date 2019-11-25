@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Bluetooth device not available", Toast.LENGTH_LONG).show();
             Log.d(TAG, "Bluetooth device not available");
             finish();
+
         } else {
             checkBluetoothAndConnect();
 
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Done with conn activity");
             }
         }
+
         if (!isEv3Paired) {
             Toast.makeText(this, deviceName + " was not found. Make sure the device is paired", Toast.LENGTH_SHORT).show();
         }
