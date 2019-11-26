@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Log;
-import android.util.Rational;
 import android.view.TextureView;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -23,7 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraX;
 import androidx.camera.core.ImageAnalysis;
 import androidx.camera.core.ImageAnalysisConfig;
@@ -98,15 +96,15 @@ public class CameraPageActivity extends CommunicationsActivity {
     private void startCamera() {
         CameraX.unbindAll();
 
-        Preview preview = buildPreview();
-        ImageAnalysis analysis = buildAnalyzer();
+        Preview preview = buildCameraPreview();
+        ImageAnalysis analysis = buildImageAnalyser();
 
         CameraX.bindToLifecycle((LifecycleOwner) this, analysis, preview);
     }
 
 
 
-    private Preview buildPreview(){
+    private Preview buildCameraPreview(){
         /* connect preview */
         int aspRatioW = txView.getWidth();  //get width of screen
         int aspRatioH = txView.getHeight();  //get height
@@ -130,7 +128,7 @@ public class CameraPageActivity extends CommunicationsActivity {
         return preview;
     }
 
-    private ImageAnalysis buildAnalyzer(){
+    private ImageAnalysis buildImageAnalyser(){
         HandlerThread analyzerThread = new HandlerThread("OpenCVAnalysis");
         analyzerThread.start();
 
@@ -145,19 +143,7 @@ public class CameraPageActivity extends CommunicationsActivity {
                     @Override
                     public void analyze(ImageProxy image, int rotationDegrees) {
                         Bitmap bitmap = txView.getBitmap();
-
-                        Mat mat = new Mat();
-                        Utils.bitmapToMat(bitmap, mat);
-
-                        Imgproc.resize(mat, mat, new Size(INPUT_SIZE, INPUT_SIZE));
-                        Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE/2, INPUT_SIZE/2), 90, 1);
-
-                        //Rotating the given image
-                        Imgproc.warpAffine(mat, mat, rotationMatrix, new Size(INPUT_SIZE, INPUT_SIZE));
-
-                        Bitmap img = Bitmap.createBitmap(INPUT_SIZE, INPUT_SIZE, Bitmap.Config.ARGB_8888);
-
-                        Utils.matToBitmap(mat, img);
+                        Bitmap img = preprocessImage(bitmap);
 
                         labelText = model.runInference(img);
 
@@ -193,6 +179,23 @@ public class CameraPageActivity extends CommunicationsActivity {
                 });
         return analysis;
     }
+
+
+    private Bitmap preprocessImage(Bitmap bitmap){
+        Mat mat = new Mat();
+        Utils.bitmapToMat(bitmap, mat);
+
+        Imgproc.resize(mat, mat, new Size(INPUT_SIZE, INPUT_SIZE));
+        Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE/2, INPUT_SIZE/2), 90, 1);
+
+        Imgproc.warpAffine(mat, mat, rotationMatrix, new Size(INPUT_SIZE, INPUT_SIZE));
+
+        Bitmap img = Bitmap.createBitmap(INPUT_SIZE, INPUT_SIZE, Bitmap.Config.ARGB_8888);
+        Utils.matToBitmap(mat, img);
+
+        return img;
+    }
+
 
     private int getFps(){
         long end = System.currentTimeMillis();
