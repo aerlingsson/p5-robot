@@ -28,8 +28,6 @@
         </intent-filter>
         </activity>
 
-        <activity android:name=".Communication.UserInterface.MainCommunicationsActivity" />
-        <activity android:name=".Communication.Background.ConnectionActivity" />
         <activity android:name=".Agent.CameraPageActivity" />
     </application>
 </manifest>

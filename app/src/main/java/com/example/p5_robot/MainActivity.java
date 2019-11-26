@@ -11,7 +11,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.p5_robot.Agent.CameraPageActivity;
-import com.example.p5_robot.Communication.Background.ConnectionActivity;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
@@ -31,17 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             checkBluetoothAndConnect();
-
-            // Start CameraPageActivity on new thread
-            new Handler().post(new Runnable() {
-                @Override
-                public void run() {
-                    Log.d(TAG, "Launcing camera activity");
-                    Intent camInt = new Intent(MainActivity.this, CameraPageActivity.class);
-                    startActivity(camInt);
-
-                }
-            });
         }
     }
 
@@ -69,14 +57,17 @@ public class MainActivity extends AppCompatActivity {
         for (BluetoothDevice device : mBluetoothAdapter.getBondedDevices()){
             if (device.getName().equals(deviceName)){
                 isEv3Paired = true;
+
                 Log.d(TAG, "Found " + device.getName());
+
                 String btDeviceAddress = device.getAddress();         //MAC Address
+
                 Log.d(TAG, "Got MAC " + btDeviceAddress);
-                Log.d(TAG, "Starting conn activity");
-                Intent ConnInt = new Intent(MainActivity.this, ConnectionActivity.class); // Make an intent to connect next activity.
-                ConnInt.putExtra(EXTRA_ADDRESS, btDeviceAddress);     //this will be received at CommunicationsActivity
-                startActivity(ConnInt);                               //Change the activity.
-                Log.d(TAG, "Done with conn activity");
+                Log.d(TAG, "Launcing camera activity");
+
+                Intent camInt = new Intent(MainActivity.this, CameraPageActivity.class);
+                camInt.putExtra(EXTRA_ADDRESS, btDeviceAddress);
+                startActivity(camInt);
             }
         }
 

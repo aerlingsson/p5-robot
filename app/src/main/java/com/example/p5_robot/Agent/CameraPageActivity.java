@@ -34,18 +34,17 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.example.p5_robot.Communication.Background.CommunicationsActivity;
 import com.example.p5_robot.R;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class CameraPageActivity extends AppCompatActivity {
-    private static final String MODEL_PATH = "models/model.tflite";
+public class CameraPageActivity extends CommunicationsActivity {
+    private static final String MODEL_PATH = "models/model_test.tflite";
     private static final String LABEL_PATH = "labels.txt";
-    private static final int INPUT_SIZE = 128;
+    private static final int INPUT_SIZE = 80;
     private static final String TAG = "CameraPageActivity";
-    private static final int WIDTH = 720;
-    private static final int HEIGHT = 720;
 
     private TensorflowModel model;
     private Executor executor = Executors.newSingleThreadExecutor();
@@ -99,10 +98,18 @@ public class CameraPageActivity extends AppCompatActivity {
     private void startCamera() {
         CameraX.unbindAll();
 
+        Preview preview = buildPreview();
+        ImageAnalysis analysis = buildAnalyzer();
+
+        CameraX.bindToLifecycle((LifecycleOwner) this, analysis, preview);
+    }
+
+
+
+    private Preview buildPreview(){
         /* connect preview */
         int aspRatioW = txView.getWidth();  //get width of screen
         int aspRatioH = txView.getHeight();  //get height
-        Rational asp = new Rational(aspRatioW, aspRatioH); //aspect ratio
         android.util.Size screen = new android.util.Size(aspRatioW, aspRatioH); //size of the screen
 
         PreviewConfig pConfig = new PreviewConfig.Builder().setTargetResolution(screen).build();
@@ -120,8 +127,10 @@ public class CameraPageActivity extends AppCompatActivity {
 
                     }
                 });
+        return preview;
+    }
 
-
+    private ImageAnalysis buildAnalyzer(){
         HandlerThread analyzerThread = new HandlerThread("OpenCVAnalysis");
         analyzerThread.start();
 
@@ -141,17 +150,31 @@ public class CameraPageActivity extends AppCompatActivity {
                         Utils.bitmapToMat(bitmap, mat);
 
                         Imgproc.resize(mat, mat, new Size(INPUT_SIZE, INPUT_SIZE));
-                        Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE, INPUT_SIZE), 270, 1);
+                        Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE/2, INPUT_SIZE/2), 90, 1);
 
                         //Rotating the given image
-                        Imgproc.warpAffine(mat, mat, rotationMatrix, new Size(mat.cols(), mat.cols()));
+                        Imgproc.warpAffine(mat, mat, rotationMatrix, new Size(INPUT_SIZE, INPUT_SIZE));
 
                         Bitmap img = Bitmap.createBitmap(INPUT_SIZE, INPUT_SIZE, Bitmap.Config.ARGB_8888);
-
 
                         Utils.matToBitmap(mat, img);
 
                         labelText = model.runInference(img);
+
+
+                        final String msg = labelText + "_10";
+
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    btConnection.write(msg);
+                                } catch (Exception e) {
+                                    Log.d(TAG, "Tried to write while not connected to BT");
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
 
                         text1.post(new Runnable() {
                             public void run() {
@@ -168,8 +191,7 @@ public class CameraPageActivity extends AppCompatActivity {
 
                     }
                 });
-
-        CameraX.bindToLifecycle((LifecycleOwner) this, analysis, preview);
+        return analysis;
     }
 
     private int getFps(){

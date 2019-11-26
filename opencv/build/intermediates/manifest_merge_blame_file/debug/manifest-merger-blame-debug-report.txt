@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/home/arnar/AndroidStudioProjects/P5Robot/opencv/java/AndroidManifest.xml
+8-->/home/rasmus/Desktop/p5-robot2/opencv/java/AndroidManifest.xml
 9        android:targetSdkVersion="26" />
-9-->/home/arnar/AndroidStudioProjects/P5Robot/opencv/java/AndroidManifest.xml
+9-->/home/rasmus/Desktop/p5-robot2/opencv/java/AndroidManifest.xml
 10
 11</manifest>

@@ -18,7 +18,7 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
 
     private static final String TAG = "CommunicationsTask";
 
-    private boolean connected = true;
+    private boolean connected = false;
     private ProgressDialog progressDialog;
     public BluetoothSocket socket = null;
     private AppCompatActivity currentActivity;
@@ -48,6 +48,7 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
                 BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
                 Log.d(TAG, "Initiating connection to socket");
                 socket.connect();
+                connected = true;
             }
         }
         catch (IOException e) {
@@ -65,7 +66,7 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
         if (!connected){
             message("Connection Failed. Is it a SPP Bluetooth running a server? Try again.");
             Log.d(TAG, "Connection Failed. Is it a SPP Bluetooth running a server?");
-            this.currentActivity.finish();
+            //this.currentActivity.finish();
         }
         else {
             message("Connected.");
@@ -74,10 +75,16 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
         progressDialog.dismiss();
     }
 
-    public void write(byte b) {
+    public void write(String msg) throws Exception {
+        if (!connected){
+            throw new Exception("Tried to write a msg while not connected");
+        }
+
+
+        msg += '.';
 
         try {
-            socket.getOutputStream().write((int)b);
+            socket.getOutputStream().write(msg.getBytes());
         }
         catch (IOException e) {
             System.out.println(e.getMessage());

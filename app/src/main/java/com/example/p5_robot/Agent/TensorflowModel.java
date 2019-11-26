@@ -19,10 +19,8 @@ import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.gpu.GpuDelegate;
 
 public class TensorflowModel {
-    private static final int IMAGE_MEAN = 128;
     private static final int BATCH_SIZE = 1;
     private static final int CHANNELS = 3;
-    private static final float NORMALIZATION_VALUE = 255.0f;
 
     private int inputSize;
     private Interpreter interpreter;
@@ -68,7 +66,6 @@ public class TensorflowModel {
     }
 
     public String runInference(Bitmap bitmap) {
-        System.out.println(bitmap);
         ByteBuffer buffer = convertBitmapToByteBuffer(bitmap);
 
         float[][] result = new float[1][labels.size()];
@@ -105,9 +102,9 @@ public class TensorflowModel {
         for (int i = 0; i < inputSize; ++i) {
             for (int j = 0; j < inputSize; ++j) {
                 final int val = intValues[pixel++];
-                byteBuffer.putFloat(( (val >> 16) & 0xFF) / NORMALIZATION_VALUE);
-                byteBuffer.putFloat(( (val >> 8) & 0xFF) / NORMALIZATION_VALUE);
-                byteBuffer.putFloat(( (val) & 0xFF) / NORMALIZATION_VALUE);
+                byteBuffer.putFloat(( (val >> 16) & 0xFF));
+                byteBuffer.putFloat(( (val >> 8) & 0xFF));
+                byteBuffer.putFloat(( (val) & 0xFF));
             }
         }
         return byteBuffer;
