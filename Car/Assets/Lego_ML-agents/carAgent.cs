@@ -157,15 +157,9 @@ public class carAgent : Agent {
 
         if (progressTracker.SetupDone () == true) {
             _motorForce = 300.0f;
-
-            //if (progressTracker.getDistanceFromCenter() >= 1)
-            //{
-            //  SetReward(-1.0f);
-            //Done();
-            //}
+            SetReward (1.0f - progressTracker.getDistanceFromCenter ());
         }
 
-        SetReward (1.0f - progressTracker.getDistanceFromCenter ());
 
     }
 
