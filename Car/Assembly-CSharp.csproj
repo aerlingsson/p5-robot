@@ -225,9 +225,6 @@
  <Reference Include="Unity.Timeline">
  <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
@@ -236,6 +233,9 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>C:/Users/Jan/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

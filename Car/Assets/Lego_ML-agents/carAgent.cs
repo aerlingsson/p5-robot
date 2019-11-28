@@ -8,7 +8,9 @@ public class carAgent : Agent {
     Rigidbody rBody;
     public WaypointProgressTracker progressTracker; // A reference to the waypoint-based route we should follow
     public ColorScript colourScript;
-    [HideInInspector] public GameObject[] spawnlocations;
+    private GameObject[] spawnlocations;
+    private GameObject[] lights;
+    public GameObject directionalLight;
     public WheelCollider front_driver_col, front_passenger_col;
     public WheelCollider back_driver_col, back_passenger_col;
     public Transform frontDriver, frontPassenger;
@@ -20,16 +22,13 @@ public class carAgent : Agent {
 
     void Awake () {
         spawnlocations = GameObject.FindGameObjectsWithTag ("spawnpoint");
+        lights = GameObject.FindGameObjectsWithTag("SpotLight");
     }
 
     void Start () {
         rBody = GetComponent<Rigidbody> ();
-        //startPos = transform.position;
-        //startRot = transform.eulerAngles;
-
     }
 
-    // Update is called once per frame
     void FixedUpdate () {
         updateWheelPos (front_driver_col, frontDriver);
         updateWheelPos (front_passenger_col, frontPassenger);
@@ -40,15 +39,35 @@ public class carAgent : Agent {
     }
 
     public override void AgentReset () {
+        float intensityR = 0f;
+        int spawn = Random.Range (0, spawnlocations.Length);
+        int Rot = Random.Range(0,2);
+
+        foreach(GameObject light in lights)
+         {
+            if(Random.Range(0,2) == 0){
+                light.SetActive(false);
+
+            }
+            else {
+                //float LightRotation = Random.Range(0.0f, 10.0f);
+                intensityR = Random.Range(0.2f, 1.0f);
+                light.SetActive(true);
+                light.GetComponent<Light>().intensity = intensityR;
+                light.GetComponent<Light>().spotAngle = Random.Range(10, 90);
+                //light.transform.rotation = Quaternion.Euler(new Vector3(90,90,90));
+                //light.transform.rotation *= Quaternion.Euler(new Vector3(LightRotation,1,1));
+
+            
+            }
+         }
         colourScript.ChangeColourAndMaterial ();
         this.rBody.angularVelocity = Vector3.zero;
         this.rBody.velocity = Vector3.zero;
-        //transform.position = startPos;
-        //transform.eulerAngles = startRot;
-        /*this.transform.position = new Vector3(5.133f, 0.14f, 16.752f);
-        this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));*/
-        int spawn = Random.Range (0, spawnlocations.Length);
+        intensityR = Random.Range(0.2f, 1.0f);
+        directionalLight.GetComponent<Light>().intensity = intensityR;
         this.transform.position = spawnlocations[spawn].transform.position;
+        this.transform.rotation = spawnlocations[spawn].transform.rotation * Quaternion.Euler(new Vector3(0,(180f * Rot),0));
         _motorForce = 0.0f;
         progressTracker.Reset ();
 
