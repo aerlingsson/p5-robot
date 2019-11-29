@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace ColourScript 
-{
-    public class ColorScript : MonoBehaviour 
+namespace ColourScript {
+        public class ColorScript : MonoBehaviour 
     {
         // If public, then it's available/visible in the inspector in unity.
         Material[] materials;
