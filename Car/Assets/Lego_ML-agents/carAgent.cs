@@ -74,76 +74,70 @@ public class carAgent : Agent {
     }
 
     public override void CollectObservations () {
-        //position of the agent used for rewards
-        //AddVectorObs(this.transform.position);
-        //wheelcolliders used to driver and steer the agent
-        //AddVectorObs(back_driver_col.motorTorque);
-        //AddVectorObs(back_passenger_col.motorTorque);
-        //AddVectorObs(front_driver_col.steerAngle);
-        //AddVectorObs(front_passenger_col.steerAngle);
+
     }
 
     public void turnCar (float[] act) {
         var action = Mathf.FloorToInt (act[0]);
-
+        Debug.Log(action);
         switch (action) {
-            case 0:
+            case 1:
                 _steerangl = _steerangl - turningNumber;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 0;
                 break;
 
-            case 1:
+            case 2:
                 _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 6.0f;
                 break;
 
-            case 2:
+            case 3:
                 _steerangl = 12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 12.0f;
                 break;
 
-            case 3:
+            case 4:
                 _steerangl = 18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 18.0f;
                 break;
 
-            case 4:
+            case 5:
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 21.0f;
                 break;
 
-            case 5:
+            case 6:
                 _steerangl = -6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -6.0f;
                 break;
 
-            case 6:
+            case 7:
                 _steerangl = -12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -12.0f;
                 break;
 
-            case 7:
+            case 8:
                 _steerangl = -18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -18.0f;
                 break;
 
-            case 8:
+            case 9:
                 _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
