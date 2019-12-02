@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1718aa094d1b79d4b81983f8802226c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 14fe13462a64db64c802021e2b06de94, type: 2}
+  brain: {fileID: 11400000, guid: de35687702a50934e9abc889e9bb12fb, type: 2}
   agentParameters:
     agentCameras:
     - {fileID: 8404773545696542419}
@@ -509,6 +509,7 @@ MonoBehaviour:
   frontPassenger: {fileID: 8404773544468976001}
   backDriver: {fileID: 8404773545496083993}
   backPassenger: {fileID: 8404773544696907375}
+  _motorForce: 300
 --- !u!1 &8404773544696907376
 GameObject:
   m_ObjectHideFlags: 0

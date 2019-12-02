@@ -16,7 +16,7 @@ public class carAgent : Agent {
     public Transform frontDriver, frontPassenger;
     public Transform backDriver, backPassenger;
     float _steerAngle = 30.0f;
-    float _motorForce = 300.0f;
+    public float _motorForce = 300.0f;
     int _allowedToDrive = 0;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;

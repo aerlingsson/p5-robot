@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   broadcastHub:
     broadcastingBrains:
-    - {fileID: 11400000, guid: 14fe13462a64db64c802021e2b06de94, type: 2}
+    - {fileID: 11400000, guid: de35687702a50934e9abc889e9bb12fb, type: 2}
     m_BrainsToControl:
     - {fileID: 11400000, guid: de35687702a50934e9abc889e9bb12fb, type: 2}
   m_TrainingConfiguration:
