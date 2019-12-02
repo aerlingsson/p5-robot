@@ -16,28 +16,35 @@ public class carAgent : Agent {
     public Transform frontDriver, frontPassenger;
     public Transform backDriver, backPassenger;
     float _steerAngle = 30.0f;
-    float _motorForce = 0.0f;
+    float _motorForce = 300.0f;
+    int _allowedToDrive = 0;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
 
+    // load into arrays all gameobjects with "spawnpoint" and "SpotLight" as tags
     void Awake () {
         spawnlocations = GameObject.FindGameObjectsWithTag ("spawnpoint");
         lights = GameObject.FindGameObjectsWithTag("SpotLight");
     }
 
+    // initialize the rigid body
     void Start () {
         rBody = GetComponent<Rigidbody> ();
     }
 
+    // Update the position of the cyliders to match the position and rotation of the colliders to provide animation
+    // and set the motortorque so that the car moves
     void FixedUpdate () {
         updateWheelPos (front_driver_col, frontDriver);
         updateWheelPos (front_passenger_col, frontPassenger);
         updateWheelPos (back_driver_col, backDriver);
         updateWheelPos (back_passenger_col, backPassenger);
-        back_driver_col.motorTorque = _motorForce;
-        back_passenger_col.motorTorque = _motorForce;
+        back_driver_col.motorTorque = _motorForce * _allowedToDrive;
+        back_passenger_col.motorTorque = _motorForce * _allowedToDrive;
     }
 
+    //Resets the car and progressTracker. Randomize the lights, material and colour of said material on each reset
+    // also locks the movement of the car through allowedToDrive
     public override void AgentReset () {
         float intensityR = 0f;
         int spawn = Random.Range (0, spawnlocations.Length);
@@ -68,7 +75,7 @@ public class carAgent : Agent {
         directionalLight.GetComponent<Light>().intensity = intensityR;
         this.transform.position = spawnlocations[spawn].transform.position;
         this.transform.rotation = spawnlocations[spawn].transform.rotation * Quaternion.Euler(new Vector3(0,(180f * Rot),0));
-        _motorForce = 0.0f;
+        _allowedToDrive = 0;
         progressTracker.Reset ();
 
     }
@@ -79,7 +86,6 @@ public class carAgent : Agent {
 
     public void turnCar (float[] act) {
         var action = Mathf.FloorToInt (act[0]);
-        Debug.Log(action);
         switch (action) {
             case 1:
                 _steerangl = _steerangl - turningNumber;
@@ -149,33 +155,17 @@ public class carAgent : Agent {
     }
     public override void AgentAction (float[] vectorAction, string textAction) {
         turnCar (vectorAction);
-        /*
-        //Actions, size = 2
-        Vector3 controlSignal = Vector3.zero;
-        controlSignal.x = vectorAction[0];
-       //controlSignal.z = vectorAction[1];
-        //back_driver_col.motorTorque = (controlSignal.z * _motorForce);
-        //back_passenger_col.motorTorque = (controlSignal.z * _motorForce);
-        front_driver_col.steerAngle = (controlSignal.x * _steerAngle);
-        front_passenger_col.steerAngle = (controlSignal.x * _steerAngle);
-
-        //rewards
-        if(controlSignal.z <= 0 || controlSignal.z <= 0){
-            SetReward(-0.5f);
-        }
-        else if (controlSignal.z > 0 || controlSignal.z > 0){
-            SetReward(0.1f);
-        }
-        */
-
+        
+        //Locks movement and rewards until the progressTracker target is in place near the car
         if (progressTracker.SetupDone () == true) {
-            _motorForce = 300.0f;
+            _allowedToDrive = 1;
             SetReward (1.0f - progressTracker.getDistanceFromCenter ());
         }
 
 
     }
 
+    //resets if car drives off of the track
     void OnCollisionEnter (Collision collision) {
         if(collision.collider.tag == "plane"){
             SetReward(-10.0f);
@@ -184,6 +174,7 @@ public class carAgent : Agent {
     }
 
     
+    //Sets the position of the transform equal to the postion of the collider
     void updateWheelPos (WheelCollider col, Transform t) {
         Vector3 pos = t.position;
         Quaternion rot = t.rotation;
