@@ -16,7 +16,7 @@ public class carAgent : Agent {
     public Transform frontDriver, frontPassenger;
     public Transform backDriver, backPassenger;
     float _steerAngle = 30.0f;
-    public float _motorForce = 300.0f;
+    public float _motorForce = 0.16f;
     int _allowedToDrive = 0;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
@@ -41,6 +41,8 @@ public class carAgent : Agent {
         updateWheelPos (back_passenger_col, backPassenger);
         back_driver_col.motorTorque = _motorForce * _allowedToDrive;
         back_passenger_col.motorTorque = _motorForce * _allowedToDrive;
+        Debug.Log( "M/S" + rBody.velocity.magnitude);
+        Debug.Log(back_driver_col.rpm);
     }
 
     //Resets the car and progressTracker. Randomize the lights, material and colour of said material on each reset
@@ -169,7 +171,7 @@ public class carAgent : Agent {
     void OnCollisionEnter (Collision collision) {
         if(collision.collider.tag == "plane"){
             SetReward(-10.0f);
-            Done();
+            //Done();
         }
     }
 
