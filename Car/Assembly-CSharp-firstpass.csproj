@@ -172,9 +172,6 @@
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/mads2/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/mads2/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -183,9 +180,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/mads2/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/mads2/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/mads2/Documents/GitHub/p5-robot/Car/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
