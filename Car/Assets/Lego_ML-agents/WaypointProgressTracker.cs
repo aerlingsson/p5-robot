@@ -174,8 +174,7 @@ namespace UnityStandardAssets.Utility
         public float getDistanceFromCenter()
         {
             float distance = Vector3.Distance(transform.position, target.position);
-            Debug.Log(distance);
-            float distanceNormalized = Mathf.InverseLerp(0.0f, 1.5f, distance);
+            float distanceNormalized = Mathf.InverseLerp(0.0f, 0.15f, distance);
             return distanceNormalized;
         }
 
