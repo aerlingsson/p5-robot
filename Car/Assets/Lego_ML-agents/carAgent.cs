@@ -171,7 +171,7 @@ public class carAgent : Agent {
     void OnCollisionEnter (Collision collision) {
         if(collision.collider.tag == "plane"){
             SetReward(-10.0f);
-            //Done();
+            Done();
         }
     }
 
