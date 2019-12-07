@@ -2,11 +2,13 @@ from heapq import heappush, heappop, heapify
 from itertools import count
 import numpy as np
 
+
 class Memory:
-    def __init__(self):
+    def __init__(self, priority_percentage):
         self.memory = []
         heapify(self.memory)
         self.tiebreaker = count()
+        self.priority_percentage = priority_percentage
 
     def append(self, transition, tderr=100):
         heappush(self.memory, (-tderr, next(self.tiebreaker), transition))
@@ -18,10 +20,10 @@ class Memory:
         for transition, error in zip(transitions, errors):
             self.append(transition, error)
 
-    def get_distributed_batch(self, batch_size, priority_dist):
+    def get_distributed_batch(self, batch_size):
         batch = []
-        random_size = int(batch_size * priority_dist)
-        priority_size = int(batch_size * (1 - priority_dist))
+        priority_size = int(batch_size * self.priority_percentage)
+        random_size = int(batch_size * (1 - self.priority_percentage))
         total_size = random_size + priority_size
         while total_size is not batch_size:
             if total_size < batch_size:
@@ -34,7 +36,6 @@ class Memory:
 
         states, actions, rewards, next_states, dones = zip(*batch)
         return states, actions, rewards, next_states, dones
-
 
     def priority_sample(self, batch_size):
         batch = []

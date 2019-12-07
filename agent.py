@@ -9,25 +9,24 @@ from collections import deque
 import os
 from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, Lambda, Input
+
+from hyperparams import HyperParameters
 from memory import Memory
 
 
 class DQN:
-    def __init__(self, state_shape, action_size, lr=0.001, gamma=0.99, eps_decay=0.999, eps_min=0.01, max_tau=50):
+    def __init__(self, state_shape: tuple, action_size: int, params: HyperParameters):
         self.state_shape = state_shape
         self.action_size = action_size
-        self.lr = lr
+        self.params = params
         
         self.model = self.build_model()
         self.target_model = self.build_model()
         self.update_target_model()
-        self.memory = Memory()
-        
-        self.gamma = gamma
+
+        self.memory = Memory(priority_percentage=params.priority_percentage)
+
         self.epsilon = 1.0
-        self.epsilon_decay = eps_decay
-        self.epsilon_min = eps_min
-        self.max_tau = max_tau
         self.tau = 0
     
     def build_model(self):
@@ -69,17 +68,20 @@ class DQN:
             Dense(self.action_size, activation='linear')
         ])
 
-        model.compile(loss='mse', optimizer=Adam(lr=self.lr))
+        model.compile(loss='mse', optimizer=Adam(lr=self.params.lr))
         return model
 
-    def act(self, state):
+    def act(self, state: np.array):
         if np.random.rand() <= self.epsilon:
             return random.randrange(self.action_size)
         action = self.model.predict(state)
         return np.argmax(action[0])
     
-    def replay(self, batch_size, priority):
-        states, actions, rewards, next_states, dones = self.memory.get_distributed_batch(batch_size, priority)
+    def replay(self):
+        if self.memory.size() < self.params.batch_size:
+            return
+
+        states, actions, rewards, next_states, dones = self.memory.get_distributed_batch(self.params.batch_size)
 
         stacked_states = np.vstack(states)
         stacked_next_states = np.vstack(next_states)
@@ -87,7 +89,7 @@ class DQN:
         predictions, target_predictions = self.get_predictions(stacked_states, stacked_next_states)
         predictions, errors = self.update_predictions(actions, rewards, dones, predictions, target_predictions)
 
-        self.model.fit(stacked_states, predictions, epochs=1, verbose=0) #epochs = batch_size?
+        self.model.fit(stacked_states, predictions, epochs=1, verbose=0)
 
         predictions, target_predictions = self.get_predictions(stacked_states, stacked_next_states)
         _, errors = self.update_predictions(actions, rewards, dones, predictions, target_predictions)
@@ -95,15 +97,15 @@ class DQN:
         batch = (states, actions, rewards, next_states, dones)
         self.memory.append_batch(batch, errors)
 
-        if self.tau >= self.max_tau:
+        if self.tau >= self.params.max_tau:
             self.update_target_model()
             self.tau = 0
         self.tau += 1
             
-        if self.epsilon > self.epsilon_min:
-            self.epsilon *= self.epsilon_decay
+        if self.epsilon > self.params.eps_min:
+            self.epsilon *= self.params.eps_decay
 
-    def get_predictions(self, states, next_states):
+    def get_predictions(self, states: np.array, next_states: np.array):
         predictions = self.model.predict(states)
         target_predictions = self.target_model.predict(next_states)
         return predictions, target_predictions
@@ -113,7 +115,7 @@ class DQN:
         for index, (action, reward, done) in enumerate(zip(actions, rewards, dones)):
             if not done:
                 max_future_q = np.amax(target_predictions[index])
-                new_q = reward + self.gamma * max_future_q
+                new_q = reward + self.params.gamma * max_future_q
             else:
                 new_q = reward
             old_q = predictions[index][action]
