@@ -4,14 +4,17 @@ import numpy as np
 
 
 class Memory:
-    def __init__(self, priority_percentage):
+    def __init__(self, max_size=10000, priority_percentage=0.0):
         self.memory = []
         heapify(self.memory)
         self.tiebreaker = count()
+        self.max_size = max_size
         self.priority_percentage = priority_percentage
 
     def append(self, transition, tderr=100):
         heappush(self.memory, (-tderr, next(self.tiebreaker), transition))
+        if len(self.memory) > self.max_size:
+            self.memory.pop(-1)
 
     def append_batch(self, batch, errors):
         states, actions, rewards, next_states, dones = batch

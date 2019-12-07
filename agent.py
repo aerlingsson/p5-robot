@@ -24,7 +24,7 @@ class DQN:
         self.target_model = self.build_model()
         self.update_target_model()
 
-        self.memory = Memory(priority_percentage=params.priority_percentage)
+        self.memory = Memory(max_size=params.mem_size, priority_percentage=params.priority_percentage)
 
         self.epsilon = 1.0
         self.tau = 0

@@ -11,6 +11,7 @@ def main():
                              max_tau=args.max_tau, gamma=args.gamma,
                              priority_percentage=args.priority_percentage, batch_size=args.batch_size)
 
+
     trainer = Trainer(env_path=args.env_path, state_shape=args.state_shape, action_size=args.action_dim, params=params)
     trainer.run(max_epochs=args.max_epochs, save_interval=args.save_interval, save_path=args.save_path, test_nr=0)
 
@@ -62,7 +63,7 @@ def create_arg_parser():
 
     parser.add_argument(
         '--mem_size',
-        default=100,
+        default=10000,
         help='high inter value, e.g. 10000'
     )
 
