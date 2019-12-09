@@ -1,10 +1,6 @@
-import logging
-
-logger = logging.getLogger()
-logger.disabled = True
-
 from hyperparams import HyperParameters
 from train import Trainer
+from gym_unity.envs import UnityEnv
 
 
 ENV_PATH = "C:/Users/rasmu/Desktop/ml-agents/notebooks/carenv_speed4/Car"
@@ -47,8 +43,11 @@ if __name__ == '__main__':
             params.__setattr__(param, option)
             print(f'Test: {test_nr} with {param} = {option}')
 
-            trainer = Trainer(ENV_PATH, STATE_SHAPE, ACTION_SIZE, params)
+            env = UnityEnv(ENV_PATH, worker_id=0, use_visual=True, no_graphics=False, uint8_visual=True)
+            trainer = Trainer(env, STATE_SHAPE, ACTION_SIZE, params)
             trainer.run(MAX_EPOCHS, SAVE_INTERVAL, SAVE_PATH, test_nr=test_nr)
             trainer.close()
+
+            del trainer
 
             test_nr += 1

@@ -11,7 +11,7 @@ class Memory:
         self.max_size = max_size
         self.priority_percentage = priority_percentage
 
-    def append(self, transition, tderr=100):
+    def append(self, transition, tderr=np.inf):
         heappush(self.memory, (-tderr, next(self.tiebreaker), transition))
         if len(self.memory) > self.max_size:
             self.memory.pop(-1)

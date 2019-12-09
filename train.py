@@ -1,6 +1,5 @@
 from agent import DQN
 import tensorflow as tf
-from gym_unity.envs import UnityEnv
 import numpy as np
 import cv2
 from csvSaver import Saver
@@ -8,11 +7,11 @@ from hyperparams import HyperParameters
 
 
 class Trainer:
-    def __init__(self, env_path, state_shape, action_size, params):
+    def __init__(self, env, state_shape, action_size, params):
         self.state_shape = state_shape
         self.action_size = action_size
         self.params = params
-        self.env = UnityEnv(env_path, worker_id=0, use_visual=True, no_graphics=False, uint8_visual=True)
+        self.env = env
         self.agent = DQN(state_shape, action_size, self.params)
 
     def preprocess(self, img: np.array):

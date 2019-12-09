@@ -1,15 +1,7 @@
-import tensorflow as tf
-import tensorflow.keras
-from tensorflow.keras import backend as K
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import model_from_json, load_model
 import random
 import numpy as np
-from collections import deque
-import os
-from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, Lambda, Input
-
+from tensorflow.keras.optimizers import Adam
+from model import build_model
 from hyperparams import HyperParameters
 from memory import Memory
 
@@ -20,56 +12,15 @@ class DQN:
         self.action_size = action_size
         self.params = params
         
-        self.model = self.build_model()
-        self.target_model = self.build_model()
+        self.model = build_model(state_shape, action_size)
+        self.model.compile(loss='mse', optimizer=Adam(lr=self.params.lr))
+        self.target_model = build_model(state_shape, action_size)
         self.update_target_model()
 
         self.memory = Memory(max_size=params.mem_size, priority_percentage=params.priority_percentage)
 
         self.epsilon = 1.0
         self.tau = 0
-    
-    def build_model(self):
-        
-        '''
-        encoder = load_model('enc.h5')
-        encoder.trainable = False
-
-        inp = Input(shape=self.state_shape)
-        lamb1 = Lambda(lambda x: tf.image.rgb_to_grayscale(x))(inp)
-        lamb2 = Lambda(lambda x: x / 255)(lamb1)
-        enc = encoder(lamb2)
-        flatten = Flatten()(enc)
-        drp1 = Dropout(0.3)(flatten)
-        dense1 = Dense(100, activation='relu')(drp1)
-        drp2 = Dropout(0.3)(dense1)
-        dense2 = Dense(50, activation='relu')(drp2)
-        drp3 = Dropout(0.2)(dense2)
-        dense3 = Dense(self.action_size, activation='linear')(drp3)
-
-        model = Model(inputs=inp, outputs=dense3)
-
-        '''
-
-        model = Sequential([
-            Input(shape=self.state_shape),
-            Lambda(lambda x: tf.image.rgb_to_grayscale(x)),
-            Lambda(lambda x: x/255),
-            Conv2D(24, (5,5), strides=(2,2), activation='relu'),
-            Conv2D(36, (5,5), strides=(2,2), activation='relu'),
-            Conv2D(48, (5,5), strides=(2,2), activation='relu'),
-            Conv2D(64, (3,3), strides=(1,1), activation='relu'),
-            Flatten(),
-            Dropout(0.3),
-            Dense(100, activation='relu'),
-            Dropout(0.3),
-            Dense(50, activation='relu'),
-            Dropout(0.2),
-            Dense(self.action_size, activation='linear')
-        ])
-
-        model.compile(loss='mse', optimizer=Adam(lr=self.params.lr))
-        return model
 
     def act(self, state: np.array):
         if np.random.rand() <= self.epsilon:

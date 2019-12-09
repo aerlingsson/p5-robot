@@ -1,6 +1,7 @@
 import argparse
 from hyperparams import HyperParameters
 from train import Trainer
+from gym_unity.envs import UnityEnv
 
 
 def main():
@@ -11,8 +12,8 @@ def main():
                              max_tau=args.max_tau, gamma=args.gamma,
                              priority_percentage=args.priority_percentage, batch_size=args.batch_size)
 
-
-    trainer = Trainer(env_path=args.env_path, state_shape=args.state_shape, action_size=args.action_dim, params=params)
+    env = UnityEnv(args.env_path, worker_id=0, use_visual=True, no_graphics=False, uint8_visual=True)
+    trainer = Trainer(env, state_shape=args.state_shape, action_size=args.action_dim, params=params)
     trainer.run(max_epochs=args.max_epochs, save_interval=args.save_interval, save_path=args.save_path, test_nr=0)
 
 
@@ -63,7 +64,7 @@ def create_arg_parser():
 
     parser.add_argument(
         '--mem_size',
-        default=10000,
+        default=100000,
         help='high inter value, e.g. 10000'
     )
 
