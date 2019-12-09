@@ -20,12 +20,12 @@ public class carAgent : Agent {
     int _allowedToDrive = 0;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
-    int spawns = 0;
 
     // load into arrays all gameobjects with "spawnpoint" and "SpotLight" as tags
     void Awake () {
         spawnlocations = GameObject.FindGameObjectsWithTag ("spawnpoint");
-        lights = GameObject.FindGameObjectsWithTag("SpotLight");
+        lights = GameObject.FindGameObjectsWithTag ("SpotLight");
+
     }
 
     // initialize the rigid body
@@ -49,34 +49,30 @@ public class carAgent : Agent {
     public override void AgentReset () {
         float intensityR = 0f;
         int spawn = Random.Range (0, spawnlocations.Length);
-        int Rot = Random.Range(0,2);
+        int Rot = Random.Range (0, 2);
 
-        foreach(GameObject light in lights)
-         {
-            if(Random.Range(0,2) == 0){
-                light.SetActive(false);
+        foreach (GameObject light in lights) {
+            if (Random.Range (0, 2) == 0) {
+                light.SetActive (false);
 
-            }
-            else {
+            } else {
                 //float LightRotation = Random.Range(0.0f, 10.0f);
-                intensityR = Random.Range(0.2f, 1.0f);
-                light.SetActive(true);
-                light.GetComponent<Light>().intensity = intensityR;
-                light.GetComponent<Light>().spotAngle = Random.Range(10, 90);
+                intensityR = Random.Range (0.2f, 1.0f);
+                light.SetActive (true);
+                light.GetComponent<Light> ().intensity = intensityR;
+                light.GetComponent<Light> ().spotAngle = Random.Range (10, 90);
                 //light.transform.rotation = Quaternion.Euler(new Vector3(90,90,90));
                 //light.transform.rotation *= Quaternion.Euler(new Vector3(LightRotation,1,1));
 
-            
             }
-         }
+        }
         colourScript.ChangeColourAndMaterial ();
         this.rBody.angularVelocity = Vector3.zero;
         this.rBody.velocity = Vector3.zero;
-        intensityR = Random.Range(0.2f, 1.0f);
-        directionalLight.GetComponent<Light>().intensity = intensityR;
-        this.transform.position = spawnlocations[spawns].transform.position;
-        this.transform.rotation = spawnlocations[spawns].transform.rotation * Quaternion.Euler(new Vector3(0,(180f * Rot),0));
-        spawns += 1;
+        intensityR = Random.Range (0.2f, 1.0f);
+        directionalLight.GetComponent<Light> ().intensity = intensityR;
+        this.transform.position = spawnlocations[spawn].transform.position;
+        this.transform.rotation = spawnlocations[spawn].transform.rotation * Quaternion.Euler (new Vector3 (0, (180f * Rot), 0));
         _allowedToDrive = 0;
         progressTracker.Reset ();
 
@@ -94,15 +90,15 @@ public class carAgent : Agent {
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 21.0f;
-                break;      
-        
+                break;
+
             case 2:
-                 _steerangl = 18.0f;
+                _steerangl = 18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 18.0f;
                 break;
-          
+
             case 3:
                 _steerangl = 12.0f;
                 front_driver_col.steerAngle = _steerangl;
@@ -157,25 +153,23 @@ public class carAgent : Agent {
     }
     public override void AgentAction (float[] vectorAction, string textAction) {
         turnCar (vectorAction);
-        
+
         //Locks movement and rewards until the progressTracker target is in place near the car
         if (progressTracker.SetupDone () == true) {
             _allowedToDrive = 1;
             SetReward (1.0f - progressTracker.getDistanceFromCenter ());
         }
 
-
     }
 
     //resets if car drives off of the track
     void OnCollisionEnter (Collision collision) {
-        if(collision.collider.tag == "plane"){
-            SetReward(-10.0f);
-            Done();
+        if (collision.collider.tag == "plane") {
+            SetReward (-10.0f);
+            Done ();
         }
     }
 
-    
     //Sets the position of the transform equal to the postion of the collider
     void updateWheelPos (WheelCollider col, Transform t) {
         Vector3 pos = t.position;
@@ -187,4 +181,5 @@ public class carAgent : Agent {
         t.rotation = rot;
 
     }
+
 }

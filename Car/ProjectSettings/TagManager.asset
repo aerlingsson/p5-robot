@@ -6,9 +6,34 @@ TagManager:
   tags:
   - target
   - back
-  - road
   - target1
   - spawnpoint
+  - ground
+  - symbol_O
+  - stone
+  - pyramid
+  - agent
+  - ball
+  - iWall
+  - pit
+  - plane
+  - symbol_O_Goal
+  - symbol_X
+  - wall
+  - symbol_X_Goal
+  - goal
+  - block
+  - walkableSurface
+  - purpleAgent
+  - purpleGoal
+  - blueAgent
+  - blueGoal
+  - switchOff
+  - badFood
+  - SpotLight
+  - food
+  - Fire
+  - Road
   layers:
   - Default
   - TransparentFX
