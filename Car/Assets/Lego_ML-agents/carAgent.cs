@@ -20,6 +20,7 @@ public class carAgent : Agent {
     int _allowedToDrive = 0;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
+    int spawns = 0;
 
     // load into arrays all gameobjects with "spawnpoint" and "SpotLight" as tags
     void Awake () {
@@ -41,8 +42,6 @@ public class carAgent : Agent {
         updateWheelPos (back_passenger_col, backPassenger);
         back_driver_col.motorTorque = _motorForce * _allowedToDrive;
         back_passenger_col.motorTorque = _motorForce * _allowedToDrive;
-        Debug.Log( "M/S" + rBody.velocity.magnitude);
-        Debug.Log(back_driver_col.rpm);
     }
 
     //Resets the car and progressTracker. Randomize the lights, material and colour of said material on each reset
@@ -75,8 +74,9 @@ public class carAgent : Agent {
         this.rBody.velocity = Vector3.zero;
         intensityR = Random.Range(0.2f, 1.0f);
         directionalLight.GetComponent<Light>().intensity = intensityR;
-        this.transform.position = spawnlocations[spawn].transform.position;
-        this.transform.rotation = spawnlocations[spawn].transform.rotation * Quaternion.Euler(new Vector3(0,(180f * Rot),0));
+        this.transform.position = spawnlocations[spawns].transform.position;
+        this.transform.rotation = spawnlocations[spawns].transform.rotation * Quaternion.Euler(new Vector3(0,(180f * Rot),0));
+        spawns += 1;
         _allowedToDrive = 0;
         progressTracker.Reset ();
 
@@ -89,63 +89,63 @@ public class carAgent : Agent {
     public void turnCar (float[] act) {
         var action = Mathf.FloorToInt (act[0]);
         switch (action) {
-            case 0:
+            case 1:
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 21.0f;
                 break;      
         
-            case 1:
+            case 2:
                  _steerangl = 18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 18.0f;
                 break;
           
-            case 2:
+            case 3:
                 _steerangl = 12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 12.0f;
                 break;
 
-            case 3:
+            case 4:
                 _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 6.0f;
                 break;
 
-            case 4:
+            case 5:
                 _steerangl = _steerangl - turningNumber;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 0;
                 break;
 
-            case 5:
+            case 6:
                 _steerangl = -6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -6.0f;
                 break;
 
-            case 6:
+            case 7:
                 _steerangl = -12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -12.0f;
                 break;
 
-            case 7:
+            case 8:
                 _steerangl = -18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -18.0f;
                 break;
 
-            case 8:
+            case 9:
                 _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;

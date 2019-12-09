@@ -512,7 +512,7 @@ MonoBehaviour:
   frontPassenger: {fileID: 8404773544468976001}
   backDriver: {fileID: 8404773545496083993}
   backPassenger: {fileID: 8404773544696907375}
-  _motorForce: 8.5
+  _motorForce: 2
 --- !u!1 &8404773544696907376
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +840,7 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 2
-  m_GateFitMode: 1
+  m_GateFitMode: 0
   m_FOVAxisMode: 0
   m_SensorSize: {x: 27, y: 20.2}
   m_LensShift: {x: 0, y: 0}
