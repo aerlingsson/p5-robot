@@ -22,11 +22,20 @@ namespace PathCreation.Examples {
         MeshRenderer meshRenderer;
         Mesh mesh;
 
+        public void creation () {
+            if (pathCreator != null) {
+                AssignMeshComponents ();
+                AssignMaterials ();
+                CreateRoadMesh ();
+                AssignMeshCollider ();
+            }
+        }
         protected override void PathUpdated () {
             if (pathCreator != null) {
                 AssignMeshComponents ();
                 AssignMaterials ();
                 CreateRoadMesh ();
+                AssignMeshCollider ();
             }
         }
 
@@ -148,6 +157,16 @@ namespace PathCreation.Examples {
             if (roadMaterial != null && undersideMaterial != null) {
                 meshRenderer.sharedMaterials = new Material[] { roadMaterial, undersideMaterial, undersideMaterial };
                 meshRenderer.sharedMaterials[0].mainTextureScale = new Vector3 (1, textureTiling);
+            }
+        }
+
+        void AssignMeshCollider () {
+
+            if (meshHolder.gameObject.GetComponent<MeshCollider> ()) {
+                DestroyImmediate (meshHolder.gameObject.GetComponent<MeshCollider> ());
+            }
+            if (!meshHolder.gameObject.GetComponent<MeshCollider> ()) {
+                meshHolder.gameObject.AddComponent<MeshCollider> ();
             }
         }
 
