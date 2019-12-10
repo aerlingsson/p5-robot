@@ -77,6 +77,7 @@ public class CommunicationsTask extends AsyncTask<Void, Void, Void> {
 
     public void write(String msg) throws Exception {
         if (!connected){
+            Log.d(TAG, "Tried to write a msg while not connected");
             throw new Exception("Tried to write a msg while not connected");
         }
 

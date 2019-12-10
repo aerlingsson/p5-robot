@@ -3,6 +3,7 @@ package com.example.p5_robot.Agent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -26,6 +27,7 @@ public class TensorflowModel {
     private Interpreter interpreter;
     private GpuDelegate delegate;
     private List<String> labels = new ArrayList<>();
+    private String TAG = "TensorflowModel class";
 
 
     public TensorflowModel(AssetManager assetManager, String modelPath, String labelPath, int inputSize) {
@@ -36,10 +38,9 @@ public class TensorflowModel {
             MappedByteBuffer modelFile = loadModelFile(assetManager, modelPath);
             this.delegate = new GpuDelegate();
             Interpreter.Options options = new Interpreter.Options();
-            //options.addDelegate(this.delegate); TODO: get this to work, you probably need to optimize the model for this to work
             this.interpreter = new Interpreter(modelFile, options);
         } catch (IOException e) {
-            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Failed to load model file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Log.e(TAG, "Failed to load model");
         }
 
     }
@@ -65,14 +66,18 @@ public class TensorflowModel {
         return labelList;
     }
 
-    public String runInference(Bitmap bitmap) {
+    public int runInference(Bitmap bitmap) throws Exception {
+        if (this.interpreter == null){
+            throw new Exception("Interpreter was null");
+        }
+
         ByteBuffer buffer = convertBitmapToByteBuffer(bitmap);
 
         float[][] result = new float[1][labels.size()];
         this.interpreter.run(buffer, result);
         int index = decodeResult(result);
 
-        return labels.get(index);
+        return Integer.parseInt(labels.get(index));
     }
 
     private int decodeResult(float[][] result) {

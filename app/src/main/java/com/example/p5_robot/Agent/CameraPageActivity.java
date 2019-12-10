@@ -39,7 +39,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class CameraPageActivity extends CommunicationsActivity {
-    private static final String MODEL_PATH = "models/model_test.tflite";
+    private static final String MODEL_PATH = "models/model_test_works.tflite";
     private static final String LABEL_PATH = "labels.txt";
     private static final int INPUT_SIZE = 80;
     private static final String TAG = "CameraPageActivity";
@@ -54,6 +54,9 @@ public class CameraPageActivity extends CommunicationsActivity {
     private TextView text2;
     private String labelText = "";
     private long start;
+
+    private int sendInterval = 5;
+    private int sendCount = 0;
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
@@ -103,8 +106,7 @@ public class CameraPageActivity extends CommunicationsActivity {
     }
 
 
-
-    private Preview buildCameraPreview(){
+    private Preview buildCameraPreview() {
         /* connect preview */
         int aspRatioW = txView.getWidth();  //get width of screen
         int aspRatioH = txView.getHeight();  //get height
@@ -128,7 +130,7 @@ public class CameraPageActivity extends CommunicationsActivity {
         return preview;
     }
 
-    private ImageAnalysis buildImageAnalyser(){
+    private ImageAnalysis buildImageAnalyser() {
         HandlerThread analyzerThread = new HandlerThread("OpenCVAnalysis");
         analyzerThread.start();
 
@@ -145,35 +147,35 @@ public class CameraPageActivity extends CommunicationsActivity {
                         Bitmap bitmap = txView.getBitmap();
                         Bitmap img = preprocessImage(bitmap);
 
-                        labelText = model.runInference(img);
+                        int res = 0;
+                        try {
+                            res = model.runInference(img);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        sendCount++;
 
+                        if (sendCount == sendInterval) {
+                            sendCount = 0;
 
-                        final String msg = labelText + "_10";
+                            labelText = String.valueOf(res);
+                            System.out.println(labelText);
+                            final String msg = labelText + "_10";
 
-                        new Handler().post(new Runnable() {
-                            @Override
-                            public void run() {
-                                try {
-                                    btConnection.write(msg);
-                                } catch (Exception e) {
-                                    Log.d(TAG, "Tried to write while not connected to BT");
-                                    e.printStackTrace();
+                            new Handler().post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    try {
+                                        btConnection.write(msg);
+                                    } catch (Exception e) {
+                                        Log.d(TAG, "Tried to write while not connected to BT");
+                                        e.printStackTrace();
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        }
 
-                        text1.post(new Runnable() {
-                            public void run() {
-                                int fps = getFps();
-                                String fpsString = "Fps: " + fps;
-                                text1.setText(fpsString);
-                            }
-                        });
-                        text2.post(new Runnable() {
-                            public void run() {
-                                text2.setText(labelText);
-                            }
-                        });
+                        updateScreenText();
 
                     }
                 });
@@ -181,12 +183,27 @@ public class CameraPageActivity extends CommunicationsActivity {
     }
 
 
-    private Bitmap preprocessImage(Bitmap bitmap){
+    private void updateScreenText() {
+        text1.post(new Runnable() {
+            public void run() {
+                int fps = getFps();
+                String fpsString = "Fps: " + fps;
+                text1.setText(fpsString);
+            }
+        });
+        text2.post(new Runnable() {
+            public void run() {
+                text2.setText(labelText);
+            }
+        });
+    }
+
+    private Bitmap preprocessImage(Bitmap bitmap) {
         Mat mat = new Mat();
         Utils.bitmapToMat(bitmap, mat);
 
         Imgproc.resize(mat, mat, new Size(INPUT_SIZE, INPUT_SIZE));
-        Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE/2, INPUT_SIZE/2), 90, 1);
+        Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE / 2, INPUT_SIZE / 2), 90, 1);
 
         Imgproc.warpAffine(mat, mat, rotationMatrix, new Size(INPUT_SIZE, INPUT_SIZE));
 
@@ -197,11 +214,11 @@ public class CameraPageActivity extends CommunicationsActivity {
     }
 
 
-    private int getFps(){
+    private int getFps() {
         long end = System.currentTimeMillis();
         float sec = (end - start) / 1000F;
         start = System.currentTimeMillis();
-        return (int)(1/sec);
+        return (int) (1 / sec);
     }
 
 

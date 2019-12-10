@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         this.mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
+            Log.e(TAG, "Bluetooth device not available");
             Toast.makeText(getApplicationContext(), "Bluetooth device not available", Toast.LENGTH_LONG).show();
-            Log.d(TAG, "Bluetooth device not available");
             finish();
 
         } else {
