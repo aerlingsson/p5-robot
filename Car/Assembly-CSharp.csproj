@@ -55,11 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lego_ML-agents\CarAcademy.cs" />
-     <Compile Include="Assets\Lego_ML-agents\ColorScript.cs" />
-     <Compile Include="Assets\Lego_ML-agents\WaypointCircuit.cs" />
-     <Compile Include="Assets\Lego_ML-agents\WaypointProgressTracker.cs" />
-     <Compile Include="Assets\Lego_ML-agents\carAgent.cs" />
      <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
      <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />
      <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DDecision.cs" />
@@ -171,12 +166,9 @@
      <Compile Include="Assets\ML-Agents\Scripts\Startup.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Utilities.cs" />
-     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
-     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
-     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -185,11 +177,20 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Scripts\CarAcademy.cs" />
      <Compile Include="Assets\Scripts\CarControl.cs" />
+     <Compile Include="Assets\Scripts\ColorScript.cs" />
+     <Compile Include="Assets\Scripts\GeneratePathExample.cs" />
+     <Compile Include="Assets\Scripts\PathFollower.cs" />
+     <Compile Include="Assets\Scripts\RoadMeshCreator.cs" />
+     <Compile Include="Assets\Scripts\WaypointCircuit.cs" />
+     <Compile Include="Assets\Scripts\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\Scripts\carAgent.cs" />
+     <Compile Include="Assets\Scripts\carAgentV2.cs" />
      <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
      <None Include="Assets\EasyRoads3D\Resources\custom prefabs\_custom prefabs.txt" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Generic.compute" />
-     <None Include="Assets\IceMaterial\Shader\Ice.shader" />
+     <None Include="Assets\Resources\IceMaterial\Shader\Ice.shader" />
      <None Include="Assets\EasyRoads3D\prefab meshes\_custom prefabs.txt" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Broadcast.compute" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\BarracudaReferenceImpl.compute" />
@@ -197,7 +198,7 @@
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\TexConv.compute" />
      <None Include="Assets\EasyRoads3D\_readme .txt" />
      <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
-     <None Include="Assets\Lego_ML-agents\Normal-Diffuse-Worldspace.shader" />
+     <None Include="Assets\Scripts\Normal-Diffuse-Worldspace.shader" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Tensor.cginc" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\FastNV.compute" />
      <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
