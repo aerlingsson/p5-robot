@@ -107,6 +107,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8404773545696542419, guid: 853dc89a82a9d794fa55e45a82420f31,
+        type: 3}
+      propertyPath: m_GateFitMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404773545696542419, guid: 853dc89a82a9d794fa55e45a82420f31,
+        type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8740159037445640327, guid: 853dc89a82a9d794fa55e45a82420f31,
         type: 3}
       propertyPath: progressTracker

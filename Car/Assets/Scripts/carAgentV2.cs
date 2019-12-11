@@ -18,7 +18,6 @@ public class carAgentV2 : Agent {
     public Transform frontDriver, frontPassenger;
     public Transform backDriver, backPassenger;
     Transform startPos;
-    float _steerAngle = 30.0f;
     public float _motorForce = 0.16f;
     float _steerangl = 0.0f;
     float turningNumber = 0.0f;
@@ -79,63 +78,63 @@ public class carAgentV2 : Agent {
     public void turnCar (float[] act) {
         var action = Mathf.FloorToInt (act[0]);
         switch (action) {
-            case 1:
+            case 0:
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 21.0f;
                 break;
 
-            case 2:
+            case 1:
                 _steerangl = 18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 18.0f;
                 break;
 
-            case 3:
+            case 2:
                 _steerangl = 12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 12.0f;
                 break;
 
-            case 4:
+            case 3:
                 _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 6.0f;
                 break;
 
-            case 5:
+            case 4:
                 _steerangl = _steerangl - turningNumber;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 0;
                 break;
 
-            case 6:
+            case 5:
                 _steerangl = -6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -6.0f;
                 break;
 
-            case 7:
+            case 6:
                 _steerangl = -12.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -12.0f;
                 break;
 
-            case 8:
+            case 7:
                 _steerangl = -18.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -18.0f;
                 break;
 
-            case 9:
+            case 8:
                 _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
@@ -148,9 +147,7 @@ public class carAgentV2 : Agent {
     public override void AgentAction (float[] vectorAction, string textAction) {
         turnCar (vectorAction);
 
-        //Locks movement and rewards until the progressTracker target is in place near the car
         SetReward (1.0f - pathcreator.getDistanceFromCenter ());
-
         if (pathcreator.setup ()) {
             if (pathcreator.getDistanceFromCenter () >= 1) {
                 SetReward (-10.0f);
@@ -160,12 +157,7 @@ public class carAgentV2 : Agent {
 
     }
 
-    //resets if car drives off of the track
     void OnCollisionEnter (Collision collision) {
-        //if (collision.collider.tag == "plane") {
-        //    SetReward (-10.0f);
-        //    Done ();
-        //}
         if (collision.collider.tag == "Finish") {
             SetReward (10.0f);
             Done ();
