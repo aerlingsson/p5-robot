@@ -12,6 +12,7 @@ public class carAgentV2 : Agent {
     public ColorScript colourScript;
     private GameObject[] lights;
     public GameObject directionalLight;
+    public Transform[] waypoints;
     public Transform spawn;
     public WheelCollider front_driver_col, front_passenger_col;
     public WheelCollider back_driver_col, back_passenger_col;
@@ -44,31 +45,33 @@ public class carAgentV2 : Agent {
     }
 
     //Resets the car and progressTracker. Randomize the lights, material and colour of said material on each reset
-    // also locks the movement of the car through allowedToDrive
     public override void AgentReset () {
         float intensityR = 0f;
-        foreach (GameObject light in lights) {
-            if (Random.Range (0, 2) == 0) {
-                light.SetActive (false);
-
-            } else {
-                //float LightRotation = Random.Range(0.0f, 10.0f);
-                intensityR = Random.Range (0.2f, 1.0f);
-                light.SetActive (true);
-                light.GetComponent<Light> ().intensity = intensityR;
-                light.GetComponent<Light> ().spotAngle = Random.Range (10, 90);
-
-            }
-        }
+        pathcreator.GeneratePath ();
+        meshcreator.creation ();
         colourScript.ChangeColourAndMaterial ();
         this.rBody.angularVelocity = Vector3.zero;
         this.rBody.velocity = Vector3.zero;
         intensityR = Random.Range (0.2f, 1.0f);
         directionalLight.GetComponent<Light> ().intensity = intensityR;
-        pathcreator.GeneratePath ();
-        meshcreator.creation ();
+ 
         this.transform.position = spawn.position;
         this.transform.rotation = spawn.rotation;
+        foreach (GameObject light in lights) {
+            if (Random.Range (0, 2) == 0) {
+                light.SetActive (false);
+
+            } else {
+                intensityR = Random.Range (0.2f, 3.0f);
+                int waypointsR = Random.Range(0, waypoints.Length);
+                light.SetActive (true);
+                light.GetComponent<Light> ().intensity = intensityR;
+                light.GetComponent<Light>().transform.LookAt(waypoints[waypointsR]);
+                light.GetComponent<Light> ().spotAngle = Random.Range (10, 90);
+
+            }
+        }
+
     }
 
     public override void CollectObservations () {
@@ -79,17 +82,17 @@ public class carAgentV2 : Agent {
         var action = Mathf.FloorToInt (act[0]);
         switch (action) {
             case 0:
+                _steerangl = _steerangl - turningNumber;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 0;
+                break;
+
+            case 1:
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 21.0f;
-                break;
-
-            case 1:
-                _steerangl = 18.0f;
-                front_driver_col.steerAngle = _steerangl;
-                front_passenger_col.steerAngle = _steerangl;
-                turningNumber = 18.0f;
                 break;
 
             case 2:
@@ -100,17 +103,17 @@ public class carAgentV2 : Agent {
                 break;
 
             case 3:
+                _steerangl = 18.0f;
+                front_driver_col.steerAngle = _steerangl;
+                front_passenger_col.steerAngle = _steerangl;
+                turningNumber = 18.0f;
+                break;
+
+            case 4:
                 _steerangl = 6.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 6.0f;
-                break;
-
-            case 4:
-                _steerangl = _steerangl - turningNumber;
-                front_driver_col.steerAngle = _steerangl;
-                front_passenger_col.steerAngle = _steerangl;
-                turningNumber = 0;
                 break;
 
             case 5:
