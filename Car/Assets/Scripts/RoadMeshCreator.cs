@@ -27,7 +27,7 @@ namespace PathCreation.Examples {
                 AssignMeshComponents ();
                 AssignMaterials ();
                 CreateRoadMesh ();
-                AssignMeshCollider ();
+                //AssignMeshCollider ();
             }
         }
         protected override void PathUpdated () {
@@ -35,7 +35,7 @@ namespace PathCreation.Examples {
                 AssignMeshComponents ();
                 AssignMaterials ();
                 CreateRoadMesh ();
-                AssignMeshCollider ();
+                //AssignMeshCollider ();
             }
         }
 
