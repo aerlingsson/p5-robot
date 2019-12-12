@@ -150,7 +150,13 @@ public class carAgentV2 : Agent {
     public override void AgentAction (float[] vectorAction, string textAction) {
         turnCar (vectorAction);
 
-        SetReward (0.33f - pathcreator.getNormalizedDistanceFromCenter ());
+        if(pathcreator.getNormalizedDistanceFromCenter() < 0.33f ){
+        SetReward (1.0f - (3 * pathcreator.getNormalizedDistanceFromCenter ()));
+        }
+        else if (pathcreator.getNormalizedDistanceFromCenter() >= 0.33f){
+            SetReward(-1.0f);
+        }
+        
         if (pathcreator.setup ()) {
             if (pathcreator.getNormalizedDistanceFromCenter () >= 1) {
                 SetReward (-10.0f);
