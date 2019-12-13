@@ -25,6 +25,18 @@ MonoBehaviour:
   meshcreator: {fileID: 0}
   colourScript: {fileID: 0}
   directionalLight: {fileID: 0}
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawn: {fileID: 0}
   front_driver_col: {fileID: 4626899606265104327}
   front_passenger_col: {fileID: 4626899604482597137}
@@ -102,9 +114,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lego_sized_car_random
       objectReference: {fileID: 0}
-    - target: {fileID: 8404773544530807509, guid: 853dc89a82a9d794fa55e45a82420f31,
+    - target: {fileID: 8404773545696542419, guid: 853dc89a82a9d794fa55e45a82420f31,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8404773545696542419, guid: 853dc89a82a9d794fa55e45a82420f31,
@@ -114,8 +126,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8404773545696542419, guid: 853dc89a82a9d794fa55e45a82420f31,
         type: 3}
-      propertyPath: m_FOVAxisMode
-      value: 0
+      propertyPath: field of view
+      value: 31.4
       objectReference: {fileID: 0}
     - target: {fileID: 8740159037445640327, guid: 853dc89a82a9d794fa55e45a82420f31,
         type: 3}

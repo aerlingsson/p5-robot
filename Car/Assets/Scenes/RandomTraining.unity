@@ -1048,11 +1048,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4626899604704650977, guid: 75b4018fc3611a74baef60606913b757,
-        type: 3}
-      propertyPath: m_GateFitMode
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4626899605921682146, guid: 75b4018fc3611a74baef60606913b757,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1115,11 +1110,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6599169044955351320, guid: 75b4018fc3611a74baef60606913b757,
         type: 3}
-      propertyPath: waypoints.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6599169044955351320, guid: 75b4018fc3611a74baef60606913b757,
-        type: 3}
       propertyPath: pathcreator
       value: 
       objectReference: {fileID: 839433808}
@@ -1138,11 +1128,6 @@ PrefabInstance:
       propertyPath: directionalLight
       value: 
       objectReference: {fileID: 1830691153}
-    - target: {fileID: 6599169044955351320, guid: 75b4018fc3611a74baef60606913b757,
-        type: 3}
-      propertyPath: spawn
-      value: 
-      objectReference: {fileID: 295821518}
     - target: {fileID: 6599169044955351320, guid: 75b4018fc3611a74baef60606913b757,
         type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -1198,9 +1183,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[10]
       value: 
       objectReference: {fileID: 466268075}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 0}
+    - target: {fileID: 6599169044955351320, guid: 75b4018fc3611a74baef60606913b757,
+        type: 3}
+      propertyPath: spawn
+      value: 
+      objectReference: {fileID: 295821518}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75b4018fc3611a74baef60606913b757, type: 3}
 --- !u!4 &8329567097035478389 stripped
 Transform:
