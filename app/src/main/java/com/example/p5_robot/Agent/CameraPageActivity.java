@@ -39,7 +39,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class CameraPageActivity extends CommunicationsActivity {
-    private static final String MODEL_PATH = "models/model_test_works.tflite";
+    private static final String MODEL_PATH = "models/model_BA_d256.tflite";
     private static final String LABEL_PATH = "labels.txt";
     private static final int INPUT_SIZE = 80;
     private static final String TAG = "CameraPageActivity";
@@ -55,7 +55,7 @@ public class CameraPageActivity extends CommunicationsActivity {
     private String labelText = "";
     private long start;
 
-    private int sendInterval = 5;
+    private int sendInterval = 3;
     private int sendCount = 0;
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
@@ -160,7 +160,7 @@ public class CameraPageActivity extends CommunicationsActivity {
 
                             labelText = String.valueOf(res);
                             System.out.println(labelText);
-                            final String msg = labelText + "_10";
+                            final String msg = labelText + "_20";
 
                             new Handler().post(new Runnable() {
                                 @Override
@@ -203,6 +203,7 @@ public class CameraPageActivity extends CommunicationsActivity {
         Utils.bitmapToMat(bitmap, mat);
 
         Imgproc.resize(mat, mat, new Size(INPUT_SIZE, INPUT_SIZE));
+
         Mat rotationMatrix = Imgproc.getRotationMatrix2D(new Point(INPUT_SIZE / 2, INPUT_SIZE / 2), 90, 1);
 
         Imgproc.warpAffine(mat, mat, rotationMatrix, new Size(INPUT_SIZE, INPUT_SIZE));
