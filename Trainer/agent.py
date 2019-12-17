@@ -42,9 +42,6 @@ class DQN:
 
         self.model.fit(stacked_states, predictions, epochs=1, verbose=0)
 
-        predictions, target_predictions = self.get_predictions(stacked_states, stacked_next_states)
-        _, errors = self.update_predictions(actions, rewards, dones, predictions, target_predictions)
-
         batch = (states, actions, rewards, next_states, dones)
         self.memory.append_batch(batch, errors)
 
