@@ -89,7 +89,7 @@ public class carAgent : Agent {
                 _steerangl = 21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
-                turningNumber = 21.0f;
+                turningNumber = 22.0f;
                 break;
 
             case 2:
@@ -145,7 +145,7 @@ public class carAgent : Agent {
                 _steerangl = -21.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
-                turningNumber = -21.0f;
+                turningNumber = -22.0f;
                 break;
 
         }
