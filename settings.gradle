@@ -1,2 +1,0 @@
-include ':app', 'opencv'
-rootProject.name='P5-Robot'
