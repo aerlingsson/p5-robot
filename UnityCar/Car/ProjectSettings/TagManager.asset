@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - target
+  - back
+  - target1
+  - spawnpoint
+  - ground
+  - symbol_O
+  - stone
+  - pyramid
+  - agent
+  - ball
+  - iWall
+  - pit
+  - plane
+  - symbol_O_Goal
+  - symbol_X
+  - wall
+  - symbol_X_Goal
+  - goal
+  - block
+  - walkableSurface
+  - purpleAgent
+  - purpleGoal
+  - blueAgent
+  - blueGoal
+  - switchOff
+  - badFood
+  - SpotLight
+  - food
+  - Fire
+  - Road
+  - Start
+  - Start2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

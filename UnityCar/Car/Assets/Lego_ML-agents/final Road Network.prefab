@@ -1,0 +1,4398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3138335034246372184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034246372167}
+  - component: {fileID: 3138335034246372163}
+  - component: {fileID: 3138335034246372164}
+  - component: {fileID: 3138335034246372165}
+  - component: {fileID: 3138335034246372166}
+  m_Layer: 0
+  m_Name: road_0001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3138335034246372167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034246372184}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335036269172017}
+  m_Father: {fileID: 3138335035299368581}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034246372163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034246372184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216737829, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScript: {fileID: 3138335034268544518}
+  roadName: road_0001
+  locked: 0
+  roadType: 0
+  isCustomRoadSet: 0
+  isCustomRoad: 0
+  markers: []
+  tmpMarkers: []
+  markersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  tmpMarkersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  tValues:
+  - 0
+  - 1
+  roadWidth: 0.4
+  faceDistance: 3
+  angleTreshold: 45
+  closedTrack: 0
+  minNodeDistance: 5
+  nodeWithinRange: -1
+  uvTiling: 1
+  planarUVs: 0
+  flipNormals: 0
+  randomnessFlag: 0
+  randomnessMarkerFlag: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  vegetationStudioGrassPerimeter: 2
+  vegetationStudioPlantPerimeter: 3
+  vegetationStudioTreePerimeter: 4
+  vegetationStudioObjectPerimeter: 3
+  vegetationStudioLargeObjectPerimeter: 4
+  vertsStats: 4
+  trisStats: 2
+  indent: 5
+  surrounding: 5
+  followTerrainContours: 0
+  terrainContoursOffset: 5
+  roadShape:
+  - {x: 0.2, y: 0}
+  - {x: -0.2, y: 0}
+  roadShapeIntsStart: 
+  roadShapeIntsEnd: 
+  roadShapeIntsStartFull: 
+  roadShapeIntsEndFull: 
+  roadShapeString: 
+  roadShapeReversedString: 
+  roadShapeMatchCount: 2
+  geoReversed: -1
+  roadShapeCols: 2
+  subSegments: 1
+  nodeDistance:
+  - 0
+  - 1
+  roadShapeUVs:
+  - 0
+  - 1
+  roadShapeUVs2:
+  - 0
+  - 1
+  doConnectionTri: 0101
+  randomRotations:
+  - 0
+  - 0
+  hardEdge: 0000
+  roadShapeMaterialInts: 0000000000000000
+  subMeshCount: 1
+  roadShapeMaterialIntCounts: 02000000
+  controlPoints: []
+  splinePoints:
+  - {x: 28.385185, y: 0, z: -1.1668284}
+  - {x: 30.216702, y: 0, z: -1.1668284}
+  distances: []
+  markerInts: 0000000001000000
+  insertSplinePoints:
+  - {x: 28.385185, y: 0, z: -1.1668284}
+  - {x: 30.216702, y: 0, z: -1.1668284}
+  soSplinePoints:
+  - {x: 28.385185, y: 0, z: -1.1668284}
+  - {x: 30.216702, y: 0, z: -1.1668284}
+  soSplinePointsLeft:
+  - {x: 28.385185, y: 0, z: -0.9668284}
+  - {x: 30.216702, y: 0, z: -0.9668284}
+  soSplinePointsRight:
+  - {x: 28.385185, y: 0, z: -1.3668284}
+  - {x: 30.216702, y: 0, z: -1.3668284}
+  ODDQCOQCCQ:
+  - 0
+  - 0
+  OCOODCDQCQ:
+  - 0.5
+  - 0.5
+  meshVecs:
+  - {x: 28.385185, y: 0, z: -0.9668284}
+  - {x: 28.385185, y: 0, z: -1.3668284}
+  - {x: 30.216702, y: 0, z: -0.9668284}
+  - {x: 30.216702, y: 0, z: -1.3668284}
+  meshUVs:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 0.36630327}
+  - {x: 1, y: 0.36630327}
+  meshUVs2:
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  surfaceMeshVecs: []
+  leftIndentVecs:
+  - {x: 28.385185, y: -0.02, z: 4.0331717}
+  - {x: 30.216702, y: -0.02, z: 4.0331717}
+  rightIndentVecs:
+  - {x: 28.385185, y: -0.02, z: -7.3668284}
+  - {x: 30.216702, y: -0.02, z: -7.3668284}
+  middleIndentVecs:
+  - {x: 28.385185, y: -0.02, z: -1.1668284}
+  - {x: 30.216702, y: -0.02, z: -1.1668284}
+  leftSurroundingVecs:
+  - {x: 28.385185, y: -0.02, z: 9.033172}
+  - {x: 30.216702, y: -0.02, z: 9.033172}
+  rightSurroundingVecs:
+  - {x: 28.385185, y: -0.02, z: -11.366829}
+  - {x: 30.216702, y: -0.02, z: -11.366829}
+  leftIndentVecsSV:
+  - {x: 28.385185, y: -0.02, z: 4.0331717}
+  - {x: 30.216702, y: -0.02, z: 4.0331717}
+  rightIndentVecsSV:
+  - {x: 28.385185, y: -0.02, z: -6.3668284}
+  - {x: 30.216702, y: -0.02, z: -6.3668284}
+  bridgeElement: 0000
+  vecsBelowTerrain: []
+  treeVecs:
+  - {x: 28.385185, y: 0, z: 4.0331717}
+  - {x: 28.385185, y: 0, z: -6.3668284}
+  - {x: 30.216702, y: 0, z: 4.0331717}
+  - {x: 30.216702, y: 0, z: -6.3668284}
+  detailVecs:
+  - {x: -21.614815, y: 0, z: -47.966827}
+  - {x: -21.614815, y: 0, z: -54.36683}
+  - {x: -19.783298, y: 0, z: -47.966827}
+  - {x: -19.783298, y: 0, z: -54.36683}
+  vegetationTris: 000000000300000001000000020000000300000000000000
+  totalDistance: 1.8315163
+  nodeSplinePoint: 0000000001000000
+  totalDistanceString: 1.83 m
+  startPrefabScript: {fileID: 0}
+  endPrefabScript: {fileID: 0}
+  startConnectionSegment: -1
+  startConnectionFlag: 0
+  endConnectionSegment: -1
+  endConnectionFlag: 0
+  tCrossingConnected: 0
+  roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  roadMaterials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  roadPhysicsMaterial: {fileID: 0}
+  roadPhysicsMaterials: []
+  startDir: {x: 0, y: 0, z: 0}
+  endDir: {x: 0, y: 0, z: 0}
+  startAngle: 0
+  endAngle: 0
+  startbendLeftRight: 0
+  endbendLeftRight: 0
+  pivotp: {x: 0, y: 0, z: 0}
+  p1: {x: 0, y: 0, z: 0}
+  p2: {x: 0, y: 0, z: 0}
+  p3: {x: 0, y: 0, z: 0}
+  p4: {x: 0, y: 0, z: 0}
+  p5: {x: 0, y: 0, z: 0}
+  p6: {x: 0, y: 0, z: 0}
+  p7: {x: 0, y: 0, z: 0}
+  cp1: {x: 0, y: 0, z: 0}
+  cp2: {x: 0, y: 0, z: 0}
+  cp3: {x: 0, y: 0, z: 0}
+  cp4: {x: 0, y: 0, z: 0}
+  cp5: {x: 0, y: 0, z: 0}
+  cp6: {x: 0, y: 0, z: 0}
+  cp7: {x: 0, y: 0, z: 0}
+  cp8: {x: 0, y: 0, z: 0}
+  cp9: {x: 0, y: 0, z: 0}
+  cpcenter: {x: 0, y: 0, z: 0}
+  p1Circle: {x: 0, y: 0, z: 0}
+  p2Circle: {x: 0, y: 0, z: 0}
+  cpradius: 0
+  cpangle: 0
+  dp1: {x: 0, y: 0, z: 0}
+  dp2: {x: 0, y: 0, z: 0}
+  dp3: {x: 0, y: 0, z: 0}
+  dp4: {x: 0, y: 0, z: 0}
+  segPoints: []
+  testPoints: []
+  testPoints2: []
+  OQCQDCCCCD: {x: 0, y: 0, z: 0}
+  OOQODCQCDC: {x: 0, y: 0, z: 0}
+  endLeft: {x: 0, y: 0, z: 0}
+  endRight: {x: 0, y: 0, z: 0}
+  testmesh: {fileID: 0}
+  surfaceMesh: {fileID: 3138335036269172018}
+  sv1: {x: 28.385185, y: -0.02, z: 4.0331717}
+  sv2: {x: 28.385185, y: -0.02, z: -6.3668284}
+  prefabIndentLeft: {x: 0, y: 0, z: 0}
+  prefabIndentRight: {x: 0, y: 0, z: 0}
+  roadIndent1: {x: 0, y: 0, z: 0}
+  tmpPerpCP: {x: 0, y: 0, z: 0}
+  tmpCP: {x: 0, y: 0, z: 0}
+  splinePos: 0.001
+  camHeight: 5
+  flyOverPoints: []
+  splinePosV3: {x: 0, y: 0, z: 0}
+  markerDistances:
+  - 0
+  - 1.8315163
+  osmRoadType: 
+  soData: []
+  soDataExt: []
+  sideObjectNames: []
+  selectedSO: 0
+  rebuildSos: 0
+  sosCleared: 0
+  isSideObject: 0
+  startOffsetActiveMarker: -1
+  endOffsetActiveMarker: -1
+  leftToCenterPerc: 0.5
+  splatMapActive: 0
+  splatIndex: 0
+  expandLevel: 0
+  smoothLevel: 1
+  splatOpacity: 1
+  layer: 0
+  tag: 
+  castShadow: 0
+  fadeInFlag: 0
+  fadeInDistance: 0
+  fadeOutFlag: 0
+  fadeOutDistance: 0
+  doSurroundingSurfaces: 1
+  terrainDeformation: 1
+  snapToTerrain: 0
+  snapVertices: 0
+  snapOffset: 0.01
+  hasMeshCollider: 1
+  isUpdated: 1
+  QDDDQODQQDQDQQD: 1
+  uv4Type: 0
+  detailDistance: 50
+  startDecalCollapsed: 0
+  startDecal: {fileID: 0}
+  endDecal: {fileID: 0}
+  startDecalPrefab: {fileID: 0}
+  startDecalPrefabSource: {fileID: 0}
+  endDecalCollapsed: 0
+  endDecalPrefab: {fileID: 0}
+  endDecalPrefabSource: {fileID: 0}
+  startDecalID: -1
+  endDecalID: -1
+  lastForward: {x: 1, y: 0, z: 0}
+  roadUpdate: 0
+  bounds:
+    m_Center: {x: 29.300941, y: 4500000, z: -1.166832}
+    m_Extent: {x: 100.91576, y: 5500000, z: 100.2}
+--- !u!33 &3138335034246372164
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034246372184}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335034246372165
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034246372184}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &3138335034246372166
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034246372184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335034268544519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034268544517}
+  - component: {fileID: 3138335034268544518}
+  m_Layer: 0
+  m_Name: final Road Network
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335034268544517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034268544519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335034896610241}
+  - {fileID: 3138335035299368581}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034268544518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034268544519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 365290288, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInt: 10
+  newSplatMapRestoreCode: 0
+  toolbarInt: 0
+  roadToolbarInt: 0
+  markerToolbarInt: 0
+  menuTexs:
+  - {fileID: 2800000, guid: 34aed1010b525bf4c9cfd7da35361a90, type: 3}
+  - {fileID: 2800000, guid: 32e963efb91d19147842f8bd95d6ac56, type: 3}
+  - {fileID: 2800000, guid: ffc15be4bded7b34f9f406cde082a4a2, type: 3}
+  - {fileID: 2800000, guid: 881f73f964cf5104abc91a5f657615a8, type: 3}
+  - {fileID: 2800000, guid: b2f9adc22d0fa0647880b18b89bf0872, type: 3}
+  - {fileID: 2800000, guid: 8583bfb2058e94a48801d7212430d8d1, type: 3}
+  - {fileID: 2800000, guid: a734eccac0ad8bc49950dd4fbee58611, type: 3}
+  subMenuTexs: []
+  cprefab: {fileID: 0}
+  nodeHandleTexture: {fileID: 0}
+  lockedTexture: {fileID: 2800000, guid: 8fb7d6b5f8b40f34e8048f47afa20f2a, type: 3}
+  unLockedTexture: {fileID: 2800000, guid: eb319a63188c2d44bacc8572c8a2111a, type: 3}
+  selRoadTexture: {fileID: 2800000, guid: 46e81e5d2c8b2144582558b65e45db86, type: 3}
+  headerTexture: {fileID: 2800000, guid: 16ef664a0f7023c4a94fa58f50bf2899, type: 3}
+  sceneGUITex: {fileID: 0}
+  roadObjectsParent: {fileID: 3138335035299368581}
+  connectionObjectsParent: {fileID: 3138335034896610241}
+  OQCOODCOCQ: {fileID: 0}
+  roadTypes:
+  - roadTypeName: Default Road 1
+    id: 0
+    timestamp: 1450386558.4872544
+    roadWidth: 5
+    faceDistance: 4
+    angleTreshold: 45
+    uvTiling: 1
+    uv4Type: 0
+    detailDistance: 50
+    planarUVs: 0
+    outerIndent: 0
+    roadShapeDataActive: 0
+    roadShapeData:
+      nodes: []
+      lanes: []
+      symmetrical: 0
+      leftSidewalkOffset: 0
+      rightSidewalkOffset: 0
+      selectedNode: 0
+      selectedLaneNode: 0
+    roadShape: []
+    roadShapeExt: []
+    doConnectionTri: 
+    roadShapeUVs: []
+    roadShapeExtUVs: []
+    roadShapeUVs2: []
+    hardEdge: 
+    roadShapeVecsString: 
+    defaultSidewalk: 0
+    sidewalks: 0
+    sidewalkHeight: 0.2
+    sidewalkWidth: 2
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+    roadMaterials: []
+    roadPhysicsMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c,
+      type: 2}
+    roadPhysicsMaterials: []
+    connectionMaterial: {fileID: 2100000, guid: 3c555588afad81d428ad1704d5d015a7,
+      type: 2}
+    isSideObject: 0
+    isCustomRoad: 0
+    subSegments: 0
+    soData: []
+    soDataExt: []
+    soDataLog: []
+    layer: 0
+    tag: 
+    splatMapActive: 0
+    splatIndex: 0
+    expandLevel: 0
+    smoothLevel: 0
+    splatOpacity: 0
+    terrainDeformation: 1
+    castShadow: 0
+    randomnessFlag: 0
+    randomYPosition: 0
+    randomMinYPosition: 0
+    randomMaxYPosition: 0
+    minRandomYPositionDistance: 0
+    maxRandomYPositionDistance: 0
+    randomMinRotation: 0
+    randomMaxRotation: 0
+    minRandomRotationDistance: 0
+    maxRandomRotationDistance: 0
+    vegetationStudioGrassPerimeter: 2
+    vegetationStudioPlantPerimeter: 3
+    vegetationStudioTreePerimeter: 4
+    vegetationStudioObjectPerimeter: 3
+    vegetationStudioLargeObjectPerimeter: 4
+    decalPresets: []
+    decalClassPresets: []
+  selectedRoadType: 0
+  selectedNewRoadType: 0
+  inspRoadTypes:
+  - roadTypeName: Default Road 1
+    id: 0
+    timestamp: 1450386558.4872544
+    roadWidth: 5
+    faceDistance: 4
+    angleTreshold: 45
+    uvTiling: 1
+    uv4Type: 0
+    detailDistance: 50
+    planarUVs: 0
+    outerIndent: 0
+    roadShapeDataActive: 0
+    roadShapeData:
+      nodes: []
+      lanes: []
+      symmetrical: 0
+      leftSidewalkOffset: 0
+      rightSidewalkOffset: 0
+      selectedNode: 0
+      selectedLaneNode: 0
+    roadShape: []
+    roadShapeExt: []
+    doConnectionTri: 
+    roadShapeUVs: []
+    roadShapeExtUVs: []
+    roadShapeUVs2: []
+    hardEdge: 
+    roadShapeVecsString: 
+    defaultSidewalk: 0
+    sidewalks: 0
+    sidewalkHeight: 0.2
+    sidewalkWidth: 2
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+    roadMaterials: []
+    roadPhysicsMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c,
+      type: 2}
+    roadPhysicsMaterials: []
+    connectionMaterial: {fileID: 2100000, guid: 3c555588afad81d428ad1704d5d015a7,
+      type: 2}
+    isSideObject: 0
+    isCustomRoad: 0
+    subSegments: 0
+    soData: []
+    soDataExt: []
+    soDataLog: []
+    layer: 0
+    tag: 
+    splatMapActive: 0
+    splatIndex: 0
+    expandLevel: 0
+    smoothLevel: 0
+    splatOpacity: 0
+    terrainDeformation: 1
+    castShadow: 0
+    randomnessFlag: 0
+    randomYPosition: 0
+    randomMinYPosition: 0
+    randomMaxYPosition: 0
+    minRandomYPositionDistance: 0
+    maxRandomYPositionDistance: 0
+    randomMinRotation: 0
+    randomMaxRotation: 0
+    minRandomRotationDistance: 0
+    maxRandomRotationDistance: 0
+    vegetationStudioGrassPerimeter: 2
+    vegetationStudioPlantPerimeter: 3
+    vegetationStudioTreePerimeter: 4
+    vegetationStudioObjectPerimeter: 3
+    vegetationStudioLargeObjectPerimeter: 4
+    decalPresets: []
+    decalClassPresets: []
+  inspRoadTypeInts: 00000000
+  decalPresets: []
+  roadWidth: 5
+  roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  crossingMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  roundAboutMaterial: {fileID: 2100000, guid: 55e19257e99adea4380d1160ee92af9f, type: 2}
+  roundAboutConnectionMaterial: {fileID: 2100000, guid: ce8bb957aa39a384eb46fd561e66303f,
+    type: 2}
+  roundAboutRoadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c,
+    type: 2}
+  sidewalkMaterial: {fileID: 0}
+  targetMaterial: {fileID: 0}
+  sourceTerrain: {fileID: 0}
+  roadMaterials:
+  - dirt material
+  - road material
+  connectionMaterials:
+  - crossing material
+  - road X sidewalks
+  selectedMaterial: 0
+  selectedConnectionMaterial: 0
+  materials: []
+  selectedRoadRoadType: 1
+  roadOptions: 1
+  markerOptions: 1
+  showRoadSideObjects: 0
+  markerSOOptions: 1
+  roadTerrainOptions: 1
+  camFlyOver: 1
+  selectedRoadMaterial: 0
+  roadTextureInfoIndex: 0
+  selectedRoadTexture: {fileID: 0}
+  selectedRoadWidth: 0
+  selectedRoadLeftOffset: 0
+  selectedRoadRightOffset: 0
+  selectedRoadLeftInnerOffset: 0
+  selectedRoadRightInnerOffset: 0
+  selectedCrossingMaterial: 0
+  crossingTextureInfoIndex: 0
+  handleSelection: 1
+  positionHandleSelection: 1
+  markerDirXZ: 0
+  defaultCrossing: {fileID: 0}
+  defaultTCrossing: {fileID: 0}
+  defaultCulDeSac: {fileID: 0}
+  defaultRoundabout: {fileID: 0}
+  tex: {fileID: 0}
+  infoTexture: {fileID: 0}
+  showAllPrefabs: 1
+  standardPrefabsFlag: 0
+  sceneSettingsFoldOut: 1
+  sceneRoadsFoldOut: 0
+  scenePrefabsFoldOut: 0
+  sidewalksFoldOut: 0
+  terrainManagementFoldOut: 0
+  importRoadDataFoldOut: 0
+  lodGroupsFoldOut: 0
+  defaultMaterialsFoldOut: 0
+  kmlFlag: 0
+  osmFlag: 0
+  useOSMHeights: 0
+  heightRatio: 1
+  dynamicPrefabsFoldOut: 1
+  customPrefabsFoldOut: 1
+  prefabsDisplayType: 0
+  osmTerrainTopLon: 0
+  osmTerrainBottomLon: 0
+  osmTerrainLeftLat: 0
+  osmTerrainRightLat: 0
+  terrainMinIndent: 0
+  minIndent: 5
+  minSurrounding: 5
+  maxIndentSurrounding: 50
+  terrainY: 0
+  terrainDetailSplatX: 50
+  terrainDetailSplatY: 50
+  detailOffsetVec: {x: 50, y: 0, z: 50}
+  raise: 0
+  baseVector: {x: 0, y: 0, z: 0}
+  mirrorCrossings: 1
+  terrainNames:
+  - All Terrains
+  terrainObjects:
+  - {fileID: 0}
+  terrainSplatTextures:
+  - Splat 1 - Grass
+  activeTerrain: {fileID: 0}
+  activeTerrainY: 0
+  selectedTerrain: 0
+  selectedRoadsOnly: 0
+  terrainDone: 0
+  enableBackWithoutRestore: 0
+  detailDistance: 3
+  treeDistance: 5
+  doHeightmap: 1
+  doTrees: 1
+  soTrees: 1
+  doDetail: 1
+  terrainRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  surfaceObjects: []
+  preserveTerrainFloat: 1
+  terrainSmoothIndentDistance: 1
+  terrainSmoothSurroundingDistance: 1
+  indentSmoothStep: 0
+  surroundingSmoothStep: 0
+  doTangents: 1
+  doLightmapUVs: 0
+  doLODGroups: 0
+  doSplatmaps: 0
+  terrainHits: []
+  osmCrossingPoints: []
+  cornerPresets: []
+  sidewalkPresets: []
+  sidewalks: []
+  selectedSidewalk: 0
+  selectedRoadTypeSidewalk: 0
+  osmMotorway: 0
+  osmMotorwayLink: 0
+  osmTrunk: 0
+  osmPrimary: 0
+  osmSecondary: 0
+  osmTertiary: 0
+  osmUnclassified: 0
+  osmResidential: 0
+  osmService: 0
+  osmTrack: 0
+  osmPath: 0
+  osmMotorwayFlag: 1
+  osmMotorwayLinkFlag: 1
+  osmTrunkFlag: 1
+  osmPrimaryFlag: 1
+  osmSecondaryFlag: 1
+  osmTertiaryFlag: 1
+  osmUnclassifiedFlag: 1
+  osmResidentialFlag: 1
+  osmServiceFlag: 1
+  osmTrackFlag: 1
+  osmPathFlag: 1
+  lodGroups: 0
+  LODLevels: 4
+  LODLevelValues:
+  - 0.6
+  - 0.4
+  - 0.2
+  - 0
+  LODLevelResolution:
+  - 0.9
+  - 0.8
+  - 0.6
+  - 0.4
+  embedRoadShape: 0
+  hideSurfaces: 1
+  useLightProbes: 0
+  hideLockedObjects: 0
+  OCDOQQQOQD: 0
+  isInBuildMode: 0
+  progressFlag: 0
+  progressTerrain: 1
+  progressStatus: 1
+  progressMax: 1
+  QOQDQOOQDDQOOQ: []
+  sideObjectNames: []
+  selSideObject: 0
+  selSubSideObject: 0
+  soID: 
+  sideObjectName: 
+  sideObjectType: 0
+  sideObjectSource: {fileID: 0}
+  soEndObject: {fileID: 0}
+  sideObjectTerrainVegetationInt: 0
+  prefabChildHandling: 0
+  sideObjectDistance: 1
+  soYAxisRotation: 0
+  soSidewaysDistance: 0
+  soSidewaysDistanceHandling: 0
+  soDensity: 1
+  soOffset: 0
+  soTerrainAligment: 0
+  soCombine: 0
+  soWeld: 0
+  soControllerType: 0
+  soMaterial: {fileID: 0}
+  soXPosition: 0
+  soYPosition: 0
+  soMarkerActive: 1
+  enableSOHandles: 1
+  enableShapeNodeHandles: 0
+  enableSOShapeNodeHandles: 0
+  displayCriticalPoints: 1
+  highlightRoad: 1
+  highlightIndents: 0
+  highlightSurroundings: 0
+  highlightSideObject: 1
+  onlyShowSelectedRoad: 0
+  soDeformationObjects: []
+  soSplatmapObjects: []
+  buildSOinEditMode: 1
+  tangentsInEditMode: 0
+  calculateSmoothNormals: 1
+  importSideObjectsAlert: 1
+  importRoadPresetsAlert: 1
+  importCrossingPresetsAlert: 0
+  importSidewalkPresetsAlert: 0
+  updateSideObjectsAlert: 0
+  updateRoadPresetsAlert: 0
+  updateCrossingPresetsAlert: 0
+  updateSidewalkPresetsAlert: 0
+  waypointDistance: 10
+  RoadObjectsSoUpdates: []
+  assetsFolderID: 
+  meshSurface: {fileID: 0}
+  meshTerrainCollider: {fileID: 0}
+  markerScale: 1
+  markerDistance: 200
+  minMarkerDistance: 100
+  maxMarkerDistance: 500
+  debugFlag: 0
+  roadNetworkY: 0
+  ignoreMinIndents: 0
+  zoomStart: {x: 0, y: 0, z: 0}
+  zoomEnd: {x: 0, y: 0, z: 0}
+  lookAtStart: {x: 0, y: 0, z: 0}
+  lookAtEnd: {x: 0, y: 0, z: 0}
+  zoomRot: {x: 0, y: 0, z: 0, w: 0}
+  zoomStartTime: 0
+  hideSurfaceHandles: 1
+  dirtyBool: 0
+  dirtyOnSceneBool: 0
+  OCOQOOCOOC: 1
+  OQCOODCOCQScript: {fileID: 0}
+  ODDCQCCQDQCrossingsScript: {fileID: 0}
+  ODDCQCCQDQScript: {fileID: 0}
+  OQCOODCOCQElement: -1
+  OCOODDODOQ: -1
+  OCCQDDCDOD: {fileID: 0}
+  OCCCODDQOC: {fileID: 0}
+  OQQCDOODQD: -1
+  selectedRoadSOMarker: -1
+  selectedMarkerNode: -1
+  selectedMarkerNodes: 
+  selectedMarkerSONode: -1
+  selectedMarkerSONodes: 
+  selectedObjects: []
+  newRoadFlag: 0
+  roadTypeUpdateFlag: 1
+  roadScripts: []
+  prefabScripts: []
+  globalGridActive: 0
+  gridGUIActive: 0
+  globalGridColor: {r: 0.35, g: 0.5, b: 0.9, a: 0.9}
+  globalGridSize: 10
+  globalGridRotation: 0
+  ggTL: {x: 0, y: 0, z: 0}
+  ggBL: {x: 0, y: 0, z: 0}
+  ggBR: {x: 0, y: 0, z: 0}
+  localGridActive: 0
+  localGrids: []
+  selectedLocalGrid: 0
+  roadUpdated: 0
+  clampUVs: 1
+  soCategoryInt: 0
+  soRoadCategoryInt: 0
+  minRoadWidth: 1
+  maxRoadWidth: 75
+  maxCurbHeight: 0.5
+  minCornerRadius: 0.5
+  maxCornerRadius: 5
+  SoTestObject: {fileID: 0}
+  lockRoadNetwork: 0
+  showNotifications: 1
+  vegetationStudio: 0
+  vegetationStudioActive: 0
+  vegetationStudioGrassPerimeter: 2
+  vegetationStudioPlantPerimeter: 3
+  vegetationStudioTreePerimeter: 4
+  vegetationStudioObjectPerimeter: 3
+  vegetationStudioLargeObjectPerimeter: 4
+--- !u!1 &3138335034325150014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034325150013}
+  - component: {fileID: 3138335034325150009}
+  - component: {fileID: 3138335034325150010}
+  - component: {fileID: 3138335034325150011}
+  - component: {fileID: 3138335034325150012}
+  m_Layer: 0
+  m_Name: road_0001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3138335034325150013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034325150014}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335036034123533}
+  m_Father: {fileID: 3138335035299368581}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034325150009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034325150014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216737829, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScript: {fileID: 3138335034268544518}
+  roadName: road_0001
+  locked: 0
+  roadType: 0
+  isCustomRoadSet: 0
+  isCustomRoad: 0
+  markers: []
+  tmpMarkers: []
+  markersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tmpMarkersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tValues:
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  roadWidth: 0.4
+  faceDistance: 3
+  angleTreshold: 45
+  closedTrack: 0
+  minNodeDistance: 5
+  nodeWithinRange: -1
+  uvTiling: 1
+  planarUVs: 0
+  flipNormals: 0
+  randomnessFlag: 0
+  randomnessMarkerFlag: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  vegetationStudioGrassPerimeter: 2
+  vegetationStudioPlantPerimeter: 3
+  vegetationStudioTreePerimeter: 4
+  vegetationStudioObjectPerimeter: 3
+  vegetationStudioLargeObjectPerimeter: 4
+  vertsStats: 30
+  trisStats: 28
+  indent: 5
+  surrounding: 5
+  followTerrainContours: 0
+  terrainContoursOffset: 5
+  roadShape:
+  - {x: 0.2, y: 0}
+  - {x: -0.2, y: 0}
+  roadShapeIntsStart: 
+  roadShapeIntsEnd: 
+  roadShapeIntsStartFull: 
+  roadShapeIntsEndFull: 
+  roadShapeString: 
+  roadShapeReversedString: 
+  roadShapeMatchCount: 2
+  geoReversed: -1
+  roadShapeCols: 2
+  subSegments: 1
+  nodeDistance:
+  - 0
+  - 1
+  roadShapeUVs:
+  - 0
+  - 1
+  roadShapeUVs2:
+  - 0
+  - 1
+  doConnectionTri: 0101
+  randomRotations:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  hardEdge: 0000
+  roadShapeMaterialInts: 0000000000000000
+  subMeshCount: 1
+  roadShapeMaterialIntCounts: 02000000
+  controlPoints: []
+  splinePoints:
+  - {x: 33.718273, y: 0.0012178421, z: -0.17587079}
+  - {x: 33.71978, y: 0, z: -1.4367926}
+  - {x: 33.144608, y: 0, z: -2.3315103}
+  - {x: 32.201958, y: 0, z: -2.3954186}
+  - {x: 31.339193, y: 0, z: -2.0279453}
+  - {x: 31.083559, y: 0, z: -1.2131134}
+  - {x: 31.275284, y: 0, z: -0.44621253}
+  - {x: 31.818506, y: 0, z: -0.07873953}
+  - {x: 32.40966, y: 0, z: 0.4804592}
+  - {x: 32.473568, y: 0, z: 1.1514969}
+  - {x: 32.058167, y: 0, z: 1.6467869}
+  - {x: 31.259308, y: 0, z: 1.7106957}
+  - {x: 30.460453, y: 0, z: 1.3911538}
+  - {x: 29.965164, y: 0, z: 0.6082759}
+  - {x: 29.965162, y: 0, z: -1.4167662}
+  distances: []
+  markerInts: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  insertSplinePoints:
+  - {x: 33.718273, y: 0.0012178421, z: -0.17587079}
+  - {x: 33.71978, y: 0, z: -1.4367926}
+  - {x: 33.144608, y: 0, z: -2.3315103}
+  - {x: 32.201958, y: 0, z: -2.3954186}
+  - {x: 31.339193, y: 0, z: -2.0279453}
+  - {x: 31.083559, y: 0, z: -1.2131134}
+  - {x: 31.275284, y: 0, z: -0.44621253}
+  - {x: 31.818506, y: 0, z: -0.07873953}
+  - {x: 32.40966, y: 0, z: 0.4804592}
+  - {x: 32.473568, y: 0, z: 1.1514969}
+  - {x: 32.058167, y: 0, z: 1.6467869}
+  - {x: 31.259308, y: 0, z: 1.7106957}
+  - {x: 30.460453, y: 0, z: 1.3911538}
+  - {x: 29.965164, y: 0, z: 0.6082759}
+  - {x: 29.965162, y: 0, z: -1.4167662}
+  soSplinePoints:
+  - {x: 33.718273, y: 0.0012178421, z: -0.17587079}
+  - {x: 33.71978, y: 0, z: -1.4367926}
+  - {x: 33.144608, y: 0, z: -2.3315103}
+  - {x: 32.201958, y: 0, z: -2.3954186}
+  - {x: 31.339193, y: 0, z: -2.0279453}
+  - {x: 31.083559, y: 0, z: -1.2131134}
+  - {x: 31.275284, y: 0, z: -0.44621253}
+  - {x: 31.818506, y: 0, z: -0.07873954}
+  - {x: 32.40966, y: 0, z: 0.4804592}
+  - {x: 32.473568, y: 0, z: 1.1514969}
+  - {x: 32.058167, y: 0, z: 1.6467869}
+  - {x: 31.259308, y: 0, z: 1.7106957}
+  - {x: 30.460453, y: 0, z: 1.3911538}
+  - {x: 29.965164, y: 0, z: 0.6082759}
+  - {x: 29.965162, y: 0, z: -1.4167662}
+  soSplinePointsLeft:
+  - {x: 33.918274, y: 0.0012178421, z: -0.17563179}
+  - {x: 33.91305, y: 0, z: -1.488227}
+  - {x: 33.251408, y: 0, z: -2.500608}
+  - {x: 32.168797, y: 0, z: -2.59265}
+  - {x: 31.1939, y: 0, z: -2.1653852}
+  - {x: 30.883722, y: 0, z: -1.2211878}
+  - {x: 31.107433, y: 0, z: -0.33746418}
+  - {x: 31.691978, y: 0, z: 0.0761492}
+  - {x: 32.233128, y: 0, z: 0.57445794}
+  - {x: 32.282074, y: 0, z: 1.0937871}
+  - {x: 31.974506, y: 0, z: 1.4651252}
+  - {x: 31.290905, y: 0, z: 1.5132076}
+  - {x: 30.590147, y: 0, z: 1.2389052}
+  - {x: 30.162123, y: 0, z: 0.5735341}
+  - {x: 30.165163, y: 0, z: -1.4167664}
+  soSplinePointsRight:
+  - {x: 33.518272, y: 0.0012178421, z: -0.17610979}
+  - {x: 33.52651, y: 0, z: -1.3853582}
+  - {x: 33.037807, y: 0, z: -2.1624126}
+  - {x: 32.23512, y: 0, z: -2.1981874}
+  - {x: 31.484488, y: 0, z: -1.8905052}
+  - {x: 31.283396, y: 0, z: -1.205039}
+  - {x: 31.443134, y: 0, z: -0.55496085}
+  - {x: 31.945034, y: 0, z: -0.23362827}
+  - {x: 32.586193, y: 0, z: 0.38646048}
+  - {x: 32.665062, y: 0, z: 1.2092067}
+  - {x: 32.141827, y: 0, z: 1.8284487}
+  - {x: 31.22771, y: 0, z: 1.9081839}
+  - {x: 30.33076, y: 0, z: 1.5434024}
+  - {x: 29.768206, y: 0, z: 0.6430177}
+  - {x: 29.765162, y: 0, z: -1.4167659}
+  ODDQCOQCCQ:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  OCOODCDQCQ:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  meshVecs:
+  - {x: 33.918274, y: 0.0012178421, z: -0.17563179}
+  - {x: 33.518272, y: 0.0012178421, z: -0.17610979}
+  - {x: 33.91305, y: 0, z: -1.488227}
+  - {x: 33.52651, y: 0, z: -1.3853582}
+  - {x: 33.251408, y: 0, z: -2.500608}
+  - {x: 33.037807, y: 0, z: -2.1624126}
+  - {x: 32.168797, y: 0, z: -2.59265}
+  - {x: 32.23512, y: 0, z: -2.1981874}
+  - {x: 31.1939, y: 0, z: -2.1653852}
+  - {x: 31.484488, y: 0, z: -1.8905052}
+  - {x: 30.883722, y: 0, z: -1.2211878}
+  - {x: 31.283396, y: 0, z: -1.205039}
+  - {x: 31.107433, y: 0, z: -0.33746418}
+  - {x: 31.443134, y: 0, z: -0.55496085}
+  - {x: 31.691978, y: 0, z: 0.0761492}
+  - {x: 31.945034, y: 0, z: -0.23362827}
+  - {x: 32.233128, y: 0, z: 0.57445794}
+  - {x: 32.586193, y: 0, z: 0.38646048}
+  - {x: 32.282074, y: 0, z: 1.0937871}
+  - {x: 32.665062, y: 0, z: 1.2092067}
+  - {x: 31.974506, y: 0, z: 1.4651252}
+  - {x: 32.141827, y: 0, z: 1.8284487}
+  - {x: 31.290905, y: 0, z: 1.5132076}
+  - {x: 31.22771, y: 0, z: 1.9081839}
+  - {x: 30.590147, y: 0, z: 1.2389052}
+  - {x: 30.33076, y: 0, z: 1.5434024}
+  - {x: 30.162123, y: 0, z: 0.5735341}
+  - {x: 29.768206, y: 0, z: 0.6430177}
+  - {x: 30.165163, y: 0, z: -1.4167664}
+  - {x: 29.765162, y: 0, z: -1.4167659}
+  meshUVs:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 0.28538522}
+  - {x: 1, y: 0.28538522}
+  - {x: 0, y: 0.52612054}
+  - {x: 1, y: 0.52612054}
+  - {x: 0, y: 0.7399606}
+  - {x: 1, y: 0.7399606}
+  - {x: 0, y: 0.95220476}
+  - {x: 1, y: 0.95220476}
+  - {x: 0, y: 1.1454889}
+  - {x: 1, y: 1.1454889}
+  - {x: 0, y: 1.3244036}
+  - {x: 1, y: 1.3244036}
+  - {x: 0, y: 1.4728404}
+  - {x: 1, y: 1.4728404}
+  - {x: 0, y: 1.6570135}
+  - {x: 1, y: 1.6570135}
+  - {x: 0, y: 1.809577}
+  - {x: 1, y: 1.809577}
+  - {x: 0, y: 1.9558835}
+  - {x: 1, y: 1.9558835}
+  - {x: 0, y: 2.137267}
+  - {x: 1, y: 2.137267}
+  - {x: 0, y: 2.332}
+  - {x: 1, y: 2.332}
+  - {x: 0, y: 2.5416713}
+  - {x: 1, y: 2.5416713}
+  - {x: 0, y: 3}
+  - {x: 1, y: 3}
+  meshUVs2:
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  surfaceMeshVecs: []
+  leftIndentVecs:
+  - {x: 38.91827, y: -0.018782157, z: -0.16965683}
+  - {x: 38.744877, y: -0.02, z: -2.774096}
+  - {x: 35.921402, y: -0.02, z: -6.728035}
+  - {x: 31.339766, y: -0.02, z: -7.523442}
+  - {x: 27.561552, y: -0.02, z: -5.601379}
+  - {x: 25.887798, y: -0.02, z: -1.4230481}
+  - {x: 26.911171, y: -0.02, z: 2.3812444}
+  - {x: 28.528776, y: -0.02, z: 3.9483771}
+  - {x: 27.819786, y: -0.02, z: 2.9244387}
+  - {x: 27.494747, y: -0.02, z: -0.34895158}
+  - {x: 29.883003, y: -0.02, z: -3.076418}
+  - {x: 32.080833, y: -0.02, z: -3.4239993}
+  - {x: 33.83249, y: -0.02, z: -2.567302}
+  - {x: 35.086105, y: -0.02, z: -0.29501504}
+  - {x: 35.16516, y: -0.02, z: -1.4167724}
+  rightIndentVecs:
+  - {x: 27.518276, y: -0.018782157, z: -0.18327975}
+  - {x: 27.728317, y: -0.02, z: 0.15768474}
+  - {x: 29.833817, y: -0.02, z: 2.9104998}
+  - {x: 33.229954, y: -0.02, z: 3.7187629}
+  - {x: 35.843307, y: -0.02, z: 2.2326872}
+  - {x: 37.278503, y: -0.02, z: -0.96280664}
+  - {x: 36.47865, y: -0.02, z: -3.817411}
+  - {x: 35.74088, y: -0.02, z: -4.8803015}
+  - {x: 37.882202, y: -0.02, z: -2.4335165}
+  - {x: 38.409855, y: -0.02, z: 2.940493}
+  - {x: 34.65163, y: -0.02, z: 7.2783003}
+  - {x: 30.279797, y: -0.02, z: 7.8328323}
+  - {x: 26.439949, y: -0.02, z: 6.110851}
+  - {x: 23.859425, y: -0.02, z: 1.6852767}
+  - {x: 23.765162, y: -0.02, z: -1.4167588}
+  middleIndentVecs:
+  - {x: 33.718273, y: -0.018782157, z: -0.17587079}
+  - {x: 33.71978, y: -0.02, z: -1.4367926}
+  - {x: 33.144608, y: -0.02, z: -2.3315103}
+  - {x: 32.201958, y: -0.02, z: -2.3954186}
+  - {x: 31.339193, y: -0.02, z: -2.0279453}
+  - {x: 31.083559, y: -0.02, z: -1.2131134}
+  - {x: 31.275284, y: -0.02, z: -0.44621253}
+  - {x: 31.818506, y: -0.02, z: -0.07873954}
+  - {x: 32.40966, y: -0.02, z: 0.4804592}
+  - {x: 32.473568, y: -0.02, z: 1.1514969}
+  - {x: 32.058167, y: -0.02, z: 1.6467869}
+  - {x: 31.259308, y: -0.02, z: 1.7106957}
+  - {x: 30.460453, y: -0.02, z: 1.3911538}
+  - {x: 29.965164, y: -0.02, z: 0.6082759}
+  - {x: 29.965162, y: -0.02, z: -1.4167662}
+  leftSurroundingVecs:
+  - {x: 43.918266, y: -0.018782157, z: -0.16368186}
+  - {x: 43.576702, y: -0.02, z: -4.059965}
+  - {x: 38.591393, y: -0.02, z: -10.9554615}
+  - {x: 30.510735, y: -0.02, z: -12.454233}
+  - {x: 23.929205, y: -0.02, z: -9.037373}
+  - {x: 20.891876, y: -0.02, z: -1.6249084}
+  - {x: 22.714909, y: -0.02, z: 5.0999527}
+  - {x: 25.365574, y: -0.02, z: 7.820605}
+  - {x: 23.406445, y: -0.02, z: 5.27442}
+  - {x: 22.707418, y: -0.02, z: -1.7916902}
+  - {x: 27.7915, y: -0.02, z: -7.617961}
+  - {x: 32.87076, y: -0.02, z: -8.361206}
+  - {x: 37.074833, y: -0.02, z: -6.3735094}
+  - {x: 40.010094, y: -0.02, z: -1.1635642}
+  - {x: 40.16516, y: -0.02, z: -1.4167783}
+  rightSurroundingVecs:
+  - {x: 23.51828, y: -0.018782157, z: -0.18805972}
+  - {x: 23.862858, y: -0.02, z: 1.18638}
+  - {x: 27.697823, y: -0.02, z: 6.2924414}
+  - {x: 33.89318, y: -0.02, z: 7.6633964}
+  - {x: 38.749184, y: -0.02, z: 4.981482}
+  - {x: 41.27524, y: -0.02, z: -0.80131847}
+  - {x: 39.83566, y: -0.02, z: -5.9923778}
+  - {x: 38.27144, y: -0.02, z: -7.978084}
+  - {x: 41.412876, y: -0.02, z: -4.3135014}
+  - {x: 42.239716, y: -0.02, z: 4.094684}
+  - {x: 36.324833, y: -0.02, z: 10.911534}
+  - {x: 29.647854, y: -0.02, z: 11.782598}
+  - {x: 23.846073, y: -0.02, z: 9.155817}
+  - {x: 19.920237, y: -0.02, z: 2.380116}
+  - {x: 19.765162, y: -0.02, z: -1.416754}
+  leftIndentVecsSV:
+  - {x: 38.91827, y: -0.018782157, z: -0.16965683}
+  - {x: 38.744877, y: -0.02, z: -2.774096}
+  - {x: 35.921402, y: -0.02, z: -6.728035}
+  - {x: 31.339766, y: -0.02, z: -7.523442}
+  - {x: 27.561552, y: -0.02, z: -5.601379}
+  - {x: 25.887798, y: -0.02, z: -1.4230481}
+  - {x: 26.911171, y: -0.02, z: 2.3812444}
+  - {x: 28.528776, y: -0.02, z: 3.9483771}
+  - {x: 27.819786, y: -0.02, z: 2.9244387}
+  - {x: 27.494747, y: -0.02, z: -0.34895158}
+  - {x: 29.883003, y: -0.02, z: -3.076418}
+  - {x: 32.080833, y: -0.02, z: -3.4239993}
+  - {x: 33.83249, y: -0.02, z: -2.567302}
+  - {x: 35.086105, y: -0.02, z: -0.29501504}
+  - {x: 35.16516, y: -0.02, z: -1.4167724}
+  rightIndentVecsSV:
+  - {x: 28.518276, y: -0.018782157, z: -0.18208475}
+  - {x: 28.694683, y: -0.02, z: -0.09948909}
+  - {x: 30.367815, y: -0.02, z: 2.0650144}
+  - {x: 33.064148, y: -0.02, z: 2.7326045}
+  - {x: 35.116837, y: -0.02, z: 1.5454885}
+  - {x: 36.27932, y: -0.02, z: -1.0031787}
+  - {x: 35.639397, y: -0.02, z: -3.2736692}
+  - {x: 35.10824, y: -0.02, z: -4.105856}
+  - {x: 36.999535, y: -0.02, z: -1.9635203}
+  - {x: 37.45239, y: -0.02, z: 2.6519454}
+  - {x: 34.23333, y: -0.02, z: 6.369992}
+  - {x: 30.437782, y: -0.02, z: 6.845391}
+  - {x: 27.088417, y: -0.02, z: 5.3496094}
+  - {x: 24.844221, y: -0.02, z: 1.5115669}
+  - {x: 24.765162, y: -0.02, z: -1.41676}
+  bridgeElement: 000000000000000000000000000000
+  vecsBelowTerrain: []
+  treeVecs:
+  - {x: 38.918266, y: 0.0012178421, z: -0.16965678}
+  - {x: 28.518278, y: 0.0012178421, z: -0.1820848}
+  - {x: 38.74488, y: 0, z: -2.7740884}
+  - {x: 28.694681, y: 0, z: -0.09949696}
+  - {x: 35.921375, y: 0, z: -6.7280507}
+  - {x: 30.36784, y: 0, z: 2.06503}
+  - {x: 31.339727, y: 0, z: -7.523435}
+  - {x: 33.06419, y: 0, z: 2.7325978}
+  - {x: 27.56156, y: 0, z: -5.6013875}
+  - {x: 35.116825, y: 0, z: 1.5454971}
+  - {x: 25.887798, y: 0, z: -1.423047}
+  - {x: 36.27932, y: 0, z: -1.0031799}
+  - {x: 26.911171, y: 0, z: 2.3812444}
+  - {x: 35.639397, y: 0, z: -3.2736692}
+  - {x: 28.528765, y: 0, z: 3.9483676}
+  - {x: 35.108246, y: 0, z: -4.1058464}
+  - {x: 27.819778, y: 0, z: 2.9244258}
+  - {x: 36.999542, y: 0, z: -1.9635074}
+  - {x: 27.49475, y: 0, z: -0.34895945}
+  - {x: 37.45239, y: 0, z: 2.6519532}
+  - {x: 29.883005, y: 0, z: -3.0764189}
+  - {x: 34.233326, y: 0, z: 6.3699927}
+  - {x: 32.080853, y: 0, z: -3.423996}
+  - {x: 30.437761, y: 0, z: 6.8453875}
+  - {x: 33.83248, y: 0, z: -2.5673091}
+  - {x: 27.088425, y: 0, z: 5.349617}
+  - {x: 35.08611, y: 0, z: -0.29501075}
+  - {x: 24.844221, y: 0, z: 1.5115626}
+  - {x: 35.16516, y: 0, z: -1.4167712}
+  - {x: 24.765162, y: 0, z: -1.4167612}
+  detailVecs:
+  - {x: -13.08173, y: 0.0012178421, z: -50.172047}
+  - {x: -19.481724, y: 0.0012178421, z: -50.179695}
+  - {x: -13.187851, y: 0, z: -52.259743}
+  - {x: -19.37259, y: 0, z: -50.613842}
+  - {x: -15.14661, y: 0, z: -55.037075}
+  - {x: -18.564173, y: 0, z: -49.625946}
+  - {x: -18.328646, y: 0, z: -55.55112}
+  - {x: -17.26744, y: 0, z: -49.239716}
+  - {x: -20.985504, y: 0, z: -54.226986}
+  - {x: -16.33611, y: 0, z: -49.828903}
+  - {x: -22.113832, y: 0, z: -51.342304}
+  - {x: -15.719051, y: 0, z: -51.083923}
+  - {x: -21.410324, y: 0, z: -48.706238}
+  - {x: -16.039108, y: 0, z: -52.186188}
+  - {x: -20.20595, y: 0, z: -47.60052}
+  - {x: -16.157036, y: 0, z: -52.55696}
+  - {x: -20.414883, y: 0, z: -48.01556}
+  - {x: -14.765797, y: 0, z: -51.02352}
+  - {x: -20.59032, y: 0, z: -49.771862}
+  - {x: -14.4625435, y: 0, z: -47.925144}
+  - {x: -19.280394, y: 0, z: -51.2598}
+  - {x: -16.603271, y: 0, z: -45.446625}
+  - {x: -18.235125, y: 0, z: -51.449116}
+  - {x: -19.24626, y: 0, z: -45.129494}
+  - {x: -17.46445, y: 0, z: -51.044823}
+  - {x: -21.614641, y: 0, z: -46.17287}
+  - {x: -16.883488, y: 0, z: -49.947594}
+  - {x: -23.186186, y: 0, z: -48.835854}
+  - {x: -16.834839, y: 0, z: -51.41677}
+  - {x: -23.234838, y: 0, z: -51.416763}
+  vegetationTris: 000000000300000001000000020000000300000000000000020000000500000003000000040000000500000002000000040000000700000005000000060000000700000004000000060000000900000007000000080000000900000006000000080000000b000000090000000a0000000b000000080000000a0000000d0000000b0000000c0000000d0000000a0000000c0000000f0000000d0000000e0000000f0000000c0000000e000000110000000f00000010000000110000000e000000100000001300000011000000120000001300000010000000120000001500000013000000140000001500000012000000140000001700000015000000160000001700000014000000160000001900000017000000180000001900000016000000180000001b000000190000001a0000001b000000180000001a0000001d0000001b0000001c0000001d0000001a000000
+  totalDistance: 13.254961
+  nodeSplinePoint: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  totalDistanceString: 13.25 m
+  startPrefabScript: {fileID: 0}
+  endPrefabScript: {fileID: 0}
+  startConnectionSegment: -1
+  startConnectionFlag: 0
+  endConnectionSegment: -1
+  endConnectionFlag: 0
+  tCrossingConnected: 0
+  roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  roadMaterials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  roadPhysicsMaterial: {fileID: 0}
+  roadPhysicsMaterials: []
+  startDir: {x: 0, y: 0, z: 0}
+  endDir: {x: 0, y: 0, z: 0}
+  startAngle: 0
+  endAngle: 0
+  startbendLeftRight: 0
+  endbendLeftRight: 0
+  pivotp: {x: 0, y: 0, z: 0}
+  p1: {x: 0, y: 0, z: 0}
+  p2: {x: 0, y: 0, z: 0}
+  p3: {x: 0, y: 0, z: 0}
+  p4: {x: 0, y: 0, z: 0}
+  p5: {x: 0, y: 0, z: 0}
+  p6: {x: 0, y: 0, z: 0}
+  p7: {x: 0, y: 0, z: 0}
+  cp1: {x: 0, y: 0, z: 0}
+  cp2: {x: 0, y: 0, z: 0}
+  cp3: {x: 0, y: 0, z: 0}
+  cp4: {x: 0, y: 0, z: 0}
+  cp5: {x: 0, y: 0, z: 0}
+  cp6: {x: 0, y: 0, z: 0}
+  cp7: {x: 0, y: 0, z: 0}
+  cp8: {x: 0, y: 0, z: 0}
+  cp9: {x: 0, y: 0, z: 0}
+  cpcenter: {x: 0, y: 0, z: 0}
+  p1Circle: {x: 0, y: 0, z: 0}
+  p2Circle: {x: 0, y: 0, z: 0}
+  cpradius: 0
+  cpangle: 0
+  dp1: {x: 0, y: 0, z: 0}
+  dp2: {x: 0, y: 0, z: 0}
+  dp3: {x: 0, y: 0, z: 0}
+  dp4: {x: 0, y: 0, z: 0}
+  segPoints: []
+  testPoints: []
+  testPoints2: []
+  OQCQDCCCCD: {x: 0, y: 0, z: 0}
+  OOQODCQCDC: {x: 0, y: 0, z: 0}
+  endLeft: {x: 0, y: 0, z: 0}
+  endRight: {x: 0, y: 0, z: 0}
+  testmesh: {fileID: 0}
+  surfaceMesh: {fileID: 3138335036034123534}
+  sv1: {x: 38.918266, y: -0.018782157, z: -0.16965678}
+  sv2: {x: 28.518278, y: -0.018782157, z: -0.1820848}
+  prefabIndentLeft: {x: 0, y: 0, z: 0}
+  prefabIndentRight: {x: 0, y: 0, z: 0}
+  roadIndent1: {x: 0, y: 0, z: 0}
+  tmpPerpCP: {x: 0, y: 0, z: 0}
+  tmpCP: {x: 0, y: 0, z: 0}
+  splinePos: 0.001
+  camHeight: 5
+  flyOverPoints: []
+  splinePosV3: {x: 0, y: 0, z: 0}
+  markerDistances:
+  - 0
+  - 1.2609233
+  - 2.3245692
+  - 3.269383
+  - 4.2071457
+  - 5.0611362
+  - 5.8516397
+  - 6.5074806
+  - 7.3212166
+  - 7.9952908
+  - 8.64172
+  - 9.4431305
+  - 10.303523
+  - 11.2299185
+  - 13.254961
+  osmRoadType: 
+  soData: []
+  soDataExt: []
+  sideObjectNames: []
+  selectedSO: 0
+  rebuildSos: 0
+  sosCleared: 0
+  isSideObject: 0
+  startOffsetActiveMarker: -1
+  endOffsetActiveMarker: -1
+  leftToCenterPerc: 0.5
+  splatMapActive: 0
+  splatIndex: 0
+  expandLevel: 0
+  smoothLevel: 1
+  splatOpacity: 1
+  layer: 0
+  tag: 
+  castShadow: 0
+  fadeInFlag: 0
+  fadeInDistance: 0
+  fadeOutFlag: 0
+  fadeOutDistance: 0
+  doSurroundingSurfaces: 1
+  terrainDeformation: 1
+  snapToTerrain: 0
+  snapVertices: 0
+  snapOffset: 0.01
+  hasMeshCollider: 1
+  isUpdated: 1
+  QDDDQODQQDQDQQD: 1
+  uv4Type: 0
+  detailDistance: 50
+  startDecalCollapsed: 0
+  startDecal: {fileID: 0}
+  endDecal: {fileID: 0}
+  startDecalPrefab: {fileID: 0}
+  startDecalPrefabSource: {fileID: 0}
+  endDecalCollapsed: 0
+  endDecalPrefab: {fileID: 0}
+  endDecalPrefabSource: {fileID: 0}
+  startDecalID: -1
+  endDecalID: -1
+  lastForward: {x: -0.000000941881, y: 0, z: -1}
+  roadUpdate: 0
+  bounds:
+    m_Center: {x: 31.84172, y: 4500000, z: -0.34223175}
+    m_Extent: {x: 102.07655, y: 5500000, z: 102.25042}
+--- !u!33 &3138335034325150010
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034325150014}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335034325150011
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034325150014}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &3138335034325150012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034325150014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335034501461785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034501461784}
+  - component: {fileID: 3138335034501461764}
+  - component: {fileID: 3138335034501461765}
+  - component: {fileID: 3138335034501461766}
+  - component: {fileID: 3138335034501461767}
+  m_Layer: 0
+  m_Name: road_0001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3138335034501461784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034501461785}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335035344063314}
+  m_Father: {fileID: 3138335035299368581}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034501461764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034501461785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216737829, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScript: {fileID: 3138335034268544518}
+  roadName: road_0001
+  locked: 0
+  roadType: 0
+  isCustomRoadSet: 0
+  isCustomRoad: 0
+  markers: []
+  tmpMarkers: []
+  markersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tmpMarkersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tValues:
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  roadWidth: 0.4
+  faceDistance: 3
+  angleTreshold: 45
+  closedTrack: 0
+  minNodeDistance: 5
+  nodeWithinRange: -1
+  uvTiling: 1
+  planarUVs: 0
+  flipNormals: 0
+  randomnessFlag: 0
+  randomnessMarkerFlag: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  vegetationStudioGrassPerimeter: 2
+  vegetationStudioPlantPerimeter: 3
+  vegetationStudioTreePerimeter: 4
+  vegetationStudioObjectPerimeter: 3
+  vegetationStudioLargeObjectPerimeter: 4
+  vertsStats: 40
+  trisStats: 38
+  indent: 5
+  surrounding: 5
+  followTerrainContours: 0
+  terrainContoursOffset: 5
+  roadShape:
+  - {x: 0.2, y: 0}
+  - {x: -0.2, y: 0}
+  roadShapeIntsStart: 
+  roadShapeIntsEnd: 
+  roadShapeIntsStartFull: 
+  roadShapeIntsEndFull: 
+  roadShapeString: 
+  roadShapeReversedString: 
+  roadShapeMatchCount: 2
+  geoReversed: -1
+  roadShapeCols: 2
+  subSegments: 1
+  nodeDistance:
+  - 0
+  - 1
+  roadShapeUVs:
+  - 0
+  - 1
+  roadShapeUVs2:
+  - 0
+  - 1
+  doConnectionTri: 0101
+  randomRotations:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  hardEdge: 0000
+  roadShapeMaterialInts: 0000000000000000
+  subMeshCount: 1
+  roadShapeMaterialIntCounts: 02000000
+  controlPoints: []
+  splinePoints:
+  - {x: 31.993454, y: 0, z: 3.988573}
+  - {x: 32.60351, y: 0, z: 4.6908364}
+  - {x: 32.808964, y: 0, z: 5.4493537}
+  - {x: 33.6238, y: 0, z: 5.880735}
+  - {x: 34.694263, y: 0, z: 5.5771704}
+  - {x: 35.477165, y: 0, z: 4.95406}
+  - {x: 35.49314, y: 0, z: 4.171182}
+  - {x: 34.886013, y: 0, z: 3.4042816}
+  - {x: 33.62386, y: 0, z: 2.956916}
+  - {x: 33.208454, y: 0, z: 2.2539241}
+  - {x: 33.35225, y: 0, z: 1.4390922}
+  - {x: 33.7357, y: 0, z: 0.7041457}
+  - {x: 34.453716, y: 0, z: 0.57095987}
+  - {x: 34.902027, y: 0, z: 1.1195502}
+  - {x: 34.710304, y: 0, z: 1.8225423}
+  - {x: 34.710304, y: 0, z: 1.8225423}
+  - {x: 35.326508, y: 0, z: 2.797612}
+  - {x: 35.957207, y: 0, z: 3.0856967}
+  - {x: 36.804993, y: 0, z: 2.9113493}
+  - {x: 37.069134, y: 0, z: 1.9776614}
+  distances: []
+  markerInts: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000
+  insertSplinePoints:
+  - {x: 31.993454, y: 0, z: 3.988573}
+  - {x: 32.60351, y: 0, z: 4.6908364}
+  - {x: 32.808964, y: 0, z: 5.4493537}
+  - {x: 33.6238, y: 0, z: 5.880735}
+  - {x: 34.694263, y: 0, z: 5.5771704}
+  - {x: 35.477165, y: 0, z: 4.95406}
+  - {x: 35.49314, y: 0, z: 4.171182}
+  - {x: 34.886013, y: 0, z: 3.4042816}
+  - {x: 33.62386, y: 0, z: 2.956916}
+  - {x: 33.208454, y: 0, z: 2.2539241}
+  - {x: 33.35225, y: 0, z: 1.4390922}
+  - {x: 33.7357, y: 0, z: 0.7041457}
+  - {x: 34.453716, y: 0, z: 0.57095987}
+  - {x: 34.902027, y: 0, z: 1.1195502}
+  - {x: 34.710304, y: 0, z: 1.8225423}
+  - {x: 34.710304, y: 0, z: 1.8225423}
+  - {x: 35.326508, y: 0, z: 2.797612}
+  - {x: 35.957207, y: 0, z: 3.0856967}
+  - {x: 36.804993, y: 0, z: 2.9113493}
+  - {x: 37.069134, y: 0, z: 1.9776614}
+  soSplinePoints:
+  - {x: 31.993454, y: 0, z: 3.988573}
+  - {x: 32.60351, y: 0, z: 4.6908364}
+  - {x: 32.808964, y: 0, z: 5.4493537}
+  - {x: 33.6238, y: 0, z: 5.880735}
+  - {x: 34.694263, y: 0, z: 5.5771704}
+  - {x: 35.477165, y: 0, z: 4.95406}
+  - {x: 35.49314, y: 0, z: 4.171182}
+  - {x: 34.886013, y: 0, z: 3.4042816}
+  - {x: 33.62386, y: 0, z: 2.956916}
+  - {x: 33.208454, y: 0, z: 2.2539241}
+  - {x: 33.35225, y: 0, z: 1.4390922}
+  - {x: 33.7357, y: 0, z: 0.7041457}
+  - {x: 34.453716, y: 0, z: 0.57095987}
+  - {x: 34.902027, y: 0, z: 1.1195502}
+  - {x: 34.710304, y: 0, z: 1.8225423}
+  - {x: 34.710304, y: 0, z: 1.8225423}
+  - {x: 35.326508, y: 0, z: 2.797612}
+  - {x: 35.957207, y: 0, z: 3.0856967}
+  - {x: 36.804993, y: 0, z: 2.9113493}
+  - {x: 37.069134, y: 0, z: 1.9776614}
+  soSplinePointsLeft:
+  - {x: 31.842468, y: 0, z: 4.119735}
+  - {x: 32.428883, y: 0, z: 4.788327}
+  - {x: 32.657135, y: 0, z: 5.5795393}
+  - {x: 33.61027, y: 0, z: 6.080277}
+  - {x: 34.783707, y: 0, z: 5.7560563}
+  - {x: 35.651054, y: 0, z: 5.052864}
+  - {x: 35.680008, y: 0, z: 4.099903}
+  - {x: 34.99496, y: 0, z: 3.2365615}
+  - {x: 33.73697, y: 0, z: 2.7919717}
+  - {x: 33.405327, y: 0, z: 2.2186942}
+  - {x: 33.54159, y: 0, z: 1.5035077}
+  - {x: 33.8595, y: 0, z: 0.8612226}
+  - {x: 34.386612, y: 0, z: 0.7593666}
+  - {x: 34.7061, y: 0, z: 1.159717}
+  - {x: 34.517353, y: 0, z: 1.7699194}
+  - {x: 34.541237, y: 0, z: 1.9293867}
+  - {x: 35.184174, y: 0, z: 2.9381146}
+  - {x: 35.941868, y: 0, z: 3.2851076}
+  - {x: 36.946167, y: 0, z: 3.0530183}
+  - {x: 37.26158, y: 0, z: 2.0321047}
+  soSplinePointsRight:
+  - {x: 32.14444, y: 0, z: 3.8574116}
+  - {x: 32.77814, y: 0, z: 4.5933456}
+  - {x: 32.960793, y: 0, z: 5.319168}
+  - {x: 33.637325, y: 0, z: 5.681193}
+  - {x: 34.60482, y: 0, z: 5.3982844}
+  - {x: 35.303276, y: 0, z: 4.855256}
+  - {x: 35.306274, y: 0, z: 4.242461}
+  - {x: 34.777065, y: 0, z: 3.5720017}
+  - {x: 33.51075, y: 0, z: 3.1218605}
+  - {x: 33.01158, y: 0, z: 2.289154}
+  - {x: 33.162907, y: 0, z: 1.3746766}
+  - {x: 33.611897, y: 0, z: 0.54706883}
+  - {x: 34.52082, y: 0, z: 0.38255316}
+  - {x: 35.097954, y: 0, z: 1.0793835}
+  - {x: 34.903255, y: 0, z: 1.8751652}
+  - {x: 34.87937, y: 0, z: 1.7156979}
+  - {x: 35.46884, y: 0, z: 2.6571093}
+  - {x: 35.972546, y: 0, z: 2.8862858}
+  - {x: 36.66382, y: 0, z: 2.7696803}
+  - {x: 36.876686, y: 0, z: 1.9232179}
+  ODDQCOQCCQ:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  OCOODCDQCQ:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  meshVecs:
+  - {x: 31.842468, y: 0, z: 4.119735}
+  - {x: 32.14444, y: 0, z: 3.8574116}
+  - {x: 32.428883, y: 0, z: 4.788327}
+  - {x: 32.77814, y: 0, z: 4.5933456}
+  - {x: 32.657135, y: 0, z: 5.5795393}
+  - {x: 32.960793, y: 0, z: 5.319168}
+  - {x: 33.61027, y: 0, z: 6.080277}
+  - {x: 33.637325, y: 0, z: 5.681193}
+  - {x: 34.783707, y: 0, z: 5.7560563}
+  - {x: 34.60482, y: 0, z: 5.3982844}
+  - {x: 35.651054, y: 0, z: 5.052864}
+  - {x: 35.303276, y: 0, z: 4.855256}
+  - {x: 35.680008, y: 0, z: 4.099903}
+  - {x: 35.306274, y: 0, z: 4.242461}
+  - {x: 34.99496, y: 0, z: 3.2365615}
+  - {x: 34.777065, y: 0, z: 3.5720017}
+  - {x: 33.73697, y: 0, z: 2.7919717}
+  - {x: 33.51075, y: 0, z: 3.1218605}
+  - {x: 33.405327, y: 0, z: 2.2186942}
+  - {x: 33.01158, y: 0, z: 2.289154}
+  - {x: 33.54159, y: 0, z: 1.5035077}
+  - {x: 33.162907, y: 0, z: 1.3746766}
+  - {x: 33.8595, y: 0, z: 0.8612226}
+  - {x: 33.611897, y: 0, z: 0.54706883}
+  - {x: 34.386612, y: 0, z: 0.7593666}
+  - {x: 34.52082, y: 0, z: 0.38255316}
+  - {x: 34.7061, y: 0, z: 1.159717}
+  - {x: 35.097954, y: 0, z: 1.0793835}
+  - {x: 34.517353, y: 0, z: 1.7699194}
+  - {x: 34.903255, y: 0, z: 1.8751652}
+  - {x: 34.541237, y: 0, z: 1.9293867}
+  - {x: 34.87937, y: 0, z: 1.7156979}
+  - {x: 35.184174, y: 0, z: 2.9381146}
+  - {x: 35.46884, y: 0, z: 2.6571093}
+  - {x: 35.941868, y: 0, z: 3.2851076}
+  - {x: 35.972546, y: 0, z: 2.8862858}
+  - {x: 36.946167, y: 0, z: 3.0530183}
+  - {x: 36.66382, y: 0, z: 2.7696803}
+  - {x: 37.26158, y: 0, z: 2.0321047}
+  - {x: 36.876686, y: 0, z: 1.9232179}
+  meshUVs:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 0.17253648}
+  - {x: 1, y: 0.17253648}
+  - {x: 0, y: 0.3182922}
+  - {x: 1, y: 0.3182922}
+  - {x: 0, y: 0.48929664}
+  - {x: 1, y: 0.48929664}
+  - {x: 0, y: 0.6956706}
+  - {x: 1, y: 0.6956706}
+  - {x: 0, y: 0.8812574}
+  - {x: 1, y: 0.8812574}
+  - {x: 0, y: 1.0264922}
+  - {x: 1, y: 1.0264922}
+  - {x: 0, y: 1.2079116}
+  - {x: 1, y: 1.2079116}
+  - {x: 0, y: 1.4562804}
+  - {x: 1, y: 1.4562804}
+  - {x: 0, y: 1.6077309}
+  - {x: 1, y: 1.6077309}
+  - {x: 0, y: 1.7611974}
+  - {x: 1, y: 1.7611974}
+  - {x: 0, y: 1.9149498}
+  - {x: 1, y: 1.9149498}
+  - {x: 0, y: 2.050396}
+  - {x: 1, y: 2.050396}
+  - {x: 0, y: 2.1818004}
+  - {x: 1, y: 2.1818004}
+  - {x: 0, y: 2.3169503}
+  - {x: 1, y: 2.3169503}
+  - {x: 0, y: 2.3169503}
+  - {x: 1, y: 2.3169503}
+  - {x: 0, y: 2.5308886}
+  - {x: 1, y: 2.5308886}
+  - {x: 0, y: 2.6594932}
+  - {x: 1, y: 2.6594932}
+  - {x: 0, y: 2.8200276}
+  - {x: 1, y: 2.8200276}
+  - {x: 0, y: 3}
+  - {x: 1, y: 3}
+  meshUVs2:
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  surfaceMeshVecs: []
+  leftIndentVecs:
+  - {x: 28.067827, y: -0.02, z: 7.3987722}
+  - {x: 28.063143, y: -0.02, z: 7.2256026}
+  - {x: 28.861427, y: -0.02, z: 8.834168}
+  - {x: 33.2721, y: -0.02, z: 11.068828}
+  - {x: 37.01978, y: -0.02, z: 10.228189}
+  - {x: 39.998302, y: -0.02, z: 7.522974}
+  - {x: 40.351685, y: -0.02, z: 2.3179245}
+  - {x: 37.718666, y: -0.02, z: -0.9564593}
+  - {x: 36.564693, y: -0.02, z: -1.3316164}
+  - {x: 38.327145, y: -0.02, z: 1.3379463}
+  - {x: 38.275158, y: -0.02, z: 3.1138983}
+  - {x: 36.95455, y: -0.02, z: 4.7881384}
+  - {x: 32.709003, y: -0.02, z: 5.4695296}
+  - {x: 29.807972, y: -0.02, z: 2.1638775}
+  - {x: 29.693533, y: -0.02, z: 0.4543357}
+  - {x: 30.314526, y: -0.02, z: 4.600514}
+  - {x: 31.625822, y: -0.02, z: 6.450683}
+  - {x: 35.558395, y: -0.02, z: 8.270381}
+  - {x: 40.47551, y: -0.02, z: 6.594731}
+  - {x: 42.07276, y: -0.02, z: 3.393187}
+  rightIndentVecs:
+  - {x: 36.674007, y: -0.02, z: -0.07743335}
+  - {x: 38.017033, y: -0.02, z: 1.6686151}
+  - {x: 37.51564, y: -0.02, z: 1.4136128}
+  - {x: 34.043133, y: -0.02, z: -0.30506796}
+  - {x: 31.921534, y: -0.02, z: 0.031724036}
+  - {x: 30.086578, y: -0.02, z: 1.8911239}
+  - {x: 29.700262, y: -0.02, z: 6.3808355}
+  - {x: 31.50862, y: -0.02, z: 8.603626}
+  - {x: 30.117481, y: -0.02, z: 8.070167}
+  - {x: 27.1054, y: -0.02, z: 3.3460515}
+  - {x: 27.482628, y: -0.02, z: -0.55779195}
+  - {x: 29.897839, y: -0.02, z: -4.1652303}
+  - {x: 36.53395, y: -0.02, z: -5.269643}
+  - {x: 40.975708, y: -0.02, z: -0.12560913}
+  - {x: 40.691837, y: -0.02, z: 3.4538658}
+  - {x: 39.951424, y: -0.02, z: -1.4896545}
+  - {x: 39.73886, y: -0.02, z: -1.5579729}
+  - {x: 36.432713, y: -0.02, z: -3.0960422}
+  - {x: 32.428608, y: -0.02, z: -1.4803748}
+  - {x: 31.10327, y: -0.02, z: 0.2899191}
+  middleIndentVecs:
+  - {x: 31.993454, y: -0.02, z: 3.988573}
+  - {x: 32.60351, y: -0.02, z: 4.6908364}
+  - {x: 32.808964, y: -0.02, z: 5.4493537}
+  - {x: 33.6238, y: -0.02, z: 5.880735}
+  - {x: 34.694263, y: -0.02, z: 5.5771704}
+  - {x: 35.477165, y: -0.02, z: 4.95406}
+  - {x: 35.49314, y: -0.02, z: 4.171182}
+  - {x: 34.886013, y: -0.02, z: 3.4042816}
+  - {x: 33.62386, y: -0.02, z: 2.956916}
+  - {x: 33.208454, y: -0.02, z: 2.2539241}
+  - {x: 33.35225, y: -0.02, z: 1.4390922}
+  - {x: 33.7357, y: -0.02, z: 0.7041457}
+  - {x: 34.453716, y: -0.02, z: 0.57095987}
+  - {x: 34.902027, y: -0.02, z: 1.1195502}
+  - {x: 34.710304, y: -0.02, z: 1.8225423}
+  - {x: 34.710304, y: -0.02, z: 1.8225423}
+  - {x: 35.326508, y: -0.02, z: 2.797612}
+  - {x: 35.957207, y: -0.02, z: 3.0856967}
+  - {x: 36.804993, y: -0.02, z: 2.9113493}
+  - {x: 37.069134, y: -0.02, z: 1.9776614}
+  leftSurroundingVecs:
+  - {x: 24.293186, y: -0.02, z: 10.67781}
+  - {x: 23.697403, y: -0.02, z: 9.662878}
+  - {x: 25.065722, y: -0.02, z: 12.0887985}
+  - {x: 32.933926, y: -0.02, z: 16.057379}
+  - {x: 39.25585, y: -0.02, z: 14.700323}
+  - {x: 44.34555, y: -0.02, z: 9.993084}
+  - {x: 45.02336, y: -0.02, z: 0.53594565}
+  - {x: 40.44237, y: -0.02, z: -5.14948}
+  - {x: 39.392418, y: -0.02, z: -5.4552045}
+  - {x: 43.248962, y: -0.02, z: 0.45719838}
+  - {x: 43.00872, y: -0.02, z: 4.7242885}
+  - {x: 40.0496, y: -0.02, z: 8.7150545}
+  - {x: 31.031399, y: -0.02, z: 10.179693}
+  - {x: 24.909843, y: -0.02, z: 3.168038}
+  - {x: 24.869713, y: -0.02, z: -0.861248}
+  - {x: 26.087816, y: -0.02, z: 7.271641}
+  - {x: 28.067472, y: -0.02, z: 9.963251}
+  - {x: 35.174923, y: -0.02, z: 13.255654}
+  - {x: 44.004856, y: -0.02, z: 10.136443}
+  - {x: 46.88394, y: -0.02, z: 4.7542696}
+  rightSurroundingVecs:
+  - {x: 39.69372, y: -0.02, z: -2.7006633}
+  - {x: 41.50962, y: -0.02, z: -0.28120518}
+  - {x: 40.552208, y: -0.02, z: -1.1900907}
+  - {x: 34.31367, y: -0.02, z: -4.2959085}
+  - {x: 30.132675, y: -0.02, z: -3.5459828}
+  - {x: 26.608782, y: -0.02, z: -0.084964275}
+  - {x: 25.962923, y: -0.02, z: 7.8064184}
+  - {x: 29.329653, y: -0.02, z: 11.958043}
+  - {x: 27.8553, y: -0.02, z: 11.369037}
+  - {x: 23.167948, y: -0.02, z: 4.0506496}
+  - {x: 23.695776, y: -0.02, z: -1.8461043}
+  - {x: 27.421797, y: -0.02, z: -7.3067627}
+  - {x: 37.876034, y: -0.02, z: -9.037773}
+  - {x: 44.89421, y: -0.02, z: -0.92893755}
+  - {x: 44.550896, y: -0.02, z: 4.5063324}
+  - {x: 43.332794, y: -0.02, z: -3.6265564}
+  - {x: 42.585545, y: -0.02, z: -4.3680277}
+  - {x: 36.73949, y: -0.02, z: -7.084261}
+  - {x: 29.60513, y: -0.02, z: -4.3137445}
+  - {x: 27.254326, y: -0.02, z: -0.79894674}
+  leftIndentVecsSV:
+  - {x: 28.067827, y: -0.02, z: 7.3987722}
+  - {x: 28.063143, y: -0.02, z: 7.2256026}
+  - {x: 28.861427, y: -0.02, z: 8.834168}
+  - {x: 33.2721, y: -0.02, z: 11.068828}
+  - {x: 37.01978, y: -0.02, z: 10.228189}
+  - {x: 39.998302, y: -0.02, z: 7.522974}
+  - {x: 40.351685, y: -0.02, z: 2.3179245}
+  - {x: 37.718666, y: -0.02, z: -0.9564593}
+  - {x: 36.564693, y: -0.02, z: -1.3316164}
+  - {x: 38.327145, y: -0.02, z: 1.3379463}
+  - {x: 38.275158, y: -0.02, z: 3.1138983}
+  - {x: 36.95455, y: -0.02, z: 4.7881384}
+  - {x: 32.709003, y: -0.02, z: 5.4695296}
+  - {x: 29.807972, y: -0.02, z: 2.1638775}
+  - {x: 29.693533, y: -0.02, z: 0.4543357}
+  - {x: 30.314526, y: -0.02, z: 4.600514}
+  - {x: 31.625822, y: -0.02, z: 6.450683}
+  - {x: 35.558395, y: -0.02, z: 8.270381}
+  - {x: 40.47551, y: -0.02, z: 6.594731}
+  - {x: 42.07276, y: -0.02, z: 3.393187}
+  rightIndentVecsSV:
+  - {x: 35.91908, y: -0.02, z: 0.57837415}
+  - {x: 37.143883, y: -0.02, z: 2.1560702}
+  - {x: 36.7565, y: -0.02, z: 2.0645387}
+  - {x: 33.9755, y: -0.02, z: 0.6926422}
+  - {x: 32.368748, y: -0.02, z: 0.9261508}
+  - {x: 30.956028, y: -0.02, z: 2.385146}
+  - {x: 30.634598, y: -0.02, z: 6.02444}
+  - {x: 32.05336, y: -0.02, z: 7.7650223}
+  - {x: 30.683025, y: -0.02, z: 7.2454486}
+  - {x: 28.089764, y: -0.02, z: 3.1699018}
+  - {x: 28.42934, y: -0.02, z: -0.23571384}
+  - {x: 30.516848, y: -0.02, z: -3.379847}
+  - {x: 36.19843, y: -0.02, z: -4.32761}
+  - {x: 39.996082, y: -0.02, z: 0.07522297}
+  - {x: 39.727074, y: -0.02, z: 3.190749}
+  - {x: 39.106083, y: -0.02, z: -0.9554292}
+  - {x: 39.02719, y: -0.02, z: -0.8554592}
+  - {x: 36.356018, y: -0.02, z: -2.0989876}
+  - {x: 33.134476, y: -0.02, z: -0.77203226}
+  - {x: 32.065506, y: -0.02, z: 0.5621356}
+  bridgeElement: 0000000000000000000000000000000000000000
+  vecsBelowTerrain: []
+  treeVecs:
+  - {x: 28.06783, y: 0, z: 7.398773}
+  - {x: 35.91908, y: 0, z: 0.5783732}
+  - {x: 28.063137, y: 0, z: 7.2255917}
+  - {x: 37.143887, y: 0, z: 2.156081}
+  - {x: 28.86144, y: 0, z: 8.834183}
+  - {x: 36.756485, y: 0, z: 2.0645244}
+  - {x: 33.272064, y: 0, z: 11.068825}
+  - {x: 33.975533, y: 0, z: 0.6926446}
+  - {x: 37.019756, y: 0, z: 10.228201}
+  - {x: 32.36877, y: 0, z: 0.9261403}
+  - {x: 39.99831, y: 0, z: 7.5229597}
+  - {x: 30.95602, y: 0, z: 2.3851604}
+  - {x: 40.351685, y: 0, z: 2.317925}
+  - {x: 30.634598, y: 0, z: 6.0244393}
+  - {x: 37.718693, y: 0, z: -0.9564431}
+  - {x: 32.053333, y: 0, z: 7.765006}
+  - {x: 36.564663, y: 0, z: -1.3316364}
+  - {x: 30.683056, y: 0, z: 7.2454686}
+  - {x: 38.327145, y: 0, z: 1.337949}
+  - {x: 28.089764, y: 0, z: 3.1698992}
+  - {x: 38.275158, y: 0, z: 3.1138973}
+  - {x: 28.42934, y: 0, z: -0.23571289}
+  - {x: 36.954544, y: 0, z: 4.788144}
+  - {x: 30.516853, y: 0, z: -3.3798525}
+  - {x: 32.70902, y: 0, z: 5.4695344}
+  - {x: 36.198414, y: 0, z: -4.327615}
+  - {x: 29.807974, y: 0, z: 2.163886}
+  - {x: 39.99608, y: 0, z: 0.075214386}
+  - {x: 29.693531, y: 0, z: 0.45434666}
+  - {x: 39.727077, y: 0, z: 3.190738}
+  - {x: 30.314516, y: 0, z: 4.6004977}
+  - {x: 39.106094, y: 0, z: -0.955413}
+  - {x: 31.625822, y: 0, z: 6.450683}
+  - {x: 39.02719, y: 0, z: -0.8554592}
+  - {x: 35.55836, y: 0, z: 8.270378}
+  - {x: 36.356052, y: 0, z: -2.0989847}
+  - {x: 40.4755, y: 0, z: 6.5947447}
+  - {x: 33.134487, y: 0, z: -0.7720463}
+  - {x: 42.07276, y: 0, z: 3.3931913}
+  - {x: 32.065506, y: 0, z: 0.5621314}
+  detailVecs:
+  - {x: -20.422316, y: 0, z: -43.91284}
+  - {x: -15.590775, y: 0, z: -48.110012}
+  - {x: -20.190565, y: 0, z: -43.749313}
+  - {x: -14.602409, y: 0, z: -46.869015}
+  - {x: -19.620281, y: 0, z: -42.467674}
+  - {x: -14.761791, y: 0, z: -46.633617}
+  - {x: -16.592651, y: 0, z: -40.926594}
+  - {x: -16.159752, y: 0, z: -47.311935}
+  - {x: -13.874664, y: 0, z: -41.560658}
+  - {x: -16.736809, y: 0, z: -47.285004}
+  - {x: -11.740593, y: 0, z: -43.46508}
+  - {x: -17.305077, y: 0, z: -46.6268}
+  - {x: -11.516987, y: 0, z: -46.969284}
+  - {x: -17.49673, y: 0, z: -44.68835}
+  - {x: -13.3708, y: 0, z: -49.27924}
+  - {x: -16.857174, y: 0, z: -43.912197}
+  - {x: -14.566414, y: 0, z: -49.682194}
+  - {x: -18.185867, y: 0, z: -44.403976}
+  - {x: -13.6415825, y: 0, z: -48.309753}
+  - {x: -19.94151, y: 0, z: -47.1824}
+  - {x: -13.618271, y: 0, z: -47.53026}
+  - {x: -19.677233, y: 0, z: -49.591557}
+  - {x: -14.283474, y: 0, z: -46.782623}
+  - {x: -18.245129, y: 0, z: -51.809086}
+  - {x: -16.619946, y: 0, z: -46.41453}
+  - {x: -14.472622, y: 0, z: -52.443546}
+  - {x: -18.232775, y: 0, z: -48.23778}
+  - {x: -11.963169, y: 0, z: -49.523117}
+  - {x: -18.376942, y: 0, z: -49.019424}
+  - {x: -12.20245, y: 0, z: -47.33549}
+  - {x: -17.994797, y: 0, z: -46.467945}
+  - {x: -12.584595, y: 0, z: -49.88697}
+  - {x: -16.950836, y: 0, z: -44.954346}
+  - {x: -12.396149, y: 0, z: -49.45043}
+  - {x: -14.288239, y: 0, z: -43.723732}
+  - {x: -13.797348, y: 0, z: -50.104877}
+  - {x: -10.9362335, y: 0, z: -44.821945}
+  - {x: -15.453781, y: 0, z: -49.355354}
+  - {x: -9.851711, y: 0, z: -47.151245}
+  - {x: -16.010021, y: 0, z: -48.893433}
+  vegetationTris: 000000000300000001000000020000000300000000000000020000000500000003000000040000000500000002000000040000000700000005000000060000000700000004000000060000000900000007000000080000000900000006000000080000000b000000090000000a0000000b000000080000000a0000000d0000000b0000000c0000000d0000000a0000000c0000000f0000000d0000000e0000000f0000000c0000000e000000110000000f00000010000000110000000e000000100000001300000011000000120000001300000010000000120000001500000013000000140000001500000012000000140000001700000015000000160000001700000014000000160000001900000017000000180000001900000016000000180000001b000000190000001a0000001b000000180000001a0000001d0000001b0000001c0000001d0000001a0000001c0000001f0000001d0000001e0000001f0000001c0000001e000000210000001f00000020000000210000001e000000200000002300000021000000220000002300000020000000220000002500000023000000240000002500000022000000240000002700000025000000260000002700000024000000
+  totalDistance: 16.174648
+  nodeSplinePoint: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000
+  totalDistanceString: 16.17 m
+  startPrefabScript: {fileID: 0}
+  endPrefabScript: {fileID: 0}
+  startConnectionSegment: -1
+  startConnectionFlag: 0
+  endConnectionSegment: -1
+  endConnectionFlag: 0
+  tCrossingConnected: 0
+  roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  roadMaterials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  roadPhysicsMaterial: {fileID: 0}
+  roadPhysicsMaterials: []
+  startDir: {x: 0, y: 0, z: 0}
+  endDir: {x: 0, y: 0, z: 0}
+  startAngle: 0
+  endAngle: 0
+  startbendLeftRight: 0
+  endbendLeftRight: 0
+  pivotp: {x: 0, y: 0, z: 0}
+  p1: {x: 0, y: 0, z: 0}
+  p2: {x: 0, y: 0, z: 0}
+  p3: {x: 0, y: 0, z: 0}
+  p4: {x: 0, y: 0, z: 0}
+  p5: {x: 0, y: 0, z: 0}
+  p6: {x: 0, y: 0, z: 0}
+  p7: {x: 0, y: 0, z: 0}
+  cp1: {x: 0, y: 0, z: 0}
+  cp2: {x: 0, y: 0, z: 0}
+  cp3: {x: 0, y: 0, z: 0}
+  cp4: {x: 0, y: 0, z: 0}
+  cp5: {x: 0, y: 0, z: 0}
+  cp6: {x: 0, y: 0, z: 0}
+  cp7: {x: 0, y: 0, z: 0}
+  cp8: {x: 0, y: 0, z: 0}
+  cp9: {x: 0, y: 0, z: 0}
+  cpcenter: {x: 0, y: 0, z: 0}
+  p1Circle: {x: 0, y: 0, z: 0}
+  p2Circle: {x: 0, y: 0, z: 0}
+  cpradius: 0
+  cpangle: 0
+  dp1: {x: 0, y: 0, z: 0}
+  dp2: {x: 0, y: 0, z: 0}
+  dp3: {x: 0, y: 0, z: 0}
+  dp4: {x: 0, y: 0, z: 0}
+  segPoints: []
+  testPoints: []
+  testPoints2: []
+  OQCQDCCCCD: {x: 0, y: 0, z: 0}
+  OOQODCQCDC: {x: 0, y: 0, z: 0}
+  endLeft: {x: 0, y: 0, z: 0}
+  endRight: {x: 0, y: 0, z: 0}
+  testmesh: {fileID: 0}
+  surfaceMesh: {fileID: 3138335035344063315}
+  sv1: {x: 28.06783, y: -0.02, z: 7.398773}
+  sv2: {x: 35.91908, y: -0.02, z: 0.5783732}
+  prefabIndentLeft: {x: 0, y: 0, z: 0}
+  prefabIndentRight: {x: 0, y: 0, z: 0}
+  roadIndent1: {x: 0, y: 0, z: 0}
+  tmpPerpCP: {x: 0, y: 0, z: 0}
+  tmpCP: {x: 0, y: 0, z: 0}
+  splinePos: 0.001
+  camHeight: 5
+  flyOverPoints: []
+  splinePosV3: {x: 0, y: 0, z: 0}
+  markerDistances:
+  - 0
+  - 0.9302389
+  - 1.716088
+  - 2.638067
+  - 3.7507424
+  - 4.751343
+  - 5.534384
+  - 6.512515
+  - 7.8516073
+  - 8.66816
+  - 9.495583
+  - 10.324546
+  - 11.0548115
+  - 11.763285
+  - 12.491952
+  - 12.491952
+  - 13.645411
+  - 14.338789
+  - 15.204317
+  - 16.174648
+  osmRoadType: 
+  soData: []
+  soDataExt: []
+  sideObjectNames: []
+  selectedSO: 0
+  rebuildSos: 0
+  sosCleared: 0
+  isSideObject: 0
+  startOffsetActiveMarker: -1
+  endOffsetActiveMarker: -1
+  leftToCenterPerc: 0.5
+  splatMapActive: 0
+  splatIndex: 0
+  expandLevel: 0
+  smoothLevel: 1
+  splatOpacity: 1
+  layer: 0
+  tag: 
+  castShadow: 0
+  fadeInFlag: 0
+  fadeInDistance: 0
+  fadeOutFlag: 0
+  fadeOutDistance: 0
+  doSurroundingSurfaces: 1
+  terrainDeformation: 1
+  snapToTerrain: 0
+  snapVertices: 0
+  snapOffset: 0.01
+  hasMeshCollider: 1
+  isUpdated: 1
+  QDDDQODQQDQDQQD: 1
+  uv4Type: 0
+  detailDistance: 50
+  startDecalCollapsed: 0
+  startDecal: {fileID: 0}
+  endDecal: {fileID: 0}
+  startDecalPrefab: {fileID: 0}
+  startDecalPrefabSource: {fileID: 0}
+  endDecalCollapsed: 0
+  endDecalPrefab: {fileID: 0}
+  endDecalPrefabSource: {fileID: 0}
+  startDecalID: -1
+  endDecalID: -1
+  lastForward: {x: 0.2722173, y: 0, z: -0.9622358}
+  roadUpdate: 0
+  bounds:
+    m_Center: {x: 34.552025, y: 4500000, z: 3.2314148}
+    m_Extent: {x: 102.70956, y: 5500000, z: 102.84886}
+--- !u!33 &3138335034501461765
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034501461785}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335034501461766
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034501461785}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &3138335034501461767
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034501461785}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335034504761127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034504761126}
+  - component: {fileID: 3138335034504761122}
+  - component: {fileID: 3138335034504761123}
+  - component: {fileID: 3138335034504761124}
+  - component: {fileID: 3138335034504761125}
+  m_Layer: 0
+  m_Name: road_0001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3138335034504761126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034504761127}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335036248187158}
+  m_Father: {fileID: 3138335035299368581}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034504761122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034504761127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216737829, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScript: {fileID: 3138335034268544518}
+  roadName: road_0001
+  locked: 0
+  roadType: 0
+  isCustomRoadSet: 0
+  isCustomRoad: 0
+  markers: []
+  tmpMarkers: []
+  markersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tmpMarkersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tValues:
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  roadWidth: 0.4
+  faceDistance: 3
+  angleTreshold: 45
+  closedTrack: 0
+  minNodeDistance: 5
+  nodeWithinRange: 1
+  uvTiling: 1
+  planarUVs: 0
+  flipNormals: 0
+  randomnessFlag: 0
+  randomnessMarkerFlag: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  vegetationStudioGrassPerimeter: 2
+  vegetationStudioPlantPerimeter: 3
+  vegetationStudioTreePerimeter: 4
+  vegetationStudioObjectPerimeter: 3
+  vegetationStudioLargeObjectPerimeter: 4
+  vertsStats: 14
+  trisStats: 12
+  indent: 5
+  surrounding: 5
+  followTerrainContours: 0
+  terrainContoursOffset: 5
+  roadShape:
+  - {x: 0.2, y: 0}
+  - {x: -0.2, y: 0}
+  roadShapeIntsStart: 
+  roadShapeIntsEnd: 
+  roadShapeIntsStartFull: 
+  roadShapeIntsEndFull: 
+  roadShapeString: 
+  roadShapeReversedString: 
+  roadShapeMatchCount: 2
+  geoReversed: -1
+  roadShapeCols: 2
+  subSegments: 1
+  nodeDistance:
+  - 0
+  - 1
+  roadShapeUVs:
+  - 0
+  - 1
+  roadShapeUVs2:
+  - 0
+  - 1
+  doConnectionTri: 0101
+  randomRotations:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  hardEdge: 0000
+  roadShapeMaterialInts: 0000000000000000
+  subMeshCount: 1
+  roadShapeMaterialIntCounts: 02000000
+  controlPoints: []
+  splinePoints:
+  - {x: 36.785927, y: 0.0001032086, z: 1.2453322}
+  - {x: 36.228188, y: 0, z: 0.8798863}
+  - {x: 36.00451, y: 0, z: -0.06276226}
+  - {x: 35.57976, y: 0, z: -0.33787048}
+  - {x: 34.768837, y: 0, z: -0.15947467}
+  - {x: 34.166103, y: -0.021, z: -0.104385376}
+  - {x: 33.77988, y: -0.021, z: -0.3465519}
+  distances: []
+  markerInts: 00000000010000000200000003000000040000000500000006000000
+  insertSplinePoints:
+  - {x: 36.785927, y: 0.0001032086, z: 1.2453322}
+  - {x: 36.228188, y: 0, z: 0.8798863}
+  - {x: 36.00451, y: 0, z: -0.06276226}
+  - {x: 35.57976, y: 0, z: -0.33787048}
+  - {x: 34.768837, y: 0, z: -0.15947467}
+  - {x: 34.166103, y: -0.021, z: -0.104385376}
+  - {x: 33.77988, y: -0.021, z: -0.3465519}
+  soSplinePoints:
+  - {x: 36.785927, y: 0.0001032086, z: 1.2453322}
+  - {x: 36.228188, y: 0, z: 0.8798863}
+  - {x: 36.00451, y: 0, z: -0.06276226}
+  - {x: 35.57976, y: 0, z: -0.33787048}
+  - {x: 34.768837, y: 0, z: -0.15947467}
+  - {x: 34.166103, y: -0.021, z: -0.104385376}
+  - {x: 33.77988, y: -0.021, z: -0.3465519}
+  soSplinePointsLeft:
+  - {x: 36.89554, y: 0.0001032086, z: 1.0780442}
+  - {x: 36.399883, y: 0, z: 0.77731925}
+  - {x: 36.18104, y: 0, z: -0.15676203}
+  - {x: 35.595367, y: 0, z: -0.5372607}
+  - {x: 34.736248, y: 0, z: -0.35678014}
+  - {x: 34.20327, y: -0.021, z: -0.30085748}
+  - {x: 33.886124, y: -0.021, z: -0.5159981}
+  soSplinePointsRight:
+  - {x: 36.676315, y: 0.0001032086, z: 1.4126203}
+  - {x: 36.05649, y: 0, z: 0.9824534}
+  - {x: 35.827976, y: 0, z: 0.03123752}
+  - {x: 35.564156, y: 0, z: -0.13848026}
+  - {x: 34.801426, y: 0, z: 0.0378308}
+  - {x: 34.128937, y: -0.021, z: 0.09208673}
+  - {x: 33.673637, y: -0.021, z: -0.17710567}
+  ODDQCOQCCQ:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  OCOODCDQCQ:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  meshVecs:
+  - {x: 36.89554, y: 0.0001032086, z: 1.0780442}
+  - {x: 36.676315, y: 0.0001032086, z: 1.4126203}
+  - {x: 36.399883, y: 0, z: 0.77731925}
+  - {x: 36.05649, y: 0, z: 0.9824534}
+  - {x: 36.18104, y: 0, z: -0.15676203}
+  - {x: 35.827976, y: 0, z: 0.03123752}
+  - {x: 35.595367, y: 0, z: -0.5372607}
+  - {x: 35.564156, y: 0, z: -0.13848026}
+  - {x: 34.736248, y: 0, z: -0.35678014}
+  - {x: 34.801426, y: 0, z: 0.0378308}
+  - {x: 34.20327, y: -0.021, z: -0.30085748}
+  - {x: 34.128937, y: -0.021, z: 0.09208673}
+  - {x: 33.886124, y: -0.021, z: -0.5159981}
+  - {x: 33.673637, y: -0.021, z: -0.17710567}
+  meshUVs:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 0.13336024}
+  - {x: 1, y: 0.13336024}
+  - {x: 0, y: 0.3271249}
+  - {x: 1, y: 0.3271249}
+  - {x: 0, y: 0.42833653}
+  - {x: 1, y: 0.42833653}
+  - {x: 0, y: 0.5943996}
+  - {x: 1, y: 0.5943996}
+  - {x: 0, y: 0.71552163}
+  - {x: 1, y: 0.71552163}
+  - {x: 0, y: 0.8066946}
+  - {x: 1, y: 0.8066946}
+  meshUVs2:
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  surfaceMeshVecs: []
+  leftIndentVecs:
+  - {x: 39.635826, y: -0.01989679, z: -3.1041586}
+  - {x: 40.692307, y: -0.02, z: -1.7868762}
+  - {x: 40.59437, y: -0.02, z: -2.5067632}
+  - {x: 35.985516, y: -0.02, z: -5.522016}
+  - {x: 33.921436, y: -0.02, z: -5.2899413}
+  - {x: 35.132637, y: -0.041, z: -5.213726}
+  - {x: 36.542213, y: -0.041, z: -4.7521734}
+  rightIndentVecs:
+  - {x: 33.38797, y: -0.01989679, z: 6.4312634}
+  - {x: 30.905584, y: -0.02, z: 4.059488}
+  - {x: 30.531979, y: -0.02, z: 2.851239}
+  - {x: 35.095978, y: -0.02, z: 5.8432264}
+  - {x: 35.7792, y: -0.02, z: 5.9576244}
+  - {x: 33.013695, y: -0.041, z: 5.987529}
+  - {x: 30.48633, y: -0.041, z: 4.906305}
+  middleIndentVecs:
+  - {x: 36.785927, y: -0.01989679, z: 1.2453322}
+  - {x: 36.228188, y: -0.02, z: 0.8798863}
+  - {x: 36.00451, y: -0.02, z: -0.06276226}
+  - {x: 35.57976, y: -0.02, z: -0.33787048}
+  - {x: 34.768837, y: -0.02, z: -0.15947467}
+  - {x: 34.166103, y: -0.041, z: -0.104385376}
+  - {x: 33.77988, y: -0.041, z: -0.3465519}
+  leftSurroundingVecs:
+  - {x: 42.376114, y: -0.01989679, z: -7.2863617}
+  - {x: 44.98473, y: -0.02, z: -4.3510714}
+  - {x: 45.007706, y: -0.02, z: -4.8567643}
+  - {x: 36.375664, y: -0.02, z: -10.506772}
+  - {x: 33.10663, y: -0.02, z: -10.223103}
+  - {x: 36.062004, y: -0.041, z: -10.126595}
+  - {x: 39.198303, y: -0.041, z: -8.988349}
+  rightSurroundingVecs:
+  - {x: 31.195738, y: -0.01989679, z: 9.777026}
+  - {x: 27.471645, y: -0.02, z: 6.110844}
+  - {x: 27.001312, y: -0.02, z: 4.73124}
+  - {x: 34.78386, y: -0.02, z: 9.831031}
+  - {x: 36.431046, y: -0.02, z: 9.904153}
+  - {x: 32.270203, y: -0.041, z: 9.917824}
+  - {x: 28.361456, y: -0.041, z: 8.295245}
+  leftIndentVecsSV:
+  - {x: 39.635826, y: -0.01989679, z: -3.1041586}
+  - {x: 40.692307, y: -0.02, z: -1.7868762}
+  - {x: 40.59437, y: -0.02, z: -2.5067632}
+  - {x: 35.985516, y: -0.02, z: -5.522016}
+  - {x: 33.921436, y: -0.02, z: -5.2899413}
+  - {x: 35.132637, y: -0.041, z: -5.213726}
+  - {x: 36.542213, y: -0.041, z: -4.7521734}
+  rightIndentVecsSV:
+  - {x: 33.936028, y: -0.01989679, z: 5.594823}
+  - {x: 31.764069, y: -0.02, z: 3.5466487}
+  - {x: 31.414644, y: -0.02, z: 2.3812387}
+  - {x: 35.174007, y: -0.02, z: 4.8462753}
+  - {x: 35.616238, y: -0.02, z: 4.970992}
+  - {x: 33.19957, y: -0.041, z: 5.0049553}
+  - {x: 31.017548, y: -0.041, z: 4.0590696}
+  bridgeElement: 00000000000000
+  vecsBelowTerrain:
+  - {x: 34.20327, y: -0.021, z: -0.30085748}
+  - {x: 34.128937, y: -0.021, z: 0.09208673}
+  - {x: 33.886124, y: -0.021, z: -0.5159981}
+  - {x: 33.673637, y: -0.021, z: -0.17710567}
+  treeVecs:
+  - {x: 39.63583, y: 0.0001032086, z: -3.1041567}
+  - {x: 33.936024, y: 0.0001032086, z: 5.594821}
+  - {x: 40.692318, y: 0, z: -1.7868574}
+  - {x: 31.764057, y: 0, z: 3.54663}
+  - {x: 40.594376, y: 0, z: -2.5067565}
+  - {x: 31.41464, y: 0, z: 2.381232}
+  - {x: 35.985508, y: 0, z: -5.522016}
+  - {x: 35.174015, y: 0, z: 4.8462753}
+  - {x: 33.921555, y: 0, z: -5.289417}
+  - {x: 35.61612, y: 0, z: 4.9704676}
+  - {x: 35.132416, y: -0.021, z: -5.2126603}
+  - {x: 33.19979, y: -0.021, z: 5.0038896}
+  - {x: 36.542244, y: -0.021, z: -4.7521534}
+  - {x: 31.017515, y: -0.021, z: 4.0590496}
+  detailVecs:
+  - {x: -11.460285, y: 0.0001032086, z: -51.431274}
+  - {x: -14.967861, y: 0.0001032086, z: -46.07806}
+  - {x: -11.024654, y: 0, z: -50.76119}
+  - {x: -16.51897, y: 0, z: -47.479042}
+  - {x: -11.170956, y: 0, z: -51.566757}
+  - {x: -16.820026, y: 0, z: -48.558765}
+  - {x: -14.1705475, y: 0, z: -53.528114}
+  - {x: -14.6699295, y: 0, z: -47.14763}
+  - {x: -15.752567, y: 0, z: -53.31636}
+  - {x: -14.709759, y: 0, z: -47.002586}
+  - {x: -15.239243, y: -0.021, z: -53.24794}
+  - {x: -16.42855, y: -0.021, z: -46.96083}
+  - {x: -14.520203, y: -0.021, z: -53.057693}
+  - {x: -17.920036, y: -0.021, z: -47.635414}
+  vegetationTris: 000000000300000001000000020000000300000000000000020000000500000003000000040000000500000002000000040000000700000005000000060000000700000004000000060000000900000007000000080000000900000006000000080000000b000000090000000a0000000b000000080000000a0000000d0000000b0000000c0000000d0000000a000000
+  totalDistance: 4.033473
+  nodeSplinePoint: 00000000010000000200000003000000040000000500000006000000
+  totalDistanceString: 4.03 m
+  startPrefabScript: {fileID: 0}
+  endPrefabScript: {fileID: 0}
+  startConnectionSegment: -1
+  startConnectionFlag: 0
+  endConnectionSegment: -1
+  endConnectionFlag: 0
+  tCrossingConnected: 0
+  roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  roadMaterials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  roadPhysicsMaterial: {fileID: 0}
+  roadPhysicsMaterials: []
+  startDir: {x: 0, y: 0, z: 0}
+  endDir: {x: 0, y: 0, z: 0}
+  startAngle: 0
+  endAngle: 0
+  startbendLeftRight: 0
+  endbendLeftRight: 0
+  pivotp: {x: 0, y: 0, z: 0}
+  p1: {x: 0, y: 0, z: 0}
+  p2: {x: 0, y: 0, z: 0}
+  p3: {x: 0, y: 0, z: 0}
+  p4: {x: 0, y: 0, z: 0}
+  p5: {x: 0, y: 0, z: 0}
+  p6: {x: 0, y: 0, z: 0}
+  p7: {x: 0, y: 0, z: 0}
+  cp1: {x: 0, y: 0, z: 0}
+  cp2: {x: 0, y: 0, z: 0}
+  cp3: {x: 0, y: 0, z: 0}
+  cp4: {x: 0, y: 0, z: 0}
+  cp5: {x: 0, y: 0, z: 0}
+  cp6: {x: 0, y: 0, z: 0}
+  cp7: {x: 0, y: 0, z: 0}
+  cp8: {x: 0, y: 0, z: 0}
+  cp9: {x: 0, y: 0, z: 0}
+  cpcenter: {x: 0, y: 0, z: 0}
+  p1Circle: {x: 0, y: 0, z: 0}
+  p2Circle: {x: 0, y: 0, z: 0}
+  cpradius: 0
+  cpangle: 0
+  dp1: {x: 0, y: 0, z: 0}
+  dp2: {x: 0, y: 0, z: 0}
+  dp3: {x: 0, y: 0, z: 0}
+  dp4: {x: 0, y: 0, z: 0}
+  segPoints: []
+  testPoints: []
+  testPoints2: []
+  OQCQDCCCCD: {x: 0, y: 0, z: 0}
+  OOQODCQCDC: {x: 0, y: 0, z: 0}
+  endLeft: {x: 0, y: 0, z: 0}
+  endRight: {x: 0, y: 0, z: 0}
+  testmesh: {fileID: 0}
+  surfaceMesh: {fileID: 3138335036248187159}
+  sv1: {x: 39.63583, y: -0.01989679, z: -3.1041567}
+  sv2: {x: 33.936024, y: -0.01989679, z: 5.594821}
+  prefabIndentLeft: {x: 0, y: 0, z: 0}
+  prefabIndentRight: {x: 0, y: 0, z: 0}
+  roadIndent1: {x: 0, y: 0, z: 0}
+  tmpPerpCP: {x: 0, y: 0, z: 0}
+  tmpCP: {x: 0, y: 0, z: 0}
+  splinePos: 0.001
+  camHeight: 5
+  flyOverPoints: []
+  splinePosV3: {x: 0, y: 0, z: 0}
+  markerDistances:
+  - 0
+  - 0.66680115
+  - 1.6356244
+  - 2.1416826
+  - 2.971998
+  - 3.577608
+  - 4.033473
+  osmRoadType: 
+  soData: []
+  soDataExt: []
+  sideObjectNames: []
+  selectedSO: 0
+  rebuildSos: 0
+  sosCleared: 0
+  isSideObject: 0
+  startOffsetActiveMarker: -1
+  endOffsetActiveMarker: -1
+  leftToCenterPerc: 0.5
+  splatMapActive: 0
+  splatIndex: 0
+  expandLevel: 0
+  smoothLevel: 1
+  splatOpacity: 1
+  layer: 0
+  tag: 
+  castShadow: 0
+  fadeInFlag: 0
+  fadeInDistance: 0
+  fadeOutFlag: 0
+  fadeOutDistance: 0
+  doSurroundingSurfaces: 1
+  terrainDeformation: 1
+  snapToTerrain: 0
+  snapVertices: 0
+  snapOffset: 0.01
+  hasMeshCollider: 1
+  isUpdated: 1
+  QDDDQODQQDQDQQD: 1
+  uv4Type: 0
+  detailDistance: 50
+  startDecalCollapsed: 0
+  startDecal: {fileID: 0}
+  endDecal: {fileID: 0}
+  startDecalPrefab: {fileID: 0}
+  startDecalPrefabSource: {fileID: 0}
+  endDecalCollapsed: 0
+  endDecalPrefab: {fileID: 0}
+  endDecalPrefabSource: {fileID: 0}
+  startDecalID: -1
+  endDecalID: -1
+  lastForward: {x: -0.84723115, y: 0, z: -0.5312244}
+  roadUpdate: 0
+  bounds:
+    m_Center: {x: 35.28459, y: 4500000, z: 0.4376831}
+    m_Extent: {x: 101.61095, y: 5500000, z: 100.97494}
+--- !u!33 &3138335034504761123
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034504761127}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335034504761124
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034504761127}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &3138335034504761125
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034504761127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335034746821650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034746821649}
+  - component: {fileID: 3138335034746821661}
+  - component: {fileID: 3138335034746821662}
+  - component: {fileID: 3138335034746821663}
+  - component: {fileID: 3138335034746821648}
+  m_Layer: 0
+  m_Name: road_0001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3138335034746821649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034746821650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335036145144479}
+  m_Father: {fileID: 3138335035299368581}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034746821661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034746821650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216737829, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScript: {fileID: 3138335034268544518}
+  roadName: road_0001
+  locked: 0
+  roadType: 0
+  isCustomRoadSet: 0
+  isCustomRoad: 0
+  markers: []
+  tmpMarkers: []
+  markersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tmpMarkersExt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tValues:
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  roadWidth: 0.4
+  faceDistance: 3
+  angleTreshold: 45
+  closedTrack: 0
+  minNodeDistance: 5
+  nodeWithinRange: -1
+  uvTiling: 1
+  planarUVs: 0
+  flipNormals: 0
+  randomnessFlag: 0
+  randomnessMarkerFlag: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  vegetationStudioGrassPerimeter: 2
+  vegetationStudioPlantPerimeter: 3
+  vegetationStudioTreePerimeter: 4
+  vegetationStudioObjectPerimeter: 3
+  vegetationStudioLargeObjectPerimeter: 4
+  vertsStats: 28
+  trisStats: 26
+  indent: 5
+  surrounding: 5
+  followTerrainContours: 0
+  terrainContoursOffset: 5
+  roadShape:
+  - {x: 0.2, y: 0}
+  - {x: -0.2, y: 0}
+  roadShapeIntsStart: 
+  roadShapeIntsEnd: 
+  roadShapeIntsStartFull: 
+  roadShapeIntsEndFull: 
+  roadShapeString: 
+  roadShapeReversedString: 
+  roadShapeMatchCount: 2
+  geoReversed: -1
+  roadShapeCols: 2
+  subSegments: 1
+  nodeDistance:
+  - 0
+  - 1
+  roadShapeUVs:
+  - 0
+  - 1
+  roadShapeUVs2:
+  - 0
+  - 1
+  doConnectionTri: 0101
+  randomRotations:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  hardEdge: 0000
+  roadShapeMaterialInts: 0000000000000000
+  subMeshCount: 1
+  roadShapeMaterialIntCounts: 02000000
+  controlPoints: []
+  splinePoints:
+  - {x: 28.421003, y: 0, z: -1.1655343}
+  - {x: 27.849325, y: 0, z: -1.0853976}
+  - {x: 27.467335, y: 0, z: -0.8260795}
+  - {x: 27.343376, y: 0, z: -0.2540989}
+  - {x: 27.502934, y: 0, z: 0.415728}
+  - {x: 27.438705, y: 0, z: 1.1782527}
+  - {x: 27.335392, y: 0, z: 1.711127}
+  - {x: 27.451637, y: 0, z: 2.1162198}
+  - {x: 27.778175, y: 0.0038027763, z: 2.3691692}
+  - {x: 28.804201, y: 0, z: 2.8723154}
+  - {x: 29.764576, y: 0, z: 2.730475}
+  - {x: 30.59052, y: 0, z: 2.8341064}
+  - {x: 31.251085, y: 0, z: 3.6695118}
+  - {x: 32.068775, y: 0, z: 4.061668}
+  distances: []
+  markerInts: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+  insertSplinePoints:
+  - {x: 28.421003, y: 0, z: -1.1655343}
+  - {x: 27.849325, y: 0, z: -1.0853976}
+  - {x: 27.467335, y: 0, z: -0.8260795}
+  - {x: 27.343376, y: 0, z: -0.2540989}
+  - {x: 27.502934, y: 0, z: 0.415728}
+  - {x: 27.438705, y: 0, z: 1.1782527}
+  - {x: 27.335392, y: 0, z: 1.711127}
+  - {x: 27.451637, y: 0, z: 2.1162198}
+  - {x: 27.778175, y: 0.0038027763, z: 2.3691692}
+  - {x: 28.804201, y: 0, z: 2.8723154}
+  - {x: 29.764576, y: 0, z: 2.730475}
+  - {x: 30.59052, y: 0, z: 2.8341064}
+  - {x: 31.251085, y: 0, z: 3.6695118}
+  - {x: 32.068775, y: 0, z: 4.061668}
+  soSplinePoints:
+  - {x: 28.421003, y: 0, z: -1.1655343}
+  - {x: 27.849325, y: 0, z: -1.0853976}
+  - {x: 27.467335, y: 0, z: -0.8260795}
+  - {x: 27.343376, y: 0, z: -0.2540989}
+  - {x: 27.502934, y: 0, z: 0.415728}
+  - {x: 27.438705, y: 0, z: 1.1782527}
+  - {x: 27.335392, y: 0, z: 1.711127}
+  - {x: 27.451637, y: 0, z: 2.1162198}
+  - {x: 27.778175, y: 0.0038027763, z: 2.3691692}
+  - {x: 28.804201, y: 0, z: 2.8723154}
+  - {x: 29.764576, y: 0, z: 2.730475}
+  - {x: 30.59052, y: 0, z: 2.8341064}
+  - {x: 31.251085, y: 0, z: 3.6695118}
+  - {x: 32.068775, y: 0, z: 4.061668}
+  soSplinePointsLeft:
+  - {x: 28.39324, y: 0, z: -1.3635978}
+  - {x: 27.782257, y: 0, z: -1.2738173}
+  - {x: 27.29649, y: 0, z: -0.93006}
+  - {x: 27.143457, y: 0, z: -0.24836788}
+  - {x: 27.303375, y: 0, z: 0.4290095}
+  - {x: 27.240358, y: 0, z: 1.1525992}
+  - {x: 27.13541, y: 0, z: 1.7138842}
+  - {x: 27.285706, y: 0, z: 2.2278712}
+  - {x: 27.680586, y: 0.0038027763, z: 2.543744}
+  - {x: 28.76841, y: 0, z: 3.0690866}
+  - {x: 29.768852, y: 0, z: 2.9304292}
+  - {x: 30.483707, y: 0, z: 3.0031946}
+  - {x: 31.123314, y: 0, z: 3.823377}
+  - {x: 31.982288, y: 0, z: 4.2420015}
+  soSplinePointsRight:
+  - {x: 28.448767, y: 0, z: -0.96747077}
+  - {x: 27.916393, y: 0, z: -0.8969779}
+  - {x: 27.63818, y: 0, z: -0.72209895}
+  - {x: 27.543295, y: 0, z: -0.2598299}
+  - {x: 27.702492, y: 0, z: 0.4024465}
+  - {x: 27.637053, y: 0, z: 1.2039062}
+  - {x: 27.535374, y: 0, z: 1.7083699}
+  - {x: 27.617569, y: 0, z: 2.0045683}
+  - {x: 27.875765, y: 0.0038027763, z: 2.1945944}
+  - {x: 28.839993, y: 0, z: 2.6755443}
+  - {x: 29.7603, y: 0, z: 2.5305207}
+  - {x: 30.697334, y: 0, z: 2.6650183}
+  - {x: 31.378857, y: 0, z: 3.5156467}
+  - {x: 32.155262, y: 0, z: 3.8813345}
+  ODDQCOQCCQ:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  OCOODCDQCQ:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  meshVecs:
+  - {x: 28.39324, y: 0, z: -1.3635978}
+  - {x: 28.448767, y: 0, z: -0.96747077}
+  - {x: 27.782257, y: 0, z: -1.2738173}
+  - {x: 27.916393, y: 0, z: -0.8969779}
+  - {x: 27.29649, y: 0, z: -0.93006}
+  - {x: 27.63818, y: 0, z: -0.72209895}
+  - {x: 27.143457, y: 0, z: -0.24836788}
+  - {x: 27.543295, y: 0, z: -0.2598299}
+  - {x: 27.303375, y: 0, z: 0.4290095}
+  - {x: 27.702492, y: 0, z: 0.4024465}
+  - {x: 27.240358, y: 0, z: 1.1525992}
+  - {x: 27.637053, y: 0, z: 1.2039062}
+  - {x: 27.13541, y: 0, z: 1.7138842}
+  - {x: 27.535374, y: 0, z: 1.7083699}
+  - {x: 27.285706, y: 0, z: 2.2278712}
+  - {x: 27.617569, y: 0, z: 2.0045683}
+  - {x: 27.680586, y: 0.0038027763, z: 2.543744}
+  - {x: 27.875765, y: 0.0038027763, z: 2.1945944}
+  - {x: 28.76841, y: 0, z: 3.0690866}
+  - {x: 28.839993, y: 0, z: 2.6755443}
+  - {x: 29.768852, y: 0, z: 2.9304292}
+  - {x: 29.7603, y: 0, z: 2.5305207}
+  - {x: 30.483707, y: 0, z: 3.0031946}
+  - {x: 30.697334, y: 0, z: 2.6650183}
+  - {x: 31.123314, y: 0, z: 3.823377}
+  - {x: 31.378857, y: 0, z: 3.5156467}
+  - {x: 31.982288, y: 0, z: 4.2420015}
+  - {x: 32.155262, y: 0, z: 3.8813345}
+  meshUVs:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 0.123174466}
+  - {x: 1, y: 0.123174466}
+  - {x: 0, y: 0.22168872}
+  - {x: 1, y: 0.22168872}
+  - {x: 0, y: 0.34656826}
+  - {x: 1, y: 0.34656826}
+  - {x: 0, y: 0.4934916}
+  - {x: 1, y: 0.4934916}
+  - {x: 0, y: 0.6567715}
+  - {x: 1, y: 0.6567715}
+  - {x: 0, y: 0.7725908}
+  - {x: 1, y: 0.7725908}
+  - {x: 0, y: 0.8625159}
+  - {x: 1, y: 0.8625159}
+  - {x: 0, y: 0.9506543}
+  - {x: 1, y: 0.9506543}
+  - {x: 0, y: 1.1944906}
+  - {x: 1, y: 1.1944906}
+  - {x: 0, y: 1.4016335}
+  - {x: 1, y: 1.4016335}
+  - {x: 0, y: 1.5792513}
+  - {x: 1, y: 1.5792513}
+  - {x: 0, y: 1.8064979}
+  - {x: 1, y: 1.8064979}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
+  meshUVs2:
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: -Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  - {x: Infinity, y: Infinity}
+  surfaceMeshVecs: []
+  leftIndentVecs:
+  - {x: 27.699156, y: -0.02, z: -6.3151884}
+  - {x: 26.105556, y: -0.02, z: -5.9843025}
+  - {x: 23.025364, y: -0.02, z: -3.529574}
+  - {x: 22.145512, y: -0.02, z: -0.10509309}
+  - {x: 22.314411, y: -0.02, z: 0.7610473}
+  - {x: 22.28166, y: -0.02, z: 0.5112595}
+  - {x: 22.135885, y: -0.02, z: 1.7828138}
+  - {x: 23.13738, y: -0.02, z: 5.0191784}
+  - {x: 25.240852, y: -0.016197223, z: 6.90811}
+  - {x: 27.873623, y: -0.02, z: 7.988371}
+  - {x: 29.87576, y: -0.02, z: 7.929286}
+  - {x: 27.813368, y: -0.02, z: 7.230403}
+  - {x: 27.92903, y: -0.02, z: 7.670005}
+  - {x: 29.820122, y: -0.02, z: 8.750331}
+  rightIndentVecs:
+  - {x: 29.281668, y: -0.02, z: 4.9744377}
+  - {x: 29.928434, y: -0.02, z: 4.7556047}
+  - {x: 32.76353, y: -0.02, z: 2.397318}
+  - {x: 33.54083, y: -0.02, z: -0.43175966}
+  - {x: 33.689247, y: -0.02, z: 0.0040011406}
+  - {x: 33.58749, y: -0.02, z: 1.9735138}
+  - {x: 33.5348, y: -0.02, z: 1.6256543}
+  - {x: 32.59556, y: -0.02, z: -1.3450006}
+  - {x: 30.803446, y: -0.016197223, z: -3.042645}
+  - {x: 29.913736, y: -0.02, z: -3.227597}
+  - {x: 29.632011, y: -0.02, z: -3.4681077}
+  - {x: 33.90174, y: -0.02, z: -2.4076314}
+  - {x: 35.212, y: -0.02, z: -1.1003065}
+  - {x: 34.749863, y: -0.02, z: -1.5286608}
+  middleIndentVecs:
+  - {x: 28.421003, y: -0.02, z: -1.1655343}
+  - {x: 27.849325, y: -0.02, z: -1.0853976}
+  - {x: 27.467335, y: -0.02, z: -0.8260795}
+  - {x: 27.343376, y: -0.02, z: -0.2540989}
+  - {x: 27.502934, y: -0.02, z: 0.415728}
+  - {x: 27.438705, y: -0.02, z: 1.1782527}
+  - {x: 27.335392, y: -0.02, z: 1.711127}
+  - {x: 27.451637, y: -0.02, z: 2.1162198}
+  - {x: 27.778175, y: -0.016197223, z: 2.3691692}
+  - {x: 28.804201, y: -0.02, z: 2.8723154}
+  - {x: 29.764576, y: -0.02, z: 2.730475}
+  - {x: 30.59052, y: -0.02, z: 2.8341064}
+  - {x: 31.251085, y: -0.02, z: 3.6695118}
+  - {x: 32.068775, y: -0.02, z: 4.061668}
+  leftSurroundingVecs:
+  - {x: 27.005072, y: -0.02, z: -11.266779}
+  - {x: 24.428856, y: -0.02, z: -10.694788}
+  - {x: 18.754236, y: -0.02, z: -6.129088}
+  - {x: 17.147564, y: -0.02, z: 0.038181692}
+  - {x: 17.325449, y: -0.02, z: 1.093085}
+  - {x: 17.322964, y: -0.02, z: -0.13008022}
+  - {x: 17.13636, y: -0.02, z: 1.8517433}
+  - {x: 18.989056, y: -0.02, z: 7.810486}
+  - {x: 22.801117, y: -0.016197223, z: 11.272476}
+  - {x: 26.978838, y: -0.02, z: 12.907656}
+  - {x: 29.982666, y: -0.02, z: 12.9281435}
+  - {x: 25.143028, y: -0.02, z: 11.457611}
+  - {x: 24.734745, y: -0.02, z: 11.516632}
+  - {x: 27.657955, y: -0.02, z: 13.25866}
+  rightSurroundingVecs:
+  - {x: 29.836935, y: -0.02, z: 8.93571}
+  - {x: 31.269794, y: -0.02, z: 8.523993}
+  - {x: 36.180435, y: -0.02, z: 4.476929}
+  - {x: 37.53919, y: -0.02, z: -0.54637945}
+  - {x: 37.68042, y: -0.02, z: -0.2616291}
+  - {x: 37.554447, y: -0.02, z: 2.4865856}
+  - {x: 37.534424, y: -0.02, z: 1.5705107}
+  - {x: 35.91422, y: -0.02, z: -3.5780466}
+  - {x: 32.755234, y: -0.016197223, z: -6.5341377}
+  - {x: 30.629564, y: -0.02, z: -7.1630244}
+  - {x: 29.546486, y: -0.02, z: -7.4671936}
+  - {x: 36.038013, y: -0.02, z: -5.789398}
+  - {x: 37.767426, y: -0.02, z: -4.1776085}
+  - {x: 36.479595, y: -0.02, z: -5.1353245}
+  leftIndentVecsSV:
+  - {x: 27.699156, y: -0.02, z: -6.3151884}
+  - {x: 26.105556, y: -0.02, z: -5.9843025}
+  - {x: 23.025364, y: -0.02, z: -3.529574}
+  - {x: 22.145512, y: -0.02, z: -0.10509309}
+  - {x: 22.314411, y: -0.02, z: 0.7610473}
+  - {x: 22.28166, y: -0.02, z: 0.5112595}
+  - {x: 22.135885, y: -0.02, z: 1.7828138}
+  - {x: 23.13738, y: -0.02, z: 5.0191784}
+  - {x: 25.240852, y: -0.016197223, z: 6.90811}
+  - {x: 27.873623, y: -0.02, z: 7.988371}
+  - {x: 29.87576, y: -0.02, z: 7.929286}
+  - {x: 27.813368, y: -0.02, z: 7.230403}
+  - {x: 27.92903, y: -0.02, z: 7.670005}
+  - {x: 29.820122, y: -0.02, z: 8.750331}
+  rightIndentVecsSV:
+  - {x: 29.14285, y: -0.02, z: 3.98412}
+  - {x: 29.593094, y: -0.02, z: 3.8135076}
+  - {x: 31.909306, y: -0.02, z: 1.8774151}
+  - {x: 32.54124, y: -0.02, z: -0.4031047}
+  - {x: 32.691456, y: -0.02, z: 0.0704087}
+  - {x: 32.59575, y: -0.02, z: 1.8452458}
+  - {x: 32.534897, y: -0.02, z: 1.6394403}
+  - {x: 31.765894, y: -0.02, z: -0.7867391}
+  - {x: 30.315498, y: -0.016197223, z: -2.1697717}
+  - {x: 29.73478, y: -0.02, z: -2.24374}
+  - {x: 29.653393, y: -0.02, z: -2.4683363}
+  - {x: 33.367672, y: -0.02, z: -1.5621898}
+  - {x: 34.573143, y: -0.02, z: -0.33098102}
+  - {x: 34.31743, y: -0.02, z: -0.62699485}
+  bridgeElement: 0000000000000000000000000000
+  vecsBelowTerrain: []
+  treeVecs:
+  - {x: 27.699137, y: 0, z: -6.3151855}
+  - {x: 29.14287, y: 0, z: 3.984117}
+  - {x: 26.105576, y: 0, z: -5.984309}
+  - {x: 29.593075, y: 0, z: 3.8135142}
+  - {x: 23.025362, y: 0, z: -3.529574}
+  - {x: 31.909307, y: 0, z: 1.8774148}
+  - {x: 22.145512, y: 0, z: -0.10509229}
+  - {x: 32.54124, y: 0, z: -0.4031055}
+  - {x: 22.314413, y: 0, z: 0.7610469}
+  - {x: 32.691456, y: 0, z: 0.07040915}
+  - {x: 22.28166, y: 0, z: 0.51126194}
+  - {x: 32.59575, y: 0, z: 1.8452435}
+  - {x: 22.135885, y: 0, z: 1.7828131}
+  - {x: 32.534897, y: 0, z: 1.639441}
+  - {x: 23.137436, y: 0, z: 5.0191584}
+  - {x: 31.765839, y: 0, z: -0.7867191}
+  - {x: 25.240862, y: 0.0038027763, z: 6.9081163}
+  - {x: 30.315489, y: 0.0038027763, z: -2.1697779}
+  - {x: 27.873644, y: 0, z: 7.9883657}
+  - {x: 29.734758, y: 0, z: -2.2437348}
+  - {x: 29.875776, y: 0, z: 7.929286}
+  - {x: 29.653376, y: 0, z: -2.4683359}
+  - {x: 27.813358, y: 0, z: 7.230397}
+  - {x: 33.367683, y: 0, z: -1.5621841}
+  - {x: 27.929028, y: 0, z: 7.670003}
+  - {x: 34.573143, y: 0, z: -0.3309791}
+  - {x: 29.820135, y: 0, z: 8.750338}
+  - {x: 34.317417, y: 0, z: -0.6270015}
+  detailVecs:
+  - {x: -22.023222, y: 0, z: -54.33455}
+  - {x: -21.134771, y: 0, z: -47.996517}
+  - {x: -23.223753, y: 0, z: -54.100113}
+  - {x: -21.077597, y: 0, z: -48.070683}
+  - {x: -25.266186, y: 0, z: -52.48977}
+  - {x: -19.799145, y: 0, z: -49.16239}
+  - {x: -25.85531, y: 0, z: -50.162403}
+  - {x: -19.457937, y: 0, z: -50.345795}
+  - {x: -25.690002, y: 0, z: -49.37177}
+  - {x: -19.30413, y: 0, z: -49.796776}
+  - {x: -25.73486, y: 0, z: -49.232204}
+  - {x: -19.38773, y: 0, z: -48.411293}
+  - {x: -25.864304, y: 0, z: -48.24476}
+  - {x: -19.464912, y: 0, z: -48.33299}
+  - {x: -25.203257, y: 0, z: -46.097355}
+  - {x: -19.893469, y: 0, z: -49.670204}
+  - {x: -23.783249, y: 0.0038027763, z: -44.83763}
+  - {x: -20.6604, y: 0.0038027763, z: -50.42403}
+  - {x: -21.76845, y: 0, z: -43.979347}
+  - {x: -20.623148, y: 0, z: -50.276024}
+  - {x: -20.166992, y: 0, z: -44.07026}
+  - {x: -20.303856, y: 0, z: -50.468792}
+  - {x: -21.118502, y: 0, z: -44.460484}
+  - {x: -17.700455, y: 0, z: -49.871304}
+  - {x: -20.793259, y: 0, z: -43.86865}
+  - {x: -16.70457, y: 0, z: -48.792328}
+  - {x: -19.315004, y: 0, z: -43.052998}
+  - {x: -16.547447, y: 0, z: -48.823666}
+  vegetationTris: 000000000300000001000000020000000300000000000000020000000500000003000000040000000500000002000000040000000700000005000000060000000700000004000000060000000900000007000000080000000900000006000000080000000b000000090000000a0000000b000000080000000a0000000d0000000b0000000c0000000d0000000a0000000c0000000f0000000d0000000e0000000f0000000c0000000e000000110000000f00000010000000110000000e000000100000001300000011000000120000001300000010000000120000001500000013000000140000001500000012000000140000001700000015000000160000001700000014000000160000001900000017000000180000001900000016000000180000001b000000190000001a0000001b00000018000000
+  totalDistance: 9.373169
+  nodeSplinePoint: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+  totalDistanceString: 9.37 m
+  startPrefabScript: {fileID: 0}
+  endPrefabScript: {fileID: 0}
+  startConnectionSegment: -1
+  startConnectionFlag: 0
+  endConnectionSegment: -1
+  endConnectionFlag: 0
+  tCrossingConnected: 0
+  roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  roadMaterials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  roadPhysicsMaterial: {fileID: 0}
+  roadPhysicsMaterials: []
+  startDir: {x: 0, y: 0, z: 0}
+  endDir: {x: 0, y: 0, z: 0}
+  startAngle: 0
+  endAngle: 0
+  startbendLeftRight: 0
+  endbendLeftRight: 0
+  pivotp: {x: 0, y: 0, z: 0}
+  p1: {x: 0, y: 0, z: 0}
+  p2: {x: 0, y: 0, z: 0}
+  p3: {x: 0, y: 0, z: 0}
+  p4: {x: 0, y: 0, z: 0}
+  p5: {x: 0, y: 0, z: 0}
+  p6: {x: 0, y: 0, z: 0}
+  p7: {x: 0, y: 0, z: 0}
+  cp1: {x: 0, y: 0, z: 0}
+  cp2: {x: 0, y: 0, z: 0}
+  cp3: {x: 0, y: 0, z: 0}
+  cp4: {x: 0, y: 0, z: 0}
+  cp5: {x: 0, y: 0, z: 0}
+  cp6: {x: 0, y: 0, z: 0}
+  cp7: {x: 0, y: 0, z: 0}
+  cp8: {x: 0, y: 0, z: 0}
+  cp9: {x: 0, y: 0, z: 0}
+  cpcenter: {x: 0, y: 0, z: 0}
+  p1Circle: {x: 0, y: 0, z: 0}
+  p2Circle: {x: 0, y: 0, z: 0}
+  cpradius: 0
+  cpangle: 0
+  dp1: {x: 0, y: 0, z: 0}
+  dp2: {x: 0, y: 0, z: 0}
+  dp3: {x: 0, y: 0, z: 0}
+  dp4: {x: 0, y: 0, z: 0}
+  segPoints: []
+  testPoints: []
+  testPoints2: []
+  OQCQDCCCCD: {x: 0, y: 0, z: 0}
+  OOQODCQCDC: {x: 0, y: 0, z: 0}
+  endLeft: {x: 0, y: 0, z: 0}
+  endRight: {x: 0, y: 0, z: 0}
+  testmesh: {fileID: 0}
+  surfaceMesh: {fileID: 3138335036145144464}
+  sv1: {x: 27.699137, y: -0.02, z: -6.3151855}
+  sv2: {x: 29.14287, y: -0.02, z: 3.984117}
+  prefabIndentLeft: {x: 0, y: 0, z: 0}
+  prefabIndentRight: {x: 0, y: 0, z: 0}
+  roadIndent1: {x: 0, y: 0, z: 0}
+  tmpPerpCP: {x: 0, y: 0, z: 0}
+  tmpCP: {x: 0, y: 0, z: 0}
+  splinePos: 0.001
+  camHeight: 5
+  flyOverPoints: []
+  splinePosV3: {x: 0, y: 0, z: 0}
+  markerDistances:
+  - 0
+  - 0.5772675
+  - 1.0389628
+  - 1.6242213
+  - 2.31279
+  - 3.0780149
+  - 3.620812
+  - 4.0422535
+  - 4.4553213
+  - 5.5980806
+  - 6.5688734
+  - 7.401294
+  - 8.466305
+  - 9.373169
+  osmRoadType: 
+  soData: []
+  soDataExt: []
+  sideObjectNames: []
+  selectedSO: 0
+  rebuildSos: 0
+  sosCleared: 1
+  isSideObject: 0
+  startOffsetActiveMarker: -1
+  endOffsetActiveMarker: -1
+  leftToCenterPerc: 0.5
+  splatMapActive: 0
+  splatIndex: 0
+  expandLevel: 0
+  smoothLevel: 1
+  splatOpacity: 1
+  layer: 0
+  tag: 
+  castShadow: 0
+  fadeInFlag: 0
+  fadeInDistance: 0
+  fadeOutFlag: 0
+  fadeOutDistance: 0
+  doSurroundingSurfaces: 1
+  terrainDeformation: 1
+  snapToTerrain: 0
+  snapVertices: 0
+  snapOffset: 0.01
+  hasMeshCollider: 1
+  isUpdated: 1
+  QDDDQODQQDQDQQD: 1
+  uv4Type: 0
+  detailDistance: 50
+  startDecalCollapsed: 0
+  startDecal: {fileID: 0}
+  endDecal: {fileID: 0}
+  startDecalPrefab: {fileID: 0}
+  startDecalPrefabSource: {fileID: 0}
+  endDecalCollapsed: 0
+  endDecalPrefab: {fileID: 0}
+  endDecalPrefabSource: {fileID: 0}
+  startDecalID: -1
+  endDecalID: -1
+  lastForward: {x: 0.9016672, y: 0, z: 0.4324308}
+  roadUpdate: 0
+  bounds:
+    m_Center: {x: 29.645332, y: 4500000, z: 1.4392014}
+    m_Extent: {x: 102.509926, y: 5500000, z: 102.8028}
+--- !u!33 &3138335034746821662
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034746821650}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335034746821663
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034746821650}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5eb40cae6b57dfa478d322a723923661, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &3138335034746821648
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034746821650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335034896610242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335034896610241}
+  - component: {fileID: 3138335034896610240}
+  m_Layer: 0
+  m_Name: Connection Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335034896610241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034896610242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138335034268544517}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138335034896610240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335034896610242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1419717442, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3138335035299368582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335035299368581}
+  m_Layer: 0
+  m_Name: Road Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335035299368581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335035299368582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3138335034246372167}
+  - {fileID: 3138335034325150013}
+  - {fileID: 3138335034504761126}
+  - {fileID: 3138335034501461784}
+  - {fileID: 3138335034746821649}
+  m_Father: {fileID: 3138335034268544517}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3138335035344063315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335035344063314}
+  - component: {fileID: 3138335035344063326}
+  - component: {fileID: 3138335035344063327}
+  - component: {fileID: 3138335035344063313}
+  - component: {fileID: 315164268}
+  m_Layer: 31
+  m_Name: surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335035344063314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335035344063315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138335034501461784}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3138335035344063326
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335035344063315}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335035344063327
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335035344063315}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6df83606ee896204ea5f2925b610f5fb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &3138335035344063313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335035344063315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -257043915, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &315164268
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335035344063315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335036034123534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335036034123533}
+  - component: {fileID: 3138335036034123529}
+  - component: {fileID: 3138335036034123530}
+  - component: {fileID: 3138335036034123532}
+  - component: {fileID: 629361815}
+  m_Layer: 31
+  m_Name: surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335036034123533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036034123534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138335034325150013}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3138335036034123529
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036034123534}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335036034123530
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036034123534}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6df83606ee896204ea5f2925b610f5fb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &3138335036034123532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036034123534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -257043915, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &629361815
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036034123534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335036145144464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335036145144479}
+  - component: {fileID: 3138335036145144475}
+  - component: {fileID: 3138335036145144476}
+  - component: {fileID: 3138335036145144478}
+  - component: {fileID: 1171628846}
+  m_Layer: 31
+  m_Name: surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335036145144479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036145144464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138335034746821649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3138335036145144475
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036145144464}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335036145144476
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036145144464}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6df83606ee896204ea5f2925b610f5fb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &3138335036145144478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036145144464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -257043915, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &1171628846
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036145144464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335036248187159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335036248187158}
+  - component: {fileID: 3138335036248187154}
+  - component: {fileID: 3138335036248187155}
+  - component: {fileID: 3138335036248187157}
+  - component: {fileID: 2143811002}
+  m_Layer: 31
+  m_Name: surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335036248187158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036248187159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138335034504761126}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3138335036248187154
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036248187159}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335036248187155
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036248187159}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6df83606ee896204ea5f2925b610f5fb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &3138335036248187157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036248187159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -257043915, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &2143811002
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036248187159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!1 &3138335036269172018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3138335036269172017}
+  - component: {fileID: 3138335036269172029}
+  - component: {fileID: 3138335036269172030}
+  - component: {fileID: 3138335036269172016}
+  - component: {fileID: 765180392}
+  m_Layer: 31
+  m_Name: surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3138335036269172017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036269172018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3138335034246372167}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3138335036269172029
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036269172018}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3138335036269172030
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036269172018}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6df83606ee896204ea5f2925b610f5fb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &3138335036269172016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036269172018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -257043915, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &765180392
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138335036269172018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
