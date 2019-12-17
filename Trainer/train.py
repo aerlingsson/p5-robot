@@ -44,8 +44,7 @@ class Trainer:
                 total_reward += reward
 
                 next_state = self.preprocess(next_state)
-                if time >= 10:
-                    self.agent.remember(state, action, reward, next_state, done)
+                self.agent.remember(state, action, reward, next_state, done)
                 state = next_state
 
                 self.agent.replay()
