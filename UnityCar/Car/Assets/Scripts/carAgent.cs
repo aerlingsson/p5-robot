@@ -86,7 +86,7 @@ public class carAgent : Agent {
         var action = Mathf.FloorToInt (act[0]);
         switch (action) {
             case 1:
-                _steerangl = 21.0f;
+                _steerangl = 22.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = 22.0f;
@@ -142,7 +142,7 @@ public class carAgent : Agent {
                 break;
 
             case 9:
-                _steerangl = -21.0f;
+                _steerangl = -22.0f;
                 front_driver_col.steerAngle = _steerangl;
                 front_passenger_col.steerAngle = _steerangl;
                 turningNumber = -22.0f;
