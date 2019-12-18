@@ -34,7 +34,7 @@ def create_arg_parser():
 
     parser.add_argument(
         '--max_epochs',
-        default=3000,
+        default=2000,
         help='int value, e.g. 1000'
     )
 
@@ -64,7 +64,7 @@ def create_arg_parser():
 
     parser.add_argument(
         '--mem_size',
-        default=100000,
+        default=20000,
         help='high inter value, e.g. 10000'
     )
 
