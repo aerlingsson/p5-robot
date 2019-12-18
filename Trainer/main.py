@@ -70,19 +70,19 @@ def create_arg_parser():
 
     parser.add_argument(
         '--eps_decay',
-        default=0.99996,
+        default=0.99995,
         help='float value under 1, e.g. 0.999'
     )
 
     parser.add_argument(
         '--eps_min',
-        default=0.2,
+        default=0.1,
         help='float value under 1, e.g. 0.1'
     )
 
     parser.add_argument(
         '--max_tau',
-        default=1000,
+        default=100,
         help='int value, e.g. 1000'
     )
 
